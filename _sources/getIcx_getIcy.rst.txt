@@ -1,0 +1,7 @@
+getIcx\_getIcy module
+=====================
+
+.. automodule:: getIcx_getIcy
+    :members:
+    :undoc-members:
+    :show-inheritance:

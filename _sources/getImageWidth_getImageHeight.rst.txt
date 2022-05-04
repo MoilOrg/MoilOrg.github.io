@@ -1,0 +1,7 @@
+getImageWidth\_getImageHeight module
+====================================
+
+.. automodule:: getImageWidth_getImageHeight
+    :members:
+    :undoc-members:
+    :show-inheritance:

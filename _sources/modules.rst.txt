@@ -1,0 +1,10 @@
+spamfilter-py
+=============
+
+.. toctree::
+   :maxdepth: 4
+
+   moildev
+   spamfilter
+   test_spamfilter
+   token

@@ -1,0 +1,787 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title> M</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #f8f8f2;
+  background-color: #272822;
+}
+.highlight .err {
+  color: #272822;
+  background-color: #f92672;
+}
+.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #f4bf75;
+}
+.highlight .nt {
+  color: #f4bf75;
+}
+.highlight .o, .highlight .ow {
+  color: #f8f8f2;
+}
+.highlight .p, .highlight .pi {
+  color: #f8f8f2;
+}
+.highlight .gi {
+  color: #a6e22e;
+}
+.highlight .gd {
+  color: #f92672;
+}
+.highlight .gh {
+  color: #66d9ef;
+  background-color: #272822;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #ae81ff;
+}
+.highlight .kc {
+  color: #fd971f;
+}
+.highlight .kt {
+  color: #fd971f;
+}
+.highlight .kd {
+  color: #fd971f;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #a6e22e;
+}
+.highlight .sr {
+  color: #a1efe4;
+}
+.highlight .si {
+  color: #cc6633;
+}
+.highlight .se {
+  color: #cc6633;
+}
+.highlight .nn {
+  color: #f4bf75;
+}
+.highlight .nc {
+  color: #f4bf75;
+}
+.highlight .no {
+  color: #f4bf75;
+}
+.highlight .na {
+  color: #66d9ef;
+}
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
+  color: #a6e22e;
+}
+.highlight .ss {
+  color: #a6e22e;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;cpp&quot;,&quot;csharp&quot;,&quot;python&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+      <!-- <img src="images/AAA-removebg-preview.png" alt="Logo" /> -->
+        <div class="lang-selector">
+              <!-- <a href="#" data-language-name="cpp">C++</a>
+              <a href="#" data-language-name="csharp">C#</a>
+              <a href="#" data-language-name="python">Python</a> -->
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc">
+      </div>
+        <!-- <ul class="toc-footer">
+            <li><a href='http://www.microstrain.com/'>microstrain.com</a></li>
+            <li><a href='http://www.sensorcloud.com/'>sensorcloud.com</a></li>
+            <li><a href='http://www.lord.com/'>lord.com</a></li>
+        </ul> -->
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+      <h1 id='introduction'>Moildev-SDK Module</h1><pre class="highlight cpp tab-cpp"><code><span class="c1">//get the version of MSCL (MSCL_VERSION.majorPart(), .minorPart(), and .patchPart() are also available)   
+</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">mscl</span><span class="o">::</span><span class="n">MSCL_VERSION</span><span class="p">.</span><span class="n">str</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</code></pre><pre class="highlight csharp tab-csharp"><code><span class="c1">//get the version of MSCL (MSCL_VERSION.majorPart(), .minorPart(), and .patchPart() are also available)</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">mscl</span><span class="p">.</span><span class="n">MSCL_VERSION</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+<!-- </code></pre><pre class="highlight python tab-python"><code><span class="c"># get the version of MSCL (MSCL_VERSION.majorPart(), .minorPart(), and .patchPart() are also available)</span>
+<span class="k">
+  import math
+  import os
+  import re
+  from collections import Counter</span>
+
+  <span class="k">print</span><span class="n">success</span><span class="o">.</span><span class="n">MOILDEV-SDK</span>
+</code></pre> -->
+  <!-- <p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre"></span></code></p>
+  <p align="justify">&emsp; &emsp;   <a href="https://github.com/MoilOrg">MoilApp</a> 
+    is a fisheye image processing software developed by MOIL-Lab. This
+    application is an implementation of Moildev SDK as a sophisticated method of
+    processing fisheye images. The commonly used is to process fisheye image with the
+    result panorama view and Anypoint view. This sophisticated methodology for image
+    processing is very useful in a variety of applications that require high image quality
+    and wide-angle FoV.</p>
+
+  <p align="justify">&emsp; &emsp; The fisheye lens also terms fisheye image sensor (FIS) is a unique 
+    super wide-angle lens with a short focal length that produces strong visual distortion intended to 
+    create a wide panoramic or hemispherical image. The most significant feature is the field of
+    view vast. A fisheye camera (also termed a fisheye image sensor, FIS) can capture a
+    clear image with a FOV of over 180 degrees, but a severer barrel distortion comes
+    along.
+  <p align="justify">&emsp; &emsp; Based on Prof Chuang-Jan Chang, the method for presenting fisheye camera 
+    images is integrating the multicollimator metrology and cartography in order to
+    systematically describe the projection mechanism of the fisheye camera. The fisheye
+    camera in our proposed method generates the hemisphere coordinate system. Hence,
+    the position of an imaged point referring to the principal point on the image plane
+    directly reflects its corresponding Zenithal distance a. and azimuthal distance β of the
+    sight ray in space so as to normalize the imaged point onto a small sphere presented
+    through figure bellow:</p>
+
+  <span id="moildev-module"></span><h1>Moildev-SDK Module<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1> -->
+  </code></pre><pre class="highlight csharp tab-csharp"><code><span class="c1">//get the version of MSCL (MSCL_VERSION.majorPart(), .minorPart(), and .patchPart() are also available)</span>
+  <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">mscl</span><span class="p">.</span><span class="n">MSCL_VERSION</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+  </code></pre><pre class="highlight python tab-python"><code><span class="c"># get the version of MSCL (MSCL_VERSION.majorPart(), .minorPart(), and .patchPart() are also available)</span>
+  <span class="k">
+    class Moildev(object):
+        def __init__(self, file_camera_parameter=None, camera_type=None, **kwarg):
+          
+            super(Moildev, self).__init__()
+            self.__alphaToRho_Table = []
+            self.__rhoToAlpha_Table = []
+  
+            self.__cameraName = None
+            self.__cameraFov = None
+            self.__sensor_width = None
+            self.__sensor_height = None
+            self.__Icx = None
+            self.__Icy = None
+            self.__ratio = None
+            self.__imageWidth = None
+            self.__imageHeight = None
+            self.__calibrationRatio = None
+            self.__parameter0 = None
+            self.__parameter1 = None
+            self.__parameter2 = None
+            self.__parameter3 = None
+            self.__parameter4 = None
+            self.__parameter5 = None
+
+            if file_camera_parameter is None:
+                if kwarg == {}:
+                    print("Pass the argument with camera parameter file with json extension (*.json) "
+                          "Or Given list of Parameter,\nsee detail documentation here https://github.com/MoilOrg/moildev")
+
+                else:
+                    for key, value in kwarg.items():
+                        if key == "cameraName":
+                            self.__cameraName = value
+                        elif key == "cameraFov":
+                            self.__cameraFov = value
+                        elif key == "sensorWidth":
+                            self.__sensor_width = value
+                        elif key == "sensorHeight":
+                            self.__sensor_height = value
+                        elif key == "icx":
+                            self.__Icx = value
+                        elif key == "icy":
+                            self.__Icy = value
+                        elif key == "ratio":
+                            self.__ratio = value
+                        elif key == "imageWidth":
+                            self.__imageWidth = value
+                        elif key == "imageHeight":
+                            self.__imageHeight = value
+                        elif key == "calibrationRatio":
+                            self.__calibrationRatio = value
+                        elif key == "parameter0":
+                            self.__parameter0 = value
+                        elif key == "parameter1":
+                            self.__parameter1 = value
+                        elif key == "parameter2":
+                            self.__parameter2 = value
+                        elif key == "parameter3":
+                            self.__parameter3 = value
+                        elif key == "parameter4":
+                            self.__parameter4 = value
+                        elif key == "parameter5":
+                            self.__parameter5 = value
+
+                    if self.__cameraName is None or \
+                            self.__cameraFov is None or \
+                            self.__sensor_width is None or \
+                            self.__sensor_height is None or \
+                            self.__Icx is None or \
+                            self.__Icy is None or \
+                            self.__ratio is None or \
+                            self.__imageWidth is None or \
+                            self.__imageHeight is None or \
+                            self.__calibrationRatio is None or \
+                            self.__parameter0 is None or \
+                            self.__parameter1 is None or \
+                            self.__parameter2 is None or \
+                            self.__parameter3 is None or \
+                            self.__parameter4 is None or \
+                            self.__parameter5 is None:
+                else:
+                    self.__setCameraParameter(file_camera_parameter, camera_type)
+                    if self.__cameraName is not None:
+                        self.__initAlphaRho_Table()
+                        self.__importMoildev()
+        
+        def setCameraParameter(self, parameter, cameraType):
+              with open(parameter) as f:
+                  data = json.load(f)
+                  if cameraType in data.keys():
+                      self.__cameraName = data[cameraType]["cameraName"]
+                      self.__cameraFov = data[cameraType]["cameraFov"] if "cameraFov" in data[cameraType].keys() else 220
+                      self.__sensor_width = data[cameraType]['cameraSensorWidth']
+                      self.__sensor_height = data[cameraType]['cameraSensorHeight']
+                      self.__Icx = data[cameraType]['iCx']
+                      self.__Icy = data[cameraType]['iCy']
+                      self.__ratio = data[cameraType]['ratio']
+                      self.__imageWidth = data[cameraType]['imageWidth']
+                      self.__imageHeight = data[cameraType]['imageHeight']
+                      self.__calibrationRatio = data[cameraType]['calibrationRatio']
+                      self.__parameter0 = data[cameraType]['parameter0']
+                      self.__parameter1 = data[cameraType]['parameter1']
+                      self.__parameter2 = data[cameraType]['parameter2']
+                      self.__parameter3 = data[cameraType]['parameter3']
+                      self.__parameter4 = data[cameraType]['parameter4']
+                      self.__parameter5 = data[cameraType]['parameter5']
+
+                  else:
+                      if "cameraName" in data.keys() and cameraType is None:
+                          with open(parameter) as file:
+                              data = json.load(file)
+                              self.__cameraName = data["cameraName"]
+                              self.__cameraFov = data["cameraFov"] if "cameraFov" in data.keys() else 220
+                              self.__sensor_width = data['cameraSensorWidth']
+                              self.__sensor_height = data['cameraSensorHeight']
+                              self.__Icx = data['iCx']
+                              self.__Icy = data['iCy']
+                              self.__ratio = data['ratio']
+                              self.__imageWidth = data['imageWidth']
+                              self.__imageHeight = data['imageHeight']
+                              self.__calibrationRatio = data['calibrationRatio']
+                              self.__parameter0 = data['parameter0']
+                              self.__parameter1 = data['parameter1']
+                              self.__parameter2 = data['parameter2']
+                              self.__parameter3 = data['parameter3']
+                              self.__parameter4 = data['parameter4']
+                              self.__parameter5 = data['parameter5']
+
+                      else:
+                          warnings.warn("Please Check your parameter file. \n"
+
+        @classmethod
+        def version(cls):
+            MoilCV.version()
+          
+        def initAlphaRho_Table(self):
+            for i in range(1800):
+                alpha = i / 10 * math.pi / 180
+                self.__alphaToRho_Table.append(
+                    (self.__parameter0 *
+                    alpha *
+                    alpha *
+                    alpha *
+                    alpha *
+                    alpha *
+                    alpha +
+                    self.__parameter1 *
+                    alpha *
+                    alpha *
+                    alpha *
+                    alpha *
+                    alpha +
+                    self.__parameter2 *
+                    alpha *
+                    alpha *
+                    alpha *
+                    alpha +
+                    self.__parameter3 *
+                    alpha *
+                    alpha *
+                    alpha +
+                    self.__parameter4 *
+                    alpha *
+                    alpha +
+                    self.__parameter5 *
+                    alpha) *
+                    self.__calibrationRatio)
+                i += 1
+
+            i = 0
+            index = 0
+            while i < 1800:
+                while index < self.__alphaToRho_Table[i]:
+                    self.__rhoToAlpha_Table.append(i)
+                    index += 1
+                i += 1
+
+            while index < 3600:
+                self.__rhoToAlpha_Table.append(i)
+                index += 1
+          
+        <!-- def getCameraName(self):
+            return self.__cameraName
+
+        def getCameraFov(self):
+            return self.__cameraFov
+
+        def getIcx(self):
+            return self.__Icx
+
+        def getIcy(self):
+            if self.__Icy is not None:
+                return self.__Icy
+
+        def getImageWidth(self):
+            return self.__imageWidth
+
+        def getImageHeight(self):
+            return self.__imageHeight
+
+        def importMoildev(self):
+            self.__moildev = MoilCV.MoilCV(
+                self.__cameraName,
+                self.__sensor_width,
+                self.__sensor_height,
+                self.__Icx,
+                self.__Icy,
+                self.__ratio,
+                self.__imageWidth,
+                self.__imageHeight,
+                self.__calibrationRatio,
+                self.__parameter0,
+                self.__parameter1,
+                self.__parameter2,
+                self.__parameter3,
+                self.__parameter4,
+                self.__parameter5)
+            self.__map_x = np.zeros(
+                (self.__imageHeight,
+                self.__imageWidth),
+                dtype=np.float32)
+            self.__map_y = np.zeros(
+                (self.__imageHeight,
+                self.__imageWidth),
+                dtype=np.float32)
+            self.__res = self.__create_map_result_image()
+
+        def create_map_result_image(self):
+            size = self.__imageHeight, self.__imageWidth, 3
+            return np.zeros(size, dtype=np.uint8)
+
+        def getAnypointMaps(self, alpha, beta, zoom, mode=1):
+            if mode == 1:
+                if beta < 0:
+                    beta = beta + 360
+                if alpha < -90 or alpha > 90 or beta < 0 or beta > 360:
+                    alpha = 0
+                    beta = 0
+
+                else:
+                    alpha = -90 if alpha < -90 else alpha
+                    alpha = 90 if alpha > 90 else alpha
+                    beta = 0 if beta < 0 else beta
+                    beta = 360 if beta > 360 else beta
+                self.__moildev.AnyPointM(
+                    self.__map_x, self.__map_y, alpha, beta, zoom)
+
+            else:
+                if alpha < - 90 or alpha > 90 or beta < -90 or beta > 90:
+                    alpha = 0
+                    beta = 0
+
+                else:
+                    alpha = -90 if alpha < -90 else alpha
+                    alpha = 90 if alpha > 90 else alpha
+                    beta = -90 if beta < -90 else beta
+                    beta = 90 if beta > 90 else beta
+                self.__moildev.AnyPointM2(
+                    self.__map_x, self.__map_y, alpha, beta, zoom)
+            return self.__map_x, self.__map_y
+
+        def getPanoramaMaps(self, alpha_min, alpha_max):
+            self.__moildev.Panorama(
+                self.__map_x,
+                self.__map_y,
+                alpha_min,
+                alpha_max)
+            return self.__map_x, self.__map_y
+
+        def anypoint(self, image, alpha, beta, zoom, mode=1):
+            map_x, map_y = self.getAnypointMaps(alpha, beta, zoom, mode)
+            image = cv2.remap(image, map_x, map_y, cv2.INTER_CUBIC)
+            return image
+
+        def panorama(self, image, alpha_min, alpha_max):
+            map_x, map_y = self.getPanoramaMaps(alpha_min, alpha_max)
+            image = cv2.remap(image, map_x, map_y, cv2.INTER_CUBIC)
+            return image
+
+        def PanoramaM_Rt(self, alpha_max, alpha, beta):
+            self.__moildev.PanoramaM_Rt(
+                self.__map_x, self.__map_y, alpha_max, alpha, beta)
+            return self.__map_x, self.__map_y
+
+        def reverseImage(self, image, alpha_max, alpha, beta):
+            self.__moildev.PanoramaM_Rt(
+                self.__map_x, self.__map_y, alpha_max, alpha, beta)
+            result = cv2.remap(image, self.__map_x, self.__map_y, cv2.INTER_CUBIC)
+            self.__moildev.revPanorama(result, self.__res, alpha_max, beta)
+            return self.__res
+
+        def getAlphaFromRho(self, rho):
+            if rho >= 0:
+                return self.__rhoToAlpha_Table[rho] / 10
+            else:
+                return -self.__rhoToAlpha_Table[-rho] / 10
+
+        def getRhoFromAlpha(self, alpha):
+            return self.__alphaToRho_Table[round(alpha * 10)]
+
+        def getAlphaBeta(self, coordinateX, coordinateY, mode=1):
+            delta_x = coordinateX - self.__Icx
+            delta_y = -(coordinateY - self.__Icy)
+            if mode == 1:
+                r = round(math.sqrt(math.pow(delta_x, 2) + math.pow(delta_y, 2)))
+                alpha = self.getAlphaFromRho(r)
+                if coordinateX == self.__Icy:
+                    angle = 0
+                else:
+                    angle = (math.atan2(delta_y, delta_x) * 180) / math.pi
+                beta = 90 - angle
+            else:
+                alpha = self.getAlphaFromRho(delta_y)
+                beta = self.getAlphaFromRho(delta_x)
+            return alpha, beta                                         -->
+        
+</span></span>
+
+  <span class="k">print</span><span class="n">success</span><span class="o">.</span><span class="n">MOILDEV-SDK</span>
+  </code></pre>
+  <dl class="class">
+  <dt id="moildev.Moildev">
+  <em class="property">class </em><code class="descclassname">moildev.</code><code class="descname">Moildev</code><span class="sig-paren">(</span><em>file_camera_parameter=None</em>, <em>camera_type=None</em>, <em>**kwarg</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt>
+  <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+  <dl class="method">
+  <dt id="moildev.Moildev.PanoramaM_Rt">
+  <code class="descname">PanoramaM_Rt</code><span class="sig-paren">(</span><em>alpha_max</em>, <em>alpha</em>, <em>beta</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.PanoramaM_Rt" title="Permalink to this definition">¶</a></dt>
+  <dd><p>To generate a pair of X-Y Maps for alpha within 0..alpha_max degree, the result X-Y Maps can be used later
+  to generate a panorama</p> 
+  <p>from the original fisheye image. The panorama image centered at the 3D
+    direction with alpha = iC_alpha_degree and beta = iC_beta_degree.</p> 
+  <dl class="docutils">
+  <dt>Args:</dt>
+  <!-- <dd><dl class="first docutils">
+  <dt>. alpha_max <span class="classifier-delimiter">:</span> <span class="classifier">max of alpha. The recommended value is half of camera FOV. For example, use</span></dt>
+  <dd>90 for a 180 degree fisheye images and use 110 for a 220 degree fisheye images.</dd>
+  </dl> -->
+  <p class="last">. alpha : alpha angle of panorama center.
+  . beta : beta angle of panorama center.</p>
+  </dd>
+  <dt>Returns:</dt>
+  <dd>New mapX and mapY.</dd>
+  <dt>Examples:</dt>
+  <dd>please reference: <a class="reference external" href="https://github.com/MoilOrg/moildev">https://github.com/MoilOrg/moildev</a></dd>
+  </dl>
+  </dd></dl>  
+  <dl class="method">
+  <dt id="moildev.Moildev.anypoint">
+  <code class="descname">anypoint</code><span class="sig-paren">(</span><em>image</em>, <em>alpha</em>, <em>beta</em>, <em>zoom</em>, <em>mode=1</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.anypoint" title="Permalink to this definition">¶</a></dt>
+  <dd><p>Generate anypoint view image. for mode 1, the result rotation is betaOffset degree rotation around the
+  Z-axis(roll) after alphaOffset degree </p>
+  <p>around the X-axis(pitch). for mode 2, The result rotation is thetaY degree rotation around the Y-axis(yaw) after thetaX degree rotation around the X-axis(pitch).</p> 
+  <dl class="docutils">
+  <dt>Args:</dt>
+  <dd>image (): source image given
+  alpha (): the alpha offset that corespondent to the pitch rotation
+  <p>(): the beta offset that corespondent to the yaw rotation</p> 
+  <p>(): decimal zoom factor, normally 1..12</p> 
+  mode (): the mode view selected</dd>
+  <dt>Returns:</dt>
+  <dd>anypoint image</dd>
+  <dt>Examples:</dt>
+  <dd>please reference: <a class="reference external" href="https://github.com/MoilOrg/moildev">https://github.com/MoilOrg/moildev</a></dd>
+  </dl>
+  </dd></dl>
+    
+  <dl class="method">
+  <dt id="moildev.Moildev.create_map_result_image">
+  <code class="descname">create_map_result_image</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.create_map_result_image" title="Permalink to this definition">¶</a></dt>
+  <dd><p>Create Maps image from zeroes matrix for result image.</p>
+  <dl class="docutils">
+  <dt>Returns:</dt>
+  <dd>Zeroes matrix same size with original image to stored data from result image.</dd>
+  </dl>
+  </dd></dl>
+    
+  <dl class="method">
+  <dt id="moildev.Moildev.getAlphaBeta">
+  <code class="descname">getAlphaBeta</code><span class="sig-paren">(</span><em>coordinateX</em>, <em>coordinateY</em>, <em>mode=1</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getAlphaBeta" title="Permalink to this definition">¶</a></dt>
+  <dd><p>Get the alpha beta from specific coordinate image.</p>
+  <dl class="docutils">
+  <dt>Args:</dt>
+  <dd>coordinateX:
+  coordinateY:
+  mode:</dd>
+  <dt>Returns:</dt>
+  <dd>alpha, beta</dd>
+  <dt>Examples:</dt>
+  <dd>please reference: <a class="reference external" href="https://github.com/MoilOrg/moildev">https://github.com/MoilOrg/moildev</a></dd>
+  </dl>
+  </dd></dl>
+    
+  <!-- <dl class="method">
+  <dt id="moildev.Moildev.getAlphaFromRho">
+  <code class="descname">getAlphaFromRho</code><span class="sig-paren">(</span><em>rho</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getAlphaFromRho" title="Permalink to this definition">¶</a></dt>
+  <dd><p>Get the alpha from rho image.
+  Args:</p>
+  <blockquote>
+  <div>rho: the value of rho given</div></blockquote>
+  <dl class="docutils">
+  <dt>Returns:</dt>
+  <dd>alpha</dd>
+  </dl>
+  </dd></dl> -->
+    
+  <dl class="method">
+  <dt id="moildev.Moildev.getAnypointMaps">
+  <code class="descname">getAnypointMaps</code><span class="sig-paren">(</span><em>alpha</em>, <em>beta</em>, <em>zoom</em>, <em>mode=1</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getAnypointMaps" title="Permalink to this definition">¶</a></dt>
+  <dd><p>The purpose is to generate a pair of X-Y Maps for the specified alpha, beta and zoom parameters,
+  the result X-Y Maps can be used later to remap the original fisheye image to the target angle image.</p>
+  <dl class="docutils">
+  <dt>Args:</dt>
+  <dd>alpha (): value of zenithal distance(float).
+  beta (): value of azimuthal distance based on cartography system(float)
+  zoom (): value of zoom(float)
+  mode (): selection anypoint mode(1 or 2)</dd>
+  <dt>Returns:</dt>
+  <dd>mapX: the mapping matrices X
+  mapY: the mapping matrices Y</dd>
+  <dt>Examples:</dt>
+  <dd>please reference: <a class="reference external" href="https://github.com/MoilOrg/moildev">https://github.com/MoilOrg/moildev</a></dd>
+  </dl>
+  </dd></dl>
+    
+  <dl class="method">
+  <dt id="moildev.Moildev.getCameraFov">
+  <code class="descname">getCameraFov</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getCameraFov" title="Permalink to this definition">¶</a></dt>
+  <dd><p>Get Field of View Camera.</p>
+  <dl class="docutils">
+  <dt>Returns:</dt>
+  <dd>FoV camera (int)</dd>
+  </dl>
+  </dd></dl>
+    
+  <dl class="method">
+  <dt id="moildev.Moildev.getCameraName">
+  <code class="descname">getCameraName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getCameraName" title="Permalink to this definition">¶</a></dt>
+  <dd><p>Get camera name.</p>
+  <dl class="docutils">
+  <dt>Returns:</dt>
+  <dd>Camera name (string)</dd>
+  </dl>
+  </dd></dl>
+    
+  <dl class="method">
+  <dt id="moildev.Moildev.getIcx">
+  <code class="descname">getIcx</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getIcx" title="Permalink to this definition">¶</a></dt>
+  <dd><p>Get center image from width image.</p>
+  <dl class="docutils">
+  <dt>Returns:</dt>
+  <dd>Image center X (int)</dd>
+  </dl>
+  </dd></dl>
+    
+  <dl class="method">
+  <dt id="moildev.Moildev.getIcy">
+  <code class="descname">getIcy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getIcy" title="Permalink to this definition">¶</a></dt>
+  <dd><p>Get center image from height image.</p>
+  <dl class="docutils">
+  <dt>Returns:</dt>
+  <dd>Image center Y(int)</dd>
+  </dl>
+  </dd></dl>
+    
+  <dl class="method">
+  <dt id="moildev.Moildev.getImageHeight">
+  <code class="descname">getImageHeight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getImageHeight" title="Permalink to this definition">¶</a></dt>
+  <dd><p>Get the size height of the image.</p>
+  <dl class="docutils">
+  <dt>Returns:</dt>
+  <dd>image height(int)</dd>
+  </dl>
+  </dd></dl>
+    
+  <dl class="method">
+  <dt id="moildev.Moildev.getImageWidth">
+  <code class="descname">getImageWidth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getImageWidth" title="Permalink to this definition">¶</a></dt>
+  <dd><p>Get the size width of the image.</p>
+  <dl class="docutils">
+  <dt>Returns:</dt>
+  <dd>image width(int)</dd>
+  </dl>
+  </dd></dl>
+    
+  <dl class="method">
+  <dt id="moildev.Moildev.getPanoramaMaps">
+  <code class="descname">getPanoramaMaps</code><span class="sig-paren">(</span><em>alpha_min</em>, <em>alpha_max</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getPanoramaMaps" title="Permalink to this definition">¶</a></dt>
+  <dd><p>To generate a pair of X-Y Maps for alpha within 0 … alpha_max degree, the result X-Y Maps can be used later
+  to generate a panorama image from the original fisheye image.</p>
+  <dl class="docutils">
+  <dt>Args:</dt>
+  <!-- <dd><p class="first">alpha_min (): the minimum alpha degree given
+  alpha_max (): the maximum alpha degree given. The recommended value is half of camera FOV. For example, use</p>
+  <blockquote class="last">
+  <div>90 for a 180 degree fisheye images and use 110 for a 220 degree fisheye images.</div></blockquote>
+  </dd> -->
+  <dt>Returns:</dt>
+  <dd>mapX: the mapping matrices X
+  mapY: the mapping matrices Y</dd>
+  <dt>Examples:</dt>
+  <dd>please reference: <a class="reference external" href="https://github.com/MoilOrg/moildev">https://github.com/MoilOrg/moildev</a></dd>
+  </dl>
+  </dd></dl>
+    
+  <dl class="method">
+  <dt id="moildev.Moildev.getRhoFromAlpha">
+  <code class="descname">getRhoFromAlpha</code><span class="sig-paren">(</span><em>alpha</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getRhoFromAlpha" title="Permalink to this definition">¶</a></dt>
+  <dd><p>Get rho image from alpha given.</p>
+  <dl class="docutils">
+  <dt>Args:</dt>
+  <dd>alpha: the value of alpha given</dd>
+  <dt>Returns:</dt>
+  <dd>rho image</dd>
+  </dl>
+  </dd></dl>
+    
+  <dl class="method">
+  <dt id="moildev.Moildev.importMoildev">
+  <code class="descname">importMoildev</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.importMoildev" title="Permalink to this definition">¶</a></dt>
+  <dd><p>Create moildev instance from Moildev SDK share object library.</p>
+  <dl class="docutils">
+  <dt>Returns:</dt>
+  <dd>Moildev object (private attribute for this class)</dd>
+  </dl>
+  </dd></dl>
+    
+  <dl class="method">
+  <dt id="moildev.Moildev.initAlphaRho_Table">
+  <code class="descname">initAlphaRho_Table</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.initAlphaRho_Table" title="Permalink to this definition">¶</a></dt>
+  <dd><p>Create list for initial alpha to rho(height image).</p>
+  <dl class="docutils">
+  <dt>Returns:</dt>
+  <dd>Initial alpha and rho table.</dd>
+  </dl>
+  </dd></dl>
+    
+  <dl class="method">
+  <dt id="moildev.Moildev.panorama">
+  <code class="descname">panorama</code><span class="sig-paren">(</span><em>image</em>, <em>alpha_min</em>, <em>alpha_max</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.panorama" title="Permalink to this definition">¶</a></dt>
+  <dd><p>The panorama image centered at the 3D direction with alpha = iC_alpha_degree and beta = iC_beta_degree.</p>
+  <dl class="docutils">
+  <dt>Args:</dt>
+  <dd>image: image source given
+  alpha_min:
+  alpha_max:</dd>
+  <dt>Returns:</dt>
+  <dd>Panorama view image</dd>
+  <dt>Examples:</dt>
+  <dd>please reference: <a class="reference external" href="https://github.com/MoilOrg/moildev">https://github.com/MoilOrg/moildev</a></dd>
+  </dl>
+  </dd></dl>
+    
+  <dl class="method">
+  <dt id="moildev.Moildev.reverseImage">
+  <code class="descname">reverseImage</code><span class="sig-paren">(</span><em>image</em>, <em>alpha_max</em>, <em>alpha</em>, <em>beta</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.reverseImage" title="Permalink to this definition">¶</a></dt>
+  <dd><p>To generate the image reverse image from panorama that can change the focus direction from the original
+  images. The panorama reverse image centered at the 3D direction with alpha_max = max of alpha and beta =
+  iC_beta_degree.</p>
+  <dl class="docutils">
+  <dt>Args:</dt>
+  <!-- <dd><p class="first">image: source image given
+  alpha_max: the value of alpha_max. is half of camera FOV. For example, use</p>
+  <blockquote>
+  <div>90 for a 180 degree fisheye images and use 110 for a 220 degree fisheye images.</div></blockquote>
+  <p class="last">alpha: the value of alpha degree
+  beta: the value of alpha degree</p>
+  </dd> -->
+  <dt>Returns:</dt>
+  <dd>the reverse image</dd>
+  <dt>Examples:</dt>
+  <dd>please reference: <a class="reference external" href="https://github.com/MoilOrg/moildev">https://github.com/MoilOrg/moildev</a></dd>
+  </dl>
+  </dd></dl>
+    
+  <dl class="method">
+  <dt id="moildev.Moildev.setCameraParameter">
+  <code class="descname">setCameraParameter</code><span class="sig-paren">(</span><em>parameter</em>, <em>cameraType</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.setCameraParameter" title="Permalink to this definition">¶</a></dt>
+  <dd><p>Set up the configuration of the camera parameter
+  Args:</p>
+  <!-- <blockquote>
+  <div>parameter (): the <a href="#id1"><span class="problematic" id="id2">*</span></a>.json file
+  cameraType (): type of the camera</div></blockquote> -->
+  <dl class="docutils">
+  <dt>Returns:</dt>
+  <dd>None</dd>
+  </dl>
+  </dd></dl>
+    
+  <dl class="classmethod">
+  <dt id="moildev.Moildev.version">
+  <em class="property">classmethod </em><code class="descname">version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.version" title="Permalink to this definition">¶</a></dt>
+  <dd><p>Showing the version of the library and the new feature updated.</p>
+  <dl class="docutils">
+  <dt>Returns:</dt>
+  <dd>Moildev version</dd>
+  </dl>
+  </dd></dl>  
+  </dd></dl>
+    
+  </div>
+
+<!-- <h1 id='introduction'>Fisheye lens technology</h1><pre class="highlight cpp tab-cpp"><code><span class="c1">//get the version of MSCL (MSCL_VERSION.majorPart(), .minorPart(), and .patchPart() are also available)   
+</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">mscl</span><span class="o">::</span><span class="n">MSCL_VERSION</span><span class="p">.</span><span class="n">str</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</code></pre><pre class="highlight csharp tab-csharp"><code><span class="c1">//get the version of MSCL (MSCL_VERSION.majorPart(), .minorPart(), and .patchPart() are also available)</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">mscl</span><span class="p">.</span><span class="n">MSCL_VERSION</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="c"># get the version of MSCL (MSCL_VERSION.majorPart(), .minorPart(), and .patchPart() are also available)</span>
+<span class="k">print</span> <span class="n">mscl</span><span class="o">.</span><span class="n">MSCL_VERSION</span>
+</code></pre> -->
+
+<!-- Here
+
+here -->
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <!-- <a href="#" data-language-name="cpp">C++</a>
+                <a href="#" data-language-name="csharp">C#</a> -->
+                <a href="#" data-language-name="python">Python</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

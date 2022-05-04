@@ -1,0 +1,7 @@
+moildev module
+==============
+
+.. automodule:: moildev
+    :members:
+    :undoc-members:
+    :show-inheritance:

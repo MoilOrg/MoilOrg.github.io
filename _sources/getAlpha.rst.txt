@@ -1,0 +1,7 @@
+getAlpha module
+===============
+
+.. automodule:: getAlpha
+    :members:
+    :undoc-members:
+    :show-inheritance:
