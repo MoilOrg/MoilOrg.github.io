@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moildev&mdash;library</title>
+  <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <style type="text/css">
+      body{
+        background: #eee;
+        padding-top: 20px;
+        /* font-family: monospace; */
+      }
+      .header{
+        border-radius: 20px 20px 0px 0px;
+        padding: 10px 0px;
+        background: #4988b3;
+        color: #fff;
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+      .faq-item{
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+      .faq-body{
+        display: none;
+        margin-top: 30px;
+      }
+      .faq-wrapper{
+        width: auto;
+        margin: 0 auto;
+      }
+      .faq-inner{
+        padding: 30px;
+        background: aliceblue;
+      }
+      .faq-plus{
+        float: right;
+        font-size: 1.4em;
+        line-height: 1em;
+        cursor: pointer;
+      }
+      hr{
+        background-color: #9b9b9b;
+      }
+    </style>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
+        <script type="text/javascript" src="static/jquery.js"></script>
+        <script type="text/javascript" src="static/underscore.js"></script>
+        <script type="text/javascript" src="static/doctools.js"></script>
+        <script type="text/javascript" src="static/language_data.js"></script>
+      <script type="text/javascript" src="static/js/theme.js"></script>
+
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="spamfilter module" href="source.html" />
+    <link rel="prev" title="spamfilter-py" href="moildev-function.html" /> 
+</head>
+<body class="wy-body-for-nav">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <!-- <a href="#" class="icon icon-home"> Moildev</a>
+            <h2>Version 3.1.0</h2>
+          </a> -->
+          <body><font face="Tahoma" size="6"> Moildev</font><br/> 
+            <font face="Tahoma" size="3"> Version 3.1.0</font><br/>
+            </body>
+          <br>
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">  
+            
+<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation"> 
+<!-- <p class="caption"><span class="caption-text">Documentation:</span></p> -->
+<ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="introduction.html">Introduction</a><ul class="current">
+  <!-- <li class="toctree-l2 current"><a class="current reference internal" href="introduction.html">What is Moildev?</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="moildev-library.html">Get starting with Moildev-Installation</a></li></ul> -->
+  </ul>
+</li>
+</ul>
+
+<ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="source.html">Moildev Library</a><ul class="current">
+  <!-- <li class="toctree-l2"><a class="reference internal" href="source.html">Panorama</a></li></ul> -->
+  <li class="toctree-l2 current"><a class="current reference internal" href="anypoint.html">Anypoint</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="panorama.html"> Panorama</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="reverse_view.html">Reverse View</a></li> 
+  </ul>
+</li>
+</ul>
+
+<ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="moildev-function.html">Application using Moildev</a><ul class="current">
+      <li class="toctree-l2 current"><a class="current reference internal" href="moilapp.html">MoilApp</a></li>
+      <li class="toctree-l2"><a class="reference internal" href="colonoscopy.html">Colonoscopy</a></li>
+      <li class="toctree-l2"><a class="reference internal" href="mms.html">Moil Monitoring System</a></li> 
+  </ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="moilfaqs.html">Moil FAQs</a><ul class="current">
+  <!-- <li class="toctree-l2"><a class="reference internal" href="source.html">Panorama</a></li></ul> -->
+  </ul>
+</li>
+</ul>
+
+<ul class="current">
+  <!-- <li class="toctree-l1 current"><a class="reference internal" href="source.html">Moildev Library</a><ul class="current"> -->
+  </ul>
+</li>
+</ul>
+
+<!-- <ul class="current"> 
+  <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Application</a><ul class="current"> 
+  <li class="toctree-l2 current"><a class="current reference internal" href="#">MoilApp</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="spamfilter.html">Visual Odometry</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="test_spamfilter.html">Surounding View's</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="token.html">Camera MOnitoring System</a></li> 
+   </ul> -->
+</li>
+</ul>               
+</div>
+</div>
+</nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" aria-label="top navigation">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MOILDEV-SDK</a>
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content">
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">Documentation</a> &raquo;</li>
+      <li>Moildev module</li>
+      <li class="wy-breadcrumbs-aside">
+      <a href="sources/moildev.rst.txt" rel="nofollow"> View page source</a> 
+      </li>
+  </ul>
+  <hr/>
+</div>
+      <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+       <div itemprop="articleBody">
+            
+
+<div class="section" id="module-moildev">
+<span id="moildev-module"></span><h1>Colonoscopy<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+<!-- <dl class="class">
+<dt id="moildev.Moildev">
+<em class="property">Code Examples to start prototyping quickly:</em><code class="descclassname">These simple examples demonstrate how to easily use the Library to include code snippets that process fisheye images.</code>Code wrote in python<code class="descname"></code><span class="sig-paren">(</span><em></em>, <em></em>, <em></em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
+<!-- <p>* What is MoilApp?</p> -->
+<p align="justify">&emsp; &emsp;  <a href="https://github.com/MoilOrg/MoilApp">Colorectal cancer,</a> 
+    also called CRC, is a significant public health problem in many countries. 
+    With a total of 1.096.601 new cases diagnosed worldwide and more than half ended in death during 2018 
+    caused CRC the fourth leading cause of cancer deaths [1]. The higher risk of developing colon cancer is for 
+    people over 50 years old and those who have had a previous colon cancer incidence in their family. The growth of 
+    glandular tissue in the colon mucosa, also known as an adenomatous polyp, causes most colon cancer instances. Mostly 
+    the polyps initially benign. Some of these will become malignant over time, eventually leading to death if not detected 
+    and treated appropriately. <br>
+    &emsp; &emsp;This study explores a state-of-the-art review of the current semi-automatic computational approaches for increasing the polyp's 
+    detection rate, estimating their polyp size, aiming to reduce the subjectivity while exploring the gastrointestinal tract. The method
+    uses the fisheye camera or wide-angle camera and processes it to generate a panoramic view to create a better perspective on the colonoscopy 
+    image and close to the common human visual perception. <br> 
+    &emsp; &emsp; The applied method of this study adapts Mask R-CNN [2], which will be used as a lumen 
+    detector in the colon image, where it has shown considerable progress accuracy in object detection and instance segmentation. The lumen detection 
+    will return the center coordinate of the lumen on the colon image.
+</p>
+
+<span id="moildev-module"></span><h1>Library used<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+<p>This session will explain in detail about the library used. </p>
+
+<b><p style=" margin: 10px 30px; padding: 5px;">a. Moildev </p></b>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp;Moildev Library is a collection of functions used to develop fisheye image applications. 
+    This library was developed by The MOIL Laboratory in Ming Chi University of Technology, Taiwan, under the guidance of professor Chuang-Jan Chang. Originally this 
+    library writes in C++ to take advantage of the computational speed provided by this programming language. Moildev library has several functions, such as Anypoint mode-1, 
+    Anypoint mode-2, and Panorama. Each function has its parameter and control by given zenithal angle and azimuthal angle to reach a specific region of interest.
+</p>
+<b><p style=" margin: 10px 30px; padding: 5px;">b. Mask R-CNN</p></b>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; <a href="https://pypi.org/project/opencv-python/">OpenCV stands</a> for Open-Source Computer Vision Library. It is a free and
+    The Mask R-CNN acts as a deep neural network and functions as a problem solver the instance segmentation in machine learning or computer vision. The instance segmentation is the task of detecting an 
+    object of interest in pixel-level that appearing in an image [7]. The instance segmentation model creates pixel-wise masks for objects in the image and provides a much more detailed understanding of 
+    the objects in the image. The Mask R-CNN technique originally is Faster R-CNN, then modified by adding another branch to predict masks for each RoI on the image. This additional branch is parallel to 
+    the existing branch for classification and bounding box regression, as shown on the Mask R-CNN method's framework in Figure 2.10. Two trainable subnetworks follow the Mask R-CNN method. The first network 
+    is a Region Proposal Network (RPN) used to generate object proposals, and the second network will classify the proposal to produce a bounding box and a binary mask for each object proposal or called the RoI. 
+    <br><center><img src="assets/f.png"></center>
+</p>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; In the main result, Mask R-CNN performs a thorough comparison with state of the art and 
+    comprehensive ablations on the COCO dataset. Table 2 compares Mask R-CNN result to the state of the art method the instance segmentation using the coco dataset. Mask R-CNN model outperforms baseline variants of 
+    all instantiations of the previous state-of-the-art models. In the table below, the winners of the COCO 2015 and 2016 segmentation challenges that include MNC and FCIS. 
+    <br><center><img src="assets/g.png"></center><br>
+</p>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; The Mask R-CNN with the backbone using ResNet-101-FPN also outperformed the base variant of all previous advanced models for object detection, 
+    including the single model variant G-RMI, the winner of the 2016 COCO Detection Challenge as shown in Table 3. 
+    <br><center><img src="assets/h.png"></center><br>
+</p>
+
+<span id="moildev-module"></span><h1>Purpose of research<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+<p align="justify" style=" margin: 10px 0px; padding: px;">&emsp; &emsp; 
+    The lumen is the inside space of a tubular biologic structure, such as the gastrointestinal tract of the human anatomy system and observation of the colonoscopy procedure carried out along the colon lumen. The lumen's center 
+    point is a reference point for reconstructing the original image's optical point as input to generate suitable panoramic view. R-CNN had provided the transfer learning model from the coco dataset and retrains this model using our own dataset. 
+    A dataset is a collection of data used during deep learning development. It consists of three different datasets: a training set, a validation set, and a test set. 
+    <br><center><img src="assets/g.png"></center><br>
+</p>
+
+<span id="moildev-module"></span><h1>Implementation<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+<p align="justify" style=" margin: 10px 30px; padding: px;" ><b>A. Create Mask R-CNN model for lumen center detection </b></p>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; This research aims to study the application of fisheye camera technology in colonoscopy devices and process the image to generate a better perspective 
+    image as a reference in detecting polyp and estimate their size during the colonoscopy procedure. 
+    <br><center><img src="assets/i.png"></center><br>
+</p>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; For the Mask R-CNN dataset, we have to annotate all the datasets. We annotate the lumen or hole in the colon image using the VGG annotator [4]. 
+    Figure 3.7 Showing the process to create a dataset from the video until getting the JSON file containing the image's information.  
+    <br><center><img src="assets/j.png"></center><br>
+</p>
+
+</p>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; ResNet101 is the backbone structure used for the Mask R-CNN model that serves as a feature detector. The objectives of the object detection model are classification and localization. 
+    We can evaluate the object detection model using the intersection over union (IoU) between the ground truth and the prediction bounding box. Figure 3.8 showing the IoU of the ground truth and the prediction bounding box.   
+    <br><center><img src="assets/k.png"></center><br>
+</p>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; The overlap ratio IoU between the ground truth bounding box (
+    Bgt) and the predicted bounding box (
+    Bp) must exceed 0.5 (50%). This value will be used as the threshold for considered correct detection. The equation to calculate the score of IoU following:    
+    <br><center><img src="assets/l.png"></center><br>
+</p>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; Where 
+    Bp ∩  Bgt represents the intersection of the predicted and ground truth bounding boxes, while 
+    Bp ∪ Bgt
+    is their union. The true positive category of object detection is if the score IoU reaches ≥ 
+    0.5, whereas the IoU score < 0.5 is a false detection and classify as False Positive (FP). When the 
+    model failed to detect an object in the image, it is a False Negative (FN). The part of the image where did not predict 
+    an object stands for True Negative (TN). Following the rule, calculate the Precision and Recall as the metric to evaluate 
+    the performance using the equation:     
+    <br><center><img src="assets/m.png"></center><br>
+</p>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; The precision-recall curve will evaluate the detector's performance.  However, 
+    to compare different detectors when the curves intersect is not easy. Therefore, the calculation of the area under the interpolated precision-recall 
+    curve can be used as a solution commonly known as the AP, which can be calculated by the following formula:     
+    <br><center><img src="assets/n.png"></center><br>
+</p>
+
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; Where 
+    Pinterp
+     is a method for reducing the wiggles' impact in a curve precision vs. recall. The highest precision found for any recall level 
+    r′≥r
+     , is the interpolated precision 
+    Pinterp
+     at a certain recall level 
+    r
+     that can be calculated by the equation:      
+    <br><center><img src="assets/o.png"></center><br>
+</p>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; fter evaluating the model, then use it to predict the lumen center 
+    in the colon image. In this research, the coordinate of lumen center is the destination result. To get the center of the lumen colon, we use a 
+    bounding box from the prediction results. The bounding box generated by Mask R-CNN is expressed by 
+    (x1, y1, x2, y2)
+     where 
+    x1, y1
+     is the first point, and 
+    x2, y2
+     
+     is the second point to create the rectangle. The midpoint of the rectangle is the center coordinate of the prediction lumen colon, which can be calculated by the equations:      
+    <br><center><img src="assets/p.png"></center><br>
+</p>
+
+<p align="justify" style=" margin: 10px 30px; padding: px;" ><b>B. Panoramic view  </b></p>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; The camera has a wide-angle FOVs lens is an ideal candidate for generating the panoramic view. The panoramic 
+    view may present a horizontal view in a specific immersed environment to meet the common human visual perception. In generating a panoramic view from a fisheye camera, the intensity 
+    of the imaged point (u,v) is mapped to the small sphere and coded as (α,β) as displayed in Figure 3.12. A gnomonic cylinder projection will project a part of the global image onto the 
+    cylinder surface based on a cartographic projection. The radial image segment on the hemisphere will be displayed as straight lines if the cylindrical surface is tangent to the equator. 
+    A panoramic view is accomplished by unfolding the cylindrical projection surface into a rectangular plane.      
+    <br><center><img src="assets/q.png"></center><br>
+
+<p align="justify" style=" margin: 10px 30px; padding: px;" ><b>C. User interface design  </b></p>
+    <p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; The design of user interface can be seen on the figure bellow this.       
+        <br><center><img src="assets/r.png"></center><br>
+
+
+<span id="moildev-module"></span><h1>Result <a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+<p align="justify" style=" margin: 10px 1px; padding: 5px;">&emsp; &emsp; From the training phase, the comparison between the Loss training and validation for every epoch is displayed on 
+    learning curve that can be seen in Figure 4.1. A loss function quantifies how good or bad a given predictor is at classifying the input data in a dataset. The smaller the loss, the better a 
+    job the classifier is at modeling the relationship between the input data and the output targets. In Mask R-CNN the loss function is obtained from the combination of the loss of classification, 
+    localization, and segmentation Mask. Following the learning curve for training loss, it showing improvement and similarly with a learning curve for validation loss that has improvement, but a large 
+    gap remains between both curves. This shows that the dataset has problems, the training dataset does not provide sufficient information to learn the problem very precisely. It also occurs when the training 
+    dataset has too few instances compared to the validation dataset.      
+    <br><center><img src="assets/s.png"></center>
+    <p align="justify" style=" margin: 10px 1px; padding: 5px;">&emsp; &emsp; From the training results, we can select the best model obtained. The best model is the lowest score of loss from the history of the 
+        training phase will be saved into Hierarchical Data Format (HDF) 5 files, which include model weight, model architecture, model compilation details (loss & metrics), and model optimizer state where has Extension (.h5)         
+    <br><center><img src="assets/t.png"></center><br><center><img src="assets/u.png"></center><br> 
+<p align="justify" style=" margin: 10px 1px; padding: 5px;">&emsp; &emsp; As described in section 3.4, a panoramic view is achieved by unfolding the cylindrical projection surface into a rectangular plane to meet the common human visual perception. 
+    The image with tshe position optical axis not in the center lumen will produce a poor panoramic view.         
+    <br><center><img src="assets/v.png"></center><br>
+    <p align="justify" style=" margin: 10px 1px; padding: 5px;">&emsp; &emsp; We have to improve the input image by re-centering the optical axis on the original image to the center of the lumen. Additionally, the center of the lumen is obtained 
+        from the prediction using the Mask R-CNN method.          
+        <br><center><img src="assets/w.png"></center><br>   
+<p align="justify" style=" margin: 10px 1px; padding: 5px;">&emsp; &emsp; The picture bellow shows some example results in generating a panoramic view from the original image, the panoramic view before transforming the optical axis image, center detection, 
+    re-center image, and the result of the ideal panoramic view         
+    <br><center><img src="assets/x.png"></center><center><img src="assets/y.png"></center><br> 
+
+<span id="moildev-module"></span><h1>Conclusion <a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+<p align="justify" style=" margin: 10px 1px; padding: 5px;">&emsp; &emsp; This project aims to process the colonoscopy image to increase the polyp's detection rate, estimate their polyp size, and reduce the subjectivity 
+    while exploring the gastrointestinal tract. We proposed a new method called a panoramic view for displaying a colonoscopy image. A panoramic view is achieved by unfolding a cylindrical projection surface into a rectangular plane. 
+    To get an ideal panoramic view from a colonoscopy image, we have to put the optical axis camera in the lumen colon center. Thus, the reconstruction of the optical axis of the image is essential. All operations use the Moildev library, which is a native library developed in the MOIL lab. <br>
+
+    &emsp; &emsp; To reconstruct the optical axis image in the lumen center   colon, we have to detect the lumen colon and return the center coordinates. We adopt the Mask R-CNN object detection technology connected to Resnet101 as the backbone. This model generating AP score with a threshold value 0.5 is 0.82(82%), 
+    a threshold 0.75 is 0.65 (65%), and a threshold > 0.9 is 0.23(23%). This model is sufficient to predict the central lumen coordinates as a reference for reconstructing the optical axis of an image. <br>
+    &emsp; &emsp; The proposed method has shown promising results by offering a colon image in a rectangular plane and close to common human visual perception makes it easier to detect the polyps and correctly estimate their size. This result can display the object's size with a similar perspective as the original 
+    without being affected by the distortion and the object's distance to the camera. <br>
+    You can be running this project through MoilApp plugin apps call colonoscopy, before you run you have to setting the environment needed. You can download or clone MoilApp form this GitHub repository <a href="https://github.com/MoilOrg/MoilApp/">https://github.com/MoilOrg/MoilApp</a>           
+    <br><br>    
+
+<dl class="docutils">
+</div>
+           </div>
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="mms.html" class="btn btn-neutral float-right" title="spamfilter module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="moildev-function.html" class="btn btn-neutral float-left" title="spamfilter-py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Moil.
+    </p>
+  </div>
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+    </section>
+</div> 
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+</body>
+</html>
