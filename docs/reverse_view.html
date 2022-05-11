@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moildev&mdash;library</title>
+  <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <style type="text/css">
+      body{
+        background: #eee;
+        padding-top: 20px;
+        /* font-family: monospace; */
+      }
+      .header{
+        border-radius: 20px 20px 0px 0px;
+        padding: 10px 0px;
+        background: #4988b3;
+        color: #fff;
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+      .faq-item{
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+      .faq-body{
+        display: none;
+        margin-top: 30px;
+      }
+      .faq-wrapper{
+        width: 100%;
+        margin: 0 auto;
+      }
+      .faq-inner{
+        padding: 30px;
+        background: aliceblue;
+      }
+      .faq-plus{
+        float: right;
+        font-size: 1.4em;
+        line-height: 1em;
+        cursor: pointer;
+      }
+      hr{
+        background-color: #9b9b9b;
+      }
+    </style>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
+        <script type="text/javascript" src="static/jquery.js"></script>
+        <script type="text/javascript" src="static/underscore.js"></script>
+        <script type="text/javascript" src="static/doctools.js"></script>
+        <script type="text/javascript" src="static/language_data.js"></script>
+      <script type="text/javascript" src="static/js/theme.js"></script>
+
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="spamfilter module" href="application.html" />
+    <link rel="prev" title="spamfilter-py" href="introduction.html" /> 
+</head>
+<body class="wy-body-for-nav">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <!-- <a href="#" class="icon icon-home"> Moildev</a>
+            <h2>Version 3.1.0</h2>
+          </a> -->
+          <body><font size="6"> Moildev</font><br/> 
+            <font size="3"> Version 3.1.0</font><br/>
+            </body>
+          <br>
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">  
+            
+<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation"> 
+<!-- <p class="caption"><span class="caption-text">Documentation:</span></p> -->
+<ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="introduction.html">Introduction</a><ul class="current">
+  <!-- <li class="toctree-l2 current"><a class="current reference internal" href="introduction.html">What is Moildev?</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="moildev-library.html">Get starting with Moildev-Installation</a></li></ul> -->
+  </ul>
+</li>
+</ul>
+
+<ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="moildev-function.html">Moildev Library</a><ul class="current">
+  <!-- <li class="toctree-l2"><a class="reference internal" href="source.html">Panorama</a></li></ul> -->
+  <li class="toctree-l2 current"><a class="current reference internal" href="anypoint.html">Anypoint</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="panorama.html"> Panorama</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="reverse_view.html">Reverse View</a></li> 
+  </ul>
+</li>
+</ul>
+
+<ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="moildev-function.html">Application using Moildev</a><ul class="current">
+    <li class="toctree-l2 current"><a class="current reference internal" href="moilapp.html">MoilApp</a></li>
+    <li class="toctree-l2"><a class="reference internal" href="measurement.html"> 3D Measurement</a></li>
+    <li class="toctree-l2"><a class="reference internal" href="mms.html">Moil Monitoring System</a></li> 
+  </ul>
+</li>
+</ul>
+
+<ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="moilfaqs.html">Moil FAQs</a><ul class="current">
+  <!-- <li class="toctree-l2"><a class="reference internal" href="source.html">Panorama</a></li></ul> -->
+  </ul>
+</li>
+</ul>
+
+<ul class="current">
+  <!-- <li class="toctree-l1 current"><a class="reference internal" href="source.html">Moildev Library</a><ul class="current"> -->
+  </ul>
+</li>
+</ul>
+
+<!-- <ul class="current"> -->
+  <!-- <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Application</a><ul class="current"> -->
+  <!-- <li class="toctree-l2 current"><a class="current reference internal" href="#">MoilApp</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="spamfilter.html">Visual Odometry</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="test_spamfilter.html">Surounding View's</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="token.html">Camera MOnitoring System</a></li> -->
+  <!-- </ul> -->
+</li>
+</ul>               
+</div>
+</div>
+</nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" aria-label="top navigation">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MOILDEV-SDK</a>
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content">
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">Documentation</a> &raquo;</li>
+      <li>Moildev module</li>
+      <li class="wy-breadcrumbs-aside">
+      <a href="sources/moildev.rst.txt" rel="nofollow"> View page source</a> 
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div class="section" id="module-moildev">
+          <span id="moildev-module"></span><h1>Reverse View Example Code<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+          <!-- <dl class="class">
+          <dt id="moildev.Moildev">
+          <em class="property">Code Examples to start prototyping quickly:</em><code class="descclassname">These simple examples demonstrate how to easily use the Library to include code snippets that process fisheye images.</code>Code wrote in python<code class="descname"></code><span class="sig-paren">(</span><em></em>, <em></em>, <em></em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
+          <code class="xref py py-class docutils literal notranslate"><span class="pre">Overvivew</span></code><br><br>
+          <p align="justify"><a href="https://github.com/MoilOrg/moildev/tree/main/examples/Reverse_view">This example</a> 
+            demonstrated how to generate image with new center optical point.</p> 
+          <code class="xref py py-class docutils literal notranslate"><span class="pre">Variable</span></code><br><br>
+          <div style="border: 1px solid #CCC; margin: 5px 1px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+            - image = The original fisheye image<br>
+            - alpha_max = max of alpha. The recommended value is half of camera FOV<br>
+            - alpha = the value of alpha<br>
+            - beta = the value of alpha<br></i>
+          </div><br>
+          <h1 align="justify">Example Code</h1>  
+          <h3 align="justify">1 Reverse view</h3>  
+          <center><div style="border: 1px #1c1d1c solid; margin: 5px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 30px; width: auto; text-align: left;">
+            >>> reverse = moildev.panorama(image, alpha_max, alpha, beta)<br>
+          </div></center>
+          <h3 align="justify">Purpose:</h3>
+          <p align="justify">This function was used for transforming the fisheye image to change the optical point without manipulating the camera head.</p>
+          <h3 align="justify">Parameter::</h3>
+          <div style="border: 1px solid #CCC; margin: 5px 5px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+            - image = The original fisheye image<br>
+            - alpha_max = max of alpha. The recommended value is half of camera FOV.<br>
+            - beta = the value of alpha.<br>
+            - See <a href="https://github.com/MoilOrg/moildev/tree/main/examples/Reverse_view">example</a><br></i>
+          </div><br>
+          <h3 align="justify">2. Code Overview</h3>  
+          <p align="justify">First, import and create object of moildev library</p>
+          <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 130px; width: auto; text-align: left;">
+            # import library<br><br>
+            import cv2<br><br>
+            from Moildev import Moildev<br><br>
+
+            # create object of Moildev<br>
+            moildev = Moildev("../Raspi_Cam.json")  # select parameter file (.json)<br><br>
+          </div></center><br>
+          <p align="justify">Create specified variable</p>
+          <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 130px; width: auto; text-align: left;">
+            # create specified variable value of alpha beta zoom and mode<br><br>
+            alpha = 110<br><br>
+            alpha = 30<br><br>
+            beta = 30<br><br>
+          </div></center><br>
+          <p align="justify">Read image from directory</p>
+          <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 70px; width: auto; text-align: left;">
+            # read image from directory using opencv<br><br>
+            image = cv2.imread("../image.jpg")<br><br>
+          </div></center><br>
+          <p align="justify">Create reverse image</p>
+          <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 70px; width: auto; text-align: left;">
+            # create reverse image<br><br>
+            reverse_image = moildev.reverseImage(image, alpha_max, alpha, beta)  # fill the variable<br><br>
+          </div></center><br>
+          <p align="justify">Save image using opencv cv2.imwrite</p>
+          <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 70px; width: auto; text-align: left;">
+            # save reverse image<br><br>
+            cv2.imwrite("reverse_image.jpg", reverse_image)<br><br>
+          </div></center><br>
+
+
+        <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+            <a href="moilapp.html" class="btn btn-neutral float-right" title="spamfilter module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+            <a href="introduction.html" class="btn btn-neutral float-left" title="spamfilter-py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        </div>
+          
+          <dl class="docutils">
+          </div>
+            <div role="contentinfo">
+              <p>
+                  &#169; Copyright 2022, Moil.
+              </p>
+            </div>
+              
+              Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a         
+              <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>         
+              provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+          
+          </footer>
+                  </div>
+                </div>
+          <div class="dark-box">
+              <div class="lang-selector">
+                    <!-- <a href="#" data-language-name="cpp">C++</a>
+                    <a href="#" data-language-name="csharp">C#</a> -->
+                    <a href="#" data-language-name="python">Python</a>
+              </div>
+          </div>
+    </div>
+    </section>
+  </div>
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

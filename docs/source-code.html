@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title> M</title>
+    <title>Moildev&mdash;library</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -117,7 +117,8 @@
             <li><a href='http://www.lord.com/'>lord.com</a></li>
         </ul> -->
     </div>
-    <div class="page-wrapper">
+    
+<div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
       <h1 id='introduction'>Moildev-SDK Module</h1><pre class="highlight cpp tab-cpp"><code><span class="c1">//get the version of MSCL (MSCL_VERSION.majorPart(), .minorPart(), and .patchPart() are also available)   
@@ -478,7 +479,6 @@
                 beta = self.getAlphaFromRho(delta_x)
             return alpha, beta                                         -->
         
-</span></span>
 
   <span class="k">print</span><span class="n">success</span><span class="o">.</span><span class="n">MOILDEV-SDK</span>
   </code></pre>
@@ -775,6 +775,378 @@
 
 here -->
       </div>
+
+
+
+
+<div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+
+
+  <!-- <span id="moildev-module"></span><h1>Moildev-SDK Module<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1> --> 
+  <!-- </code></pre><pre class="highlight csharp tab-csharp"><code><span class="c1">//get the version of MSCL (MSCL_VERSION.majorPart(), .minorPart(), and .patchPart() are also available)</span> -->
+  <!-- <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">mscl</span><span class="p">.</span><span class="n">MSCL_VERSION</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span> -->
+  </code></pre><pre class="highlight python tab-python"><code><span class="c"># get the version of MSCL (MSCL_VERSION.majorPart(), .minorPart(), and .patchPart() are also available)</span>
+  <span class="k">
+    class Moildev(object):
+        def __init__(self, file_camera_parameter=None, camera_type=None, **kwarg):
+          
+            super(Moildev, self).__init__()
+            self.__alphaToRho_Table = []
+            self.__rhoToAlpha_Table = []
+  
+            self.__cameraName = None
+            self.__cameraFov = None
+            self.__sensor_width = None
+            self.__sensor_height = None
+            self.__Icx = None
+            self.__Icy = None
+            self.__ratio = None
+            self.__imageWidth = None
+            self.__imageHeight = None
+            self.__calibrationRatio = None
+            self.__parameter0 = None
+            self.__parameter1 = None
+            self.__parameter2 = None
+            self.__parameter3 = None
+            self.__parameter4 = None
+            self.__parameter5 = None
+
+            if file_camera_parameter is None:
+                if kwarg == {}:
+                    print("Pass the argument with camera parameter file with json extension (*.json) "
+                          "Or Given list of Parameter,\nsee detail documentation here https://github.com/MoilOrg/moildev")
+
+                else:
+                    for key, value in kwarg.items():
+                        if key == "cameraName":
+                            self.__cameraName = value
+                        elif key == "cameraFov":
+                            self.__cameraFov = value
+                        elif key == "sensorWidth":
+                            self.__sensor_width = value
+                        elif key == "sensorHeight":
+                            self.__sensor_height = value
+                        elif key == "icx":
+                            self.__Icx = value
+                        elif key == "icy":
+                            self.__Icy = value
+                        elif key == "ratio":
+                            self.__ratio = value
+                        elif key == "imageWidth":
+                            self.__imageWidth = value
+                        elif key == "imageHeight":
+                            self.__imageHeight = value
+                        elif key == "calibrationRatio":
+                            self.__calibrationRatio = value
+                        elif key == "parameter0":
+                            self.__parameter0 = value
+                        elif key == "parameter1":
+                            self.__parameter1 = value
+                        elif key == "parameter2":
+                            self.__parameter2 = value
+                        elif key == "parameter3":
+                            self.__parameter3 = value
+                        elif key == "parameter4":
+                            self.__parameter4 = value
+                        elif key == "parameter5":
+                            self.__parameter5 = value
+
+                    if self.__cameraName is None or \
+                            self.__cameraFov is None or \
+                            self.__sensor_width is None or \
+                            self.__sensor_height is None or \
+                            self.__Icx is None or \
+                            self.__Icy is None or \
+                            self.__ratio is None or \
+                            self.__imageWidth is None or \
+                            self.__imageHeight is None or \
+                            self.__calibrationRatio is None or \
+                            self.__parameter0 is None or \
+                            self.__parameter1 is None or \
+                            self.__parameter2 is None or \
+                            self.__parameter3 is None or \
+                            self.__parameter4 is None or \
+                            self.__parameter5 is None:
+                else:
+                    self.__setCameraParameter(file_camera_parameter, camera_type)
+                    if self.__cameraName is not None:
+                        self.__initAlphaRho_Table()
+                        self.__importMoildev()
+        
+
+  <!-- <span class="k">print</span><span class="n">success</span><span class="o">.</span><span class="n">MOILDEV-SDK</span> -->
+  </code></pre>
+  <dl class="class">
+  <!-- <dt id="moildev.Moildev"> -->
+    <!-- <div class="section" id="module-moildev"> -->
+      <!-- <span id="moildev-module"></span><h1>Moildev Function<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+      <dl class="class"> -->
+      <!-- <dt id="moildev.Moildev">
+      <em class="property">Code Examples to start prototyping quickly:</em><code class="descclassname">These simple examples demonstrate how to easily use the Library to include code snippets that process fisheye images.</code>Code wrote in python<code class="descname"></code><span class="sig-paren">(</span><em></em>, <em></em>, <em></em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
+      <!-- <p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+      <p align="justify">&emsp; &emsp;   <a href="https://github.com/MoilOrg">Fisheye</a> 
+        camera development by Ming chi Omnidirectional imaging library provides several functions that can be used for various applications such as</p>   -->
+      <br><br>
+      
+      <span id="moildev-module"></span><h1>Anypoint images Example Code<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+      <dl class="class">
+      <dt id="moildev.Moildev">
+      <em class="property">Code Examples to start prototyping quickly:</em><code class="descclassname">These simple examples demonstrate how to easily use the Library to include code snippets that process fisheye images.</code>Code wrote in python<code class="descname"></code><span class="sig-paren">(</span><em></em>, <em></em>, <em></em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt>
+      <code class="xref py py-class docutils literal notranslate"><span class="pre">Overview</span></code>
+      <p align="justify">&emsp; &emsp;   <a href="https://github.com/MoilOrg/moildev/tree/main/examples/anypoint">This example</a> 
+          demonstrated how to generate undistotion image or anypoint view image using getAnypointMaps() and anypoint() function. For mode 1, the result rotation is betaOffset degree rotation around the Z-axis(roll) after alphaOffset degree rotation around the X-axis(pitch). for mode 2, The result rotation is theta_Y 
+          degree rotation around the Y-axis(yaw) after theta_X degree rotation around the X-axis(pitch).</p>  
+      <p>Moildev provide two option to create anypoint image, you only need to choose one:</p>
+      <p>&emsp; &emsp;1. getAnypointMaps()</p>
+      <p>&emsp; &emsp;This function will create give you return maps x and maps y for specified zenital and azimutal angel. return of X-Y Maps can be use later to remap the original image to undistortion image. by default this function will give you anypoint mode-1. You can use opencv remap to create anypoint image.</p>
+      <p>&emsp; &emsp;2. anypoint()</p>
+      <p>&emsp; &emsp;This function will give you undistortion image or anypoint image directly without using remap function anymore.</p>
+      <code class="xref py py-class docutils literal notranslate"><span class="pre">Variable</span></code>
+      <div style="border: 1px solid #CCC; margin: 5px 5px; padding: 10px; width: 760px; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+        - image: source image<br>
+        - alpha: the value of alpha<br>
+        - beta: the value of beta<br>
+        - zoom: decimal zoom factor, normally 1 to 12<br>
+        - mode: mode anypoint view (by default it will be mode 1)</i>
+      </div>
+      <div class="section" id="module-moildev">
+      <span id="moildev-module"></span><h1>Panorama images Example Code<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+      <dl class="class">
+      <dt id="moildev.Moildev">
+      <!-- <em class="property">Code Examples to start prototyping quickly:</em><code class="descclassname">These simple examples demonstrate how to easily use the Library to include code snippets that process fisheye images.</code>Code wrote in python<code class="descname"></code><span class="sig-paren">(</span><em></em>, <em></em>, <em></em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
+      <code class="xref py py-class docutils literal notranslate"><span class="pre">Overview</span></code>
+      <p align="justify"><a href="https://github.com/MoilOrg/moildev/tree/main/examples/panorama">This example</a> 
+          demonstrated how to generate panorama image centered at the 3D direction with alpha = iC_alpha_degree and beta = iC_beta_degree.</p>
+      <p>Moildev provide two option to create panorama image. you only need to choose one:</p>  
+      <p>1. getPanoramaMaps()</p>
+      <p>This function will give you return maps x and maps y for panorama image. after get maps x and maps y we can create panorama image using remap function from opencv.</p>
+      <p>2. panorama()</p>
+      <p>This function will give return a panorama image directly.</p>
+      <code class="xref py py-class docutils literal notranslate"><span class="pre">Variable</span></code>
+      <div style="border: 1px solid #CCC; margin: 5px 5px; padding: 10px; width: 760px; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+        - image = the original image<br>
+        - alpha_min = the minimum alpha<br>
+        - alpha_max : max of alpha. The recommended value is half of camera FOV.<br></i>
+      </div>
+      <div class="section" id="module-moildev">
+      <span id="moildev-module"></span><h1>Reverse View Example Code<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+      <dl class="class">
+      <dt id="moildev.Moildev">
+      <!-- <em class="property">Code Examples to start prototyping quickly:</em><code class="descclassname">These simple examples demonstrate how to easily use the Library to include code snippets that process fisheye images.</code>Code wrote in python<code class="descname"></code><span class="sig-paren">(</span><em></em>, <em></em>, <em></em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
+      <code class="xref py py-class docutils literal notranslate"><span class="pre">Overvivew</span></code>
+      <p align="justify"><a href="https://github.com/MoilOrg/moildev/tree/main/examples/Reverse_view">This example</a> 
+        demonstrated how to generate image with new center optical point.</p> 
+      <code class="xref py py-class docutils literal notranslate"><span class="pre">Variable</span></code>
+      <div style="border: 1px solid #CCC; margin: 5px 5px; padding: 10px; width: 760px; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+        - image = The original fisheye image<br>
+        - alpha_max = max of alpha. The recommended value is half of camera FOV<br>
+        - alpha = the value of alpha<br>
+        - beta = the value of alpha<br></i>
+      </div>
+      <div class="section" id="module-moildev">
+      <span id="moildev-module"></span><h1>Installation<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+      <dl class="class">
+      <dt id="moildev.Moildev">
+      <!-- <em class="property">Code Examples to start prototyping quickly:</em><code class="descclassname">These simple examples demonstrate how to easily use the Library to include code snippets that process fisheye images.</code>Code wrote in python<code class="descname"></code><span class="sig-paren">(</span><em></em>, <em></em>, <em></em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
+      <p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+      <p align="justify"><a href="https://github.com/MoilOrg/moildev/tree/main">Moildev Library</a> 
+        is a collection of functions that support the development of fisheye image applications based on python programing language. You can refer to this link to going deep on this library. currently the library can support for:</p>  
+      <br>
+      <dl class="method">
+      <dt id="moildev.Moildev.PanoramaM_Rt">
+      <code class="descname">1. How to Install</code><span class="sig-paren"></span><em></em><em></em><em></em><span class="sig-paren"></span><a class="headerlink" href="#moildev.Moildev.PanoramaM_Rt" title="Permalink to this definition">¶</a></dt>
+      <p align="justify">This library now available in pypi distribution <a href="https://pypi.org/project/Moildev/">here</a>, to install using python package index(PyPI) distribution, you can use the command bellow.</p>  
+      </p>
+      <center><div style="border: 1px #1c1d1c solid; margin: 10px 30px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 20px; width: auto; text-align: left;">
+        >>> pip3 install moildev
+      </div></center>
+      <!-- &emsp; &emsp;<code class="xref py py-class docutils literal notranslate"><span class="pre">>>> pip3 install moildev</span></code><br><br> -->
+      <p align="justify">Or you can install manually by clone this repository to your local directory, then follow this command:</p>  
+      <center><div style="border: 1px #1c1d1c solid; margin: 10px 30px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 40px; width: auto; text-align: left;">
+        >>> cd Moildev<br>
+        >>> pip install -r requirments.txt<br>
+        >>> pip install Moildev<br>
+      </div></center>
+      <dl class="method">
+      <dt id="moildev.Moildev.PanoramaM_Rt">
+      <code class="descname">2. Get in with Moildev library:</code><span class="sig-paren"></span><em></em>, <em></em><em></em><span class="sig-paren"></span><a class="headerlink" href="#moildev.Moildev.PanoramaM_Rt" title="Permalink to this definition">¶</a></dt><br>
+      <p align="justify">This library now available in pypi distribution For more information about create object you can read this example, to install using python package index(PyPI) distribution, you can use the command bellow.</p>  
+      <h3 align="justify">2.1 Create Object</h3>  
+      <!-- <p align="justify">&emsp; &emsp; &emsp; &emsp;Import library;</p>   -->
+      <center><div style="border: 1px #1c1d1c solid; margin: 10px 30px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 20px; width: auto; text-align: left;">
+        >>> from Moildev import Moildev<br>
+      </div></center>
+      <p align="justify">Each fisheye camera can be calibrated and derives a set of parameters by MOIL laboratory, before the successive functions can work correctly, configuration is necessary in the beginning of program. </p>  
+      <p align="justify">To create the object from Moildev, you have to pass the camera parameter to the package. There 3 way to create object of moildev:</p>
+      <p align="justify">1. Create object using input keyword arguments</p>
+      <p align="justify">2. Create object using one parameter with json file format extension</p>
+      <p align="justify">3. Create object using multiple parameter with json file format extension</p>
+      <h2>List of camera parameters keyword used to create moildev objects:</h2>
+      <p align="justify"><i>For more information about create object you can read this <a href="https://github.com/MoilOrg/moildev/tree/main/examples/getting_started">example</a></i></p>      
+      <center><table border="2" width="auto"><thead>
+        <tr style="background-color: #4988b3;">
+        <th width="auto"><font color="white">No</font></th>
+        <th width="500"><font color="white">Name</font></th>
+        <th width="900"><font color="white">Keyword used to create moildev objects</font></th>
+        </tr>
+        </thead><tbody>
+        <tr>
+        <td>&emsp; 1.</td>
+        <td><i>cameraName</i></td>
+        <td><i>the name of the camera used</i></td>
+        </tr>
+        <tr>
+        <td>&emsp; 2.</td>
+        <td><i>cameraFov</i></td>
+        <td><i>camera field of view (FOV)</i></td>
+        </tr>
+        <tr>
+        <td>&emsp; 3.</td>
+        <td><i>sensorWidth</i></td>
+        <td><i>size of sensor width</i></td>
+        </tr>
+        <td>&emsp; 4.</td>
+        <td><i>sensorHeight</i></td>
+        <td><i>size of sensor height</i></td>
+        </tr>
+        <td>&emsp; 5.</td>
+        <td><i>icx</i></td>
+        <td><i>center image in x-axis</i></td>
+        </tr>
+        <td>&emsp; 6.</td>
+        <td><i>icy</i></td>
+        <td><i>center image in y-axis</i></td>
+        </tr>
+        <td>&emsp; 7.</td>
+        <td><i>ratio</i></td>
+        <td><i>the value of the ratio image</i></td>
+        </tr>
+        <td>&emsp; 8.</td>
+        <td><i>imageWidth</i></td>
+        <td><i>the size of width image</i></td>
+        </tr>
+        <td>&emsp; 9.</td>
+        <td><i>imageHeight</i></td>
+        <td><i>the size of height image</i></td>
+        </tr>
+        <td>&emsp;10.</td>
+        <td><i>calibrationRatio</i></td>
+        <td><i>the value of calibration ratio</i></td>
+        </tr>
+        <td>&emsp;11.</td>
+        <td><i>parameter0 .. parameter</i></td>
+        <td><i>intrinsic fisheye camera parameter get from calibration</i></td>
+        </tr>
+        </tbody></table></center>
+        <br>
+      
+      <h3 align="justify">2.2 Create anypoint maps</h3>  
+      <div style="border: 1px #1c1d1c solid; margin: 5px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 20px; width: auto; text-align: left;">
+        >>> map_x, map_y = moildev.getAnypointMaps(alpha, beta, zoom, mode=1)<br>
+      </div></center>
+      <h3 align="justify">Purpose:</h3>
+      <p align="justify">The purpose is to generate a pair of X-Y Maps for the specified alpha, beta and zoom parameters, the result X-Y Maps can be used later to remap the original fish-eye image to the target angle image.</p>
+      <h3 align="justify">Parameter::</h3>
+      <div style="border: 1px solid #CCC; margin: 5px 5px; padding: 10px; width: 760px; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+        - alpha: alpha<br>
+        - beta: beta<br>
+        - zoom: decimal zoom factor, normally 1..12<br>
+        - selection anypoint mode(1 or 2), by default if will be mode 1 <br>
+        - See <a href="https://github.com/MoilOrg/moildev/tree/main/examples/anypoint">example</a><br></i>
+      </div>
+      <h3 align="justify">2.3 Anypoint</h3>  
+      <center><div style="border: 1px #1c1d1c solid; margin: 10px 30px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 20px; width: auto; text-align: left;">
+        >>> anypoint_image = moildev.anypoint(image, alpha, beta, zoom, mode=1)<br>
+      </div></center>
+      <h3 align="justify">Purpose:</h3>
+      <p align="justify">Generate anypoint view image. For mode 1, the result rotation is betaOffset degree rotation around the Z-axis(roll) after alphaOffset degree rotation around the X-axis(pitch). for mode 2, The result rotation</p>
+      <p align="justify">is theta_Y degree rotation around the Y-axis(yaw) after theta_X degree rotation around the X-axis(pitch).</p>
+      <h3 align="justify">Parameter::</h3>
+      <div style="border: 1px solid #CCC; margin: 5px 5px; padding: 10px; width: 760px; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+        - image: source image<br>
+        - alpha: alpha<br>
+        - beta: beta<br>
+        - zoom: zoom<br>
+        - mode: mode anypoint view (by default it will be mode 1)<br>
+        - See <a href="https://github.com/MoilOrg/moildev/tree/main/examples/anypoint">example</a></i>
+      </div>
+      <h3 align="justify">2.4 Create panorama maps</h3>  
+      <center><div style="border: 1px #1c1d1c solid; margin: 10px 30px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 40px; width: auto; text-align: left;">
+        >>> map_x, map_y = moildev.getPanoramaMaps(alpha_min, alpha_max)
+      </div></center>
+      <h3 align="justify">Purpose:</h3>
+      <p align="justify">To generate a pair of X-Y Maps for alpha within 0..alpha_max degree, the result X-Y Maps can be used later to generate a panorama image from the original fish-eye image.</p>
+      <h3 align="justify">Parameter::</h3>
+      <div style="border: 1px solid #CCC; margin: 5px 5px; padding: 10px; width: 760px; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+        - alpha_min = the minimum alpha<br>
+        - alpha_max = the maximum of alpha. The recommended vaule is half of camera FOV. For 	example, use 90 for a 180 degree fisheye images and use 110 for a 220 degree fisheye images.<br>
+        - See <a href="https://github.com/MoilOrg/moildev/tree/main/examples/panorama">example</a></i>
+      </div>
+      
+      <h3 align="justify">2.5 Panorama</h3>  
+      <center><div style="border: 1px #1c1d1c solid; margin: 5px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 20px; width: auto; text-align: left;">
+        >>> panorama_image = moildev.panorama(image, alpha_min, alpha_max)
+      </div></center>
+      <h3 align="justify">Purpose:</h3>
+      <p align="justify">The panorama image centered at the 3D direction with alpha = iC_alpha_degree and beta = iC_beta_degree.</p>
+      <h3 align="justify">Parameter::</h3>
+      <div style="border: 1px solid #CCC; margin: 5px 5px; padding: 10px; width: 760px; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+        - image = the original image<br>
+        - alpha_min = the minimum alpha<br>
+        - alpha_max : max of alpha. The recommended vaule is half of camera FOV. For example, use 90 for a 180 degree fisheye images and use 110 for a 220 degree fisheye images.<br>
+        - See <a href="https://github.com/MoilOrg/moildev/tree/main/examples/panorama">example</a><</i>
+      </div>
+      <h3 align="justify">2.6 Reverse view</h3>  
+      <center><div style="border: 1px #1c1d1c solid; margin: 5px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 20px; width: auto; text-align: left;">
+        >>> reverse = moildev.panorama(image, alpha_max, alpha, beta)<br>
+      </div></center>
+      <h3 align="justify">Purpose:</h3>
+      <p align="justify">This function was used for transforming the fisheye image to change the optical point without manipulating the camera head.</p>
+      <h3 align="justify">Parameter::</h3>
+      <div style="border: 1px solid #CCC; margin: 5px 5px; padding: 10px; width: 760px; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+        - image = The original fisheye image<br>
+        - alpha_max = max of alpha. The recommended value is half of camera FOV.<br>
+        - beta = the value of alpha.<br>
+        - See <a href="https://github.com/MoilOrg/moildev/tree/main/examples/Reverse_view">example</a><br></i>
+      </div>
+      
+      <center><h1>About Us</h1></center>
+      <body>
+          <div class="container">
+            <div class="row">
+              <div class="faq-wrapper">
+                <div class="header">
+                  <center><h3>Ming-Chi Omni-directional, Surveillance, and Imaging laboratory (MOIL-Lab), Ming Chi University of Technology, Taiwan</h3></center>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script type="text/javascript">
+            $(".faq-plus").on('click',function(){
+              $(this).parent().parent().find('.faq-body').slideToggle();
+            });
+          </script>
+        </body>
+      </head>
+      <br><br>
+      
+      <dl class="docutils">
+      </div>
+        <div role="contentinfo">
+          <p>
+              &#169; Copyright 2022, Moil.
+          </p>
+        </div>
+          
+          Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a         
+          <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>         
+          provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+      
+      </footer>
+              </div>
+            </div>
       <div class="dark-box">
           <div class="lang-selector">
                 <!-- <a href="#" data-language-name="cpp">C++</a>
@@ -782,6 +1154,6 @@ here -->
                 <a href="#" data-language-name="python">Python</a>
           </div>
       </div>
-    </div>
+</div>
   </body>
 </html>

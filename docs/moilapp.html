@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moildev&mdash;library</title>
+  <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <style type="text/css">
+      body{
+        background: #eee;
+        padding-top: 20px;
+        /* font-family: monospace; */
+      }
+      .header{
+        border-radius: 20px 20px 0px 0px;
+        padding: 10px 0px;
+        background: #4988b3;
+        color: #fff;
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+      .faq-item{
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+      .faq-body{
+        display: none;
+        margin-top: 30px;
+      }
+      .faq-wrapper{
+        width: auto;
+        margin: 0 auto;
+      }
+      .faq-inner{
+        padding: 30px;
+        background: aliceblue;
+      }
+      .faq-plus{
+        float: right;
+        font-size: 1.4em;
+        line-height: 1em;
+        cursor: pointer;
+      }
+      hr{
+        background-color: #9b9b9b;
+      }
+    </style>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
+        <script type="text/javascript" src="static/jquery.js"></script>
+        <script type="text/javascript" src="static/underscore.js"></script>
+        <script type="text/javascript" src="static/doctools.js"></script>
+        <script type="text/javascript" src="static/language_data.js"></script>
+      <script type="text/javascript" src="static/js/theme.js"></script>
+
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="spamfilter module" href="source.html" />
+    <link rel="prev" title="spamfilter-py" href="moildev-function.html" /> 
+</head>
+<body class="wy-body-for-nav">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <!-- <a href="#" class="icon icon-home"> Moildev</a>
+            <h2>Version 3.1.0</h2>
+          </a> -->
+          <body><font size="6"> Moildev</font><br/> 
+            <font size="3"> Version 3.1.0</font><br/>
+            </body>
+          <br>
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">  
+            
+<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation"> 
+<!-- <p class="caption"><span class="caption-text">Documentation:</span></p> -->
+<ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="introduction.html">Introduction</a><ul class="current">
+  <!-- <li class="toctree-l2 current"><a class="current reference internal" href="introduction.html">What is Moildev?</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="moildev-library.html">Get starting with Moildev-Installation</a></li></ul> -->
+  </ul>
+</li>
+</ul>
+
+<ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="source.html">Moildev Library</a><ul class="current">
+  <!-- <li class="toctree-l2"><a class="reference internal" href="source.html">Panorama</a></li></ul> -->
+  <li class="toctree-l2 current"><a class="current reference internal" href="anypoint.html">Anypoint</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="panorama.html"> Panorama</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="reverse_view.html">Reverse View</a></li> 
+  </ul>
+</li>
+</ul>
+
+<ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="moildev-function.html">Application using Moildev</a><ul class="current">
+      <li class="toctree-l2 current"><a class="current reference internal" href="moilapp.html">MoilApp</a></li>
+      <li class="toctree-l2"><a class="reference internal" href="measurement.html"> 3D Measurement</a></li>
+      <li class="toctree-l2"><a class="reference internal" href="mms.html">Moil Monitoring System</a></li> 
+  </ul>
+</li>
+</ul>
+
+<ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="moilfaqs.html">Moil FAQs</a><ul class="current">
+  <!-- <li class="toctree-l2"><a class="reference internal" href="source.html">Panorama</a></li></ul> -->
+  </ul>
+</li>
+</ul>
+
+<ul class="current">
+  <!-- <li class="toctree-l1 current"><a class="reference internal" href="source.html">Moildev Library</a><ul class="current"> -->
+  </ul>
+</li>
+</ul>
+
+<!-- <ul class="current"> 
+  <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Application</a><ul class="current"> 
+  <li class="toctree-l2 current"><a class="current reference internal" href="#">MoilApp</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="spamfilter.html">Visual Odometry</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="test_spamfilter.html">Surounding View's</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="token.html">Camera MOnitoring System</a></li> 
+   </ul> -->
+</li>
+</ul>               
+</div>
+</div>
+</nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" aria-label="top navigation">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MOILDEV-SDK</a>
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content">
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">Documentation</a> &raquo;</li>
+      <li>Moildev module</li>
+      <li class="wy-breadcrumbs-aside">
+      <a href="sources/moildev.rst.txt" rel="nofollow"> View page source</a> 
+      </li>
+  </ul>
+  <hr/>
+</div>
+      <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+       <div itemprop="articleBody">
+            
+
+<div class="section" id="module-moildev">
+<span id="moildev-module"></span><h1>MoilApp<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+<!-- <dl class="class">
+<dt id="moildev.Moildev">
+<em class="property">Code Examples to start prototyping quickly:</em><code class="descclassname">These simple examples demonstrate how to easily use the Library to include code snippets that process fisheye images.</code>Code wrote in python<code class="descname"></code><span class="sig-paren">(</span><em></em>, <em></em>, <em></em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
+<!-- <p>* What is MoilApp?</p> -->
+<p align="justify">&emsp; &emsp;   <a href="https://github.com/MoilOrg/MoilApp">MoilApp</a> 
+    is a fisheye image processing software developed by MOIL-Lab. This
+    application is an implementation of Moildev SDK as a sophisticated method of
+    processing fisheye images. The commonly used is to process fisheye image with the
+    result panorama view and Anypoint view. This sophisticated methodology for image
+    processing is very useful in a variety of applications that require high image quality
+    and wide-angle FoV. This application is support plugin for specific application such as 3D measurement, multiple view for ADAS, axis controller and etc. 
+    A plugin is a software component that adds a specific feature to an existing computer program. When a program supports plug-ins, it enables customization.<br><br>
+    There are many benefits to building Apps with a plugin framework:
+  </p>
+
+<div style="border: 1px solid #CCC; margin: 10px 10px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+  - 3rd party developers can create and extend upon your App<br>
+  - new features are easier to develop<br>
+  - your application becomes smaller and easier to understand<br></i></div>
+<p>This is the newest version of MoilApp where previously we had version 1, version 2 and version 3.</p>
+<div style="border: 1px solid #CCC; margin: 10px 10px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+  - FoV on camera parameter<br>
+  - Select camera type if not available on metadata image<br>
+  - Integrate with Moildev version 2.6.0 that can process for recenter optical axis fisheye image<br>
+  - Reset Center point Image<br></i>
+</div>
+
+
+<div class="section" id="module-moildev">
+<span id="moildev-module"></span><h1>Getting and installing MoilApp<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>  
+<b><p>1. What the environment library use in this application</p></b>
+<p align="justify">&emsp; &emsp;In this session, we will discuss a little about the libraries used in making MoilApp.
+  this can be your reference in developing a plugin for the application you want to
+  make. let's take a look:
+</p>
+<b><p style=" margin: 10px 30px; padding: 5px;">a. Pyqt5</p></b>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp;PyQt is a library that makes it possible to use the Qt framework from Python.
+  Qt is a free and open-source cross-platform application written in C ++ and is a
+  toolkit widget that creates a GUI. Qt offers a programming solution with strong
+  object-oriented programming (OOP) concept: where programming problems
+  are solved in object instances with attributes, functions, and interactions
+  between objects. Qt has tools that simplify developing programs and graphical
+  interfaces on desktops, embedded systems, and mobile devices, such as Qt
+  Framework, Qt creator IDE, and toolchains. Using the Qt library from Python,
+  it possible to build applications much faster without sacrificing a lot of speed in
+  C++. For the installation of this library, you can refer to the <a href="https://pypi.org/project/PyQt5/">following this link</a>.
+  While the tutorial on how to use it is explained in detail which you can access
+  via the following link.
+</p>
+<b><p style=" margin: 10px 30px; padding: 5px;">b. OpenCV-python</p></b>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; <a href="https://pypi.org/project/opencv-python/">OpenCV stands</a> for Open-Source Computer Vision Library. It is a free and
+  open-source library for machine learning and computer vision. Where
+  conventionally launched in 1999, developed by Gary Brodsky in Intel written
+  in C/C++ programming language. Nowadays, the source code of OpenCV and
+  extra modules call OpenCV contribution are available at GitHub. Hence the
+  code is easy to modify for specific needs. OpenCV is available for various
+  programming languages such as C++, C, Java, MATLAB, and Python and supports operating systems like Linux, Microsoft Windows, Mac OS, and
+  Android. Due to taking advantage of MMX and SSE instructions when they are
+  available alongside CUDA and OpenCL interfaces, mostly real-time vision
+  applications are possible. Well-established companies like Microsoft, Intel,
+  Google, IBM, Yahoo, Sony, Honda, and Toyota employ this library.
+</p>
+<b><p style=" margin: 10px 30px; padding: 5px;">c. Moildev</p></b>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp;<a href="https://pypi.org/project/Moildev/">Moildev Library</a> is a collection of functions used to develop fisheye image
+  applications. This library was developed by The Omnidirectional Imaging and
+  Surveillance Laboratory (OIL) in Ming Chi University of Technology, Taiwan,
+  under the guidance of Professor. Chuang-Jan Chang. Originally this library
+  writes in C++ to take advantage of the computational speed provided by this
+  programming language. Currently, this library available for the python
+  programming language, which uses a binding application programming
+  interface (API) that provides specially crafted adhesive code to enable a
+  programming language to use foreign libraries or operating system services at
+  the same speed. Moildev library is compatible with Linux and Windows
+  operating systems (OS).
+  Moildev library has functions, such as Anypoint mode-1, Anypoint mode-2, and
+  Panorama. Each function has its parameter and control by given zenithal angle
+  and azimuthal angle to reach a specific region of interest. Before applying
+  Moildev functions, the camera-init configuration is necessary. It delivers the
+  camera properties of intrinsic and extrinsic parameters from camera calibration.
+</p>
+<b><p style=" margin: 10px 30px; padding: 5px;">d. Others Library</p></b>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp;Other libraries will need to be used to complete the application depending on
+  the design and what will be used in the future. PyPI provides more than a
+  hundred thousand libraries that can use to achieve our goal.
+</p>
+
+<b><p>1. Setup MoilApp in your system</p></b>
+<p align="justify">&emsp; &emsp;When you want to run MoilApp on your system, there are some requirements needed
+  such as Ubuntu version 18 or higher with installed python version >3.6 and IDE.
+  To make convenience in development, we use IDE to write our program. An
+  integrated development environment (IDE) is a software application that provides
+  comprehensive facilities to computer programmers for software development. An
+  IDE normally consists of at least a source code editor, build automation tools, and a
+  debugger. PyCharm is an IDE used in computer programming, specifically for
+  Python. You can easily install following the guidance given on the official website
+  here. Oke lets start to setup MoilApp:
+</p>
+<center><div style=" margin: 10px 30px; padding: 5px; background-color: rgb(240, 175, 186); overflow: auto; height: 40px; width: auto; text-align: left;">
+  Note: The project was testing on Ubuntu 18.04 and 20.04 LTS<br>
+</div></center><br>
+<b><p style=" margin: 10px 30px; padding: 5px;">c. Moildev</p></b>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp;Moildev Library is a collection of functions used to develop fisheye image
+  applications. This library was developed by The Omnidirectional Imaging and
+  Surveillance Laboratory (OIL) in Ming Chi University of Technology, Taiwan,
+  under the guidance of Professor. Chuang-Jan Chang. Originally this library
+  writes in C++ to take advantage of the computational speed provided by this
+  programming language. Currently, this library available for the python
+  programming language, which uses a binding application programming
+  interface (API) that provides specially crafted adhesive code to enable a
+  programming language to use foreign libraries or operating system services at
+  the same speed. Moildev library is compatible with Linux and Windows
+  operating systems (OS).
+  Moildev library has functions, such as Anypoint mode-1, Anypoint mode-2, and
+  Panorama. Each function has its parameter and control by given zenithal angle
+  and azimuthal angle to reach a specific region of interest. Before applying
+  Moildev functions, the camera-init configuration is necessary. It delivers the
+  camera properties of intrinsic and extrinsic parameters from camera calibration.
+</p>
+<b><p style=" margin: 10px 30px; padding: 5px;">a. Clone the file project from GitHub</p></b>
+<p align="justify" style=" margin: 10px 45px; padding: 5px;">How to run these apps</p>
+<div style="border: 1px solid #CCC; margin: 10px 50px; padding: 10px; width: auto; height: auto; background-color: #d5e1ee; text-align: left;">
+  <p><i>Follow this step before you use MoilApp;</i></p>
+  <p><i>Open your Terminal and clone this repository</i></p>
+  <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 40px; width: auto; text-align: left;">
+    $ git clone https://github.com/MoilOrg/MoilApp.git<br>
+  </div></center>
+  <p><i>Change Directory to the MoilApp folder</i></p>
+  <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 40px; width: auto; text-align: left;">
+    $ cd MoilApp/<br>
+  </div></center>
+  <p><i>Install all requirement using bash script we provide by using this Command</i></p>
+  <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 40px; width: auto; text-align: left;">
+    $ . build.sh<br>
+  </div></center>
+  <p><i>Running this project</i></p>
+  <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 50px; width: auto; text-align: left;">
+    $ cd src/<br>
+    $ python main.py<br>
+  </div></center>
+</div>
+</p>
+<div class="section" id="module-moildev">
+<span id="moildev-module"></span><h1>Operation of MoilApp<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>  
+<p align="justify">&emsp; &emsp;In this session we will explain the components in the MoilApp application and
+  tutorials on how to use the application.
+</p>
+
+
+<center><h3>Overview of The User Interface</h3>
+<img src="assets/moildev.png"></center><br>
+<p><b>Here is detail explanation:</b></p>
+<div style="border: 1px solid #CCC; margin: 10px 10px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+    <b>1. Menu bar</b><br>
+  &emsp; This container stores various button<br>
+  &emsp; a. File<br>
+  &emsp;&emsp;File contains Load image, Load video, Open cam, Cam parameter, Record Video, Save Image, and Exit<br>
+  &emsp; b. Window<br>
+  &emsp;&emsp; Window contains Maximize and Minimize<br>
+  &emsp; c. Apps<br>
+  &emsp;&emsp; Apps contains Add, Open, Delete, Create and Help for Add-Ons<br>
+  &emsp; d. Help<br>
+  &emsp;&emsp; Help contains About Apps, About Us and Accessibility<br></i></div>
+  <div style="border: 1px solid #CCC; margin: 10px 10px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+  <b>2. Title application</b><br>
+  &emsp; This part will give you information about the application name and
+  information about image and video location as a source.<br></div>
+  <div style="border: 1px solid #CCC; margin: 10px 10px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i></i>
+  <b>3. Source media button</b><br>
+  &emsp; This grub contains three buttons: load image, load video and open camera.
+  You can load images and videos from your directory and also can get images
+  from your camera by streaming video. On open camera you can use USB
+  Camera and streaming camera.<br></i></div>
+  <div style="border: 1px solid #CCC; margin: 10px 10px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+  <b>4. Rotate button</b><br>
+  &emsp; Rotate image to the clockwise and anticlockwise direction.<br></i></div>
+  <div style="border: 1px solid #CCC; margin: 10px 10px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+  <b>5. Zoom button</b><br>
+  &emsp; Make the image look bigger or smaller by zoom in and zoom out.<br></i></div>
+  <div style="border: 1px solid #CCC; margin: 10px 10px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+  <b>6. Saving button</b><br>
+  &emsp; Save the resulting image or recording video in your local directory<br></i></div>
+  <div style="border: 1px solid #CCC; margin: 10px 10px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+  <b>7. Plugin controller</b><br>
+  &emsp; The container Plugin controller contains several buttons that have functions to
+  control plugins such as adding, opening and removing plugin application from
+  the main application.<br></i></div>
+  <div style="border: 1px solid #CCC; margin: 10px 10px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+  <b>8. Information label</b><br>
+  &emsp; Show the information of the camera type used.<br></i></div>
+  <div style="border: 1px solid #CCC; margin: 10px 10px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+  <b>9. Selection mode view</b><br>
+  &emsp; This container contains several view mode selection buttons including original
+  view, Anypoint view and panoramic view.<br></i></div>
+  <div style="border: 1px solid #CCC; margin: 10px 10px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+  <b>10. Help button</b><br>
+  &emsp; Contains several buttons that display information from this application such
+  as manual guide, about us and about MoilApp<br></i></div>
+  <div style="border: 1px solid #CCC; margin: 10px 10px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+  <b>11. Clear media from widget</b><br>
+  &emsp; This button will remove all objects such as pixmap images and others from the
+  user interface to make the application look like it was just opened<br></i></div>
+  <div style="border: 1px solid #CCC; margin: 10px 10px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+  <b>12. Extra button</b><br>
+  &emsp; This button will be active when you select Anypoint or panorama view and
+  help you to explore the image.<br></i></div>
+  <div style="border: 1px solid #CCC; margin: 10px 10px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+  <b>13. Widget show result image</b><br>
+  &emsp; This widget will be showing the result image after processing, this is the main
+  image viewer on the user interface application.<br></i></div>
+  <div style="border: 1px solid #CCC; margin: 10px 10px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+  <b>14. Widget to show Image saved</b><br>
+  &emsp; Displaying images successfully saved which can then be reopened if your
+  source media is video or camera.<br></i></div>
+  <div style="border: 1px solid #CCC; margin: 10px 10px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+  <b>15. Video controller</b><br>
+  &emsp; The video controller container contains several buttons and labels that function
+  to control media such as start, pause, stop, forward, backward, time slider and
+  duration label.<br></i></div>
+  <div style="border: 1px solid #CCC; margin: 10px 10px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+  <b>16. Widget show original image</b><br>
+  &emsp; This widget serves to display and maintain the original image to provide a
+  reference regarding the process that occurs.<br></i></div>
+</div><br><br><br><br>
+
+  </head>
+
+<dl class="docutils">
+</div>
+           </div>
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="moilfaqs.html" class="btn btn-neutral float-right" title="spamfilter module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="moildev-function.html" class="btn btn-neutral float-left" title="spamfilter-py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Moil.
+    </p>
+  </div>
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+    </section>
+</div> 
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+</body>
+</html>
