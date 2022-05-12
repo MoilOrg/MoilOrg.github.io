@@ -101,9 +101,18 @@
 </ul>
 
 <ul class="current">
-  <li class="toctree-l1 current"><a class="reference internal" href="moildev-function.html">Moildev Library</a><ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="getting_started.html">Getting Started</a><ul class="current">
+  <!-- <li class="toctree-l2 current"><a class="current reference internal" href="introduction.html">What is Moildev?</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="moildev-library.html">Get starting with Moildev-Installation</a></li></ul> -->
+  </ul>
+</li>
+</ul>
+
+<ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="moildev-function.html">Moildev API References</a><ul class="current">
   <!-- <li class="toctree-l2"><a class="reference internal" href="source.html">Panorama</a></li></ul> -->
-  <li class="toctree-l2 current"><a class="current reference internal" href="anypoint.html">Anypoint</a></li>
+  <li class="toctree-l2 current"><a class="current reference internal" href="moildev-function.html">Methodology</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="anypoint.html"> Anypoint</a></li>
   <li class="toctree-l2"><a class="reference internal" href="panorama.html"> Panorama</a></li>
   <li class="toctree-l2"><a class="reference internal" href="reverse_view.html">Reverse View</a></li> 
   </ul>
@@ -111,7 +120,15 @@
 </ul>
 
 <ul class="current">
-  <li class="toctree-l1 current"><a class="reference internal" href="moildev-function.html">Application using Moildev</a><ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="example_code.html">List Code Example</a><ul class="current">
+  <!-- <li class="toctree-l2 current"><a class="current reference internal" href="introduction.html">What is Moildev?</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="moildev-library.html">Get starting with Moildev-Installation</a></li></ul> -->
+  </ul>
+</li>
+</ul>
+
+<ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="moilapp.html">Application Example</a><ul class="current">
       <li class="toctree-l2 current"><a class="current reference internal" href="moilapp.html">MoilApp</a></li>
       <li class="toctree-l2"><a class="reference internal" href="colonoscopy.html">Colonoscopy</a></li>
       <li class="toctree-l2"><a class="reference internal" href="mms.html">Moil Monitoring System</a></li> 
@@ -156,10 +173,16 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="modules.html">Documentation</a> &raquo;</li>
-      <li>Moildev module</li>
+          <!-- <li><a href="modules.html">Documentation</a> &raquo;</li> -->
+      <li>Anypoint</li>
       <li class="wy-breadcrumbs-aside">
-      <a href="sources/moildev.rst.txt" rel="nofollow"> View page source</a> 
+      <!-- <a href="sources/moildev.rst.txt" rel="nofollow"> View page source</a>  -->
+        <input type="button" face="Tahoma" value="Print !!!" onclick="printPage()" />
+      <script>
+        function printPage() { 
+          window.print(); 
+          }
+      </script>
       </li>
   </ul>
   <hr/>
@@ -182,88 +205,220 @@
           <p>&emsp; &emsp;2. anypoint()</p>
           <p>&emsp; &emsp;This function will give you undistortion image or anypoint image directly without using remap function anymore.</p>
           <code class="xref py py-class docutils literal notranslate"><span class="pre">Variable</span></code><br><br>
-          <div style="border: 1px solid #CCC; margin: 5px 1px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+          <div style="border: 1px solid #CCC; margin: 5px 1px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;">
             - image: source image<br>
             - alpha: the value of alpha<br>
             - beta: the value of beta<br>
             - zoom: decimal zoom factor, normally 1 to 12<br>
-            - mode: mode anypoint view (by default it will be mode 1)</i>
+            - mode: mode anypoint view (by default it will be mode 1)
           </div>
           <h1 align="justify">Example Code</h1>  
           <h3 align="justify">1. Create anypoint maps</h3>  
-          <div style="border: 1px #1c1d1c solid; margin: 5px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 30px; width: auto; text-align: left;">
-            >>> map_x, map_y = moildev.getAnypointMaps(alpha, beta, zoom, mode=1)<br>
+          <div style="border: 0px #1c1d1c solid; margin: 5px 5px; padding: 5px; background-color: rgb(29, 29, 31); overflow: auto; height: 30px; width: auto; text-align: left;">
+            <font face="SemiBold 600" color="white"> 
+              $ map_x, map_y</font>
+            <font face="SemiBold 600" color= "red"> 
+              =  
+             </font>
+             <font face="SemiBold 600" color= "white"> 
+              moildev.  
+             </font>
+             <font face="SemiBold 600" color= "green"> 
+              getAnypointMaps
+             </font>
+             <font face="SemiBold 600" color= "yellow"> 
+              getAnypointMaps(alpha, beta, zoom, mode=1)
+             </font>
           </div></center>
           <h3 align="justify">Purpose:</h3>
           <p align="justify">The purpose is to generate a pair of X-Y Maps for the specified alpha, beta and zoom parameters, the result X-Y Maps can be used later to remap the original fish-eye image to the target angle image.</p>
           <h3 align="justify">Parameter::</h3>
-          <div style="border: 1px solid #CCC; margin: 5px 5px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+          <div style="border: 1px solid #CCC; margin: 5px 5px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;">
             - alpha: alpha<br>
             - beta: beta<br>
             - zoom: decimal zoom factor, normally 1..12<br>
             - selection anypoint mode(1 or 2), by default if will be mode 1 <br>
-            - See <a href="https://github.com/MoilOrg/moildev/tree/main/examples/anypoint">example</a><br></i>
+            - See <a href="https://github.com/MoilOrg/moildev/tree/main/examples/anypoint">example</a><br>
           </div>
           <h3 align="justify">2. Anypoint</h3>  
-          <center><div style="border: 1px #1c1d1c solid; margin: 10px 30px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 30px; width: auto; text-align: left;">
-            >>> anypoint_image = moildev.anypoint(image, alpha, beta, zoom, mode=1)<br>
+          <center><div style="border: 0px #1c1d1c solid; margin: 5px 5px; padding: 5px; background-color: rgb(29, 29, 31); overflow: auto; height: 30px; width: auto; text-align: left;">
+            <font face="SemiBold 600" color="white"> $ anypoint_image</font>
+            <font face="SemiBold 600" color= "red"> 
+              =  
+             </font>
+             <font face="SemiBold 600" color= "white"> 
+              moildev.  
+             </font>
+             <font face="SemiBold 600" color= "green"> 
+              anypoint
+             </font>
+             <font face="SemiBold 600" color= "yellow"> 
+              anypoint(image, alpha, beta, zoom, mode=1)
+             </font>
+          </div></center>
           </div></center>
           <h3 align="justify">Purpose:</h3>
           <p align="justify">Generate anypoint view image. For mode 1, the result rotation is betaOffset degree rotation around the Z-axis(roll) after alphaOffset degree rotation around the X-axis(pitch). for mode 2, The result rotation</p>
           <p align="justify">is theta_Y degree rotation around the Y-axis(yaw) after theta_X degree rotation around the X-axis(pitch).</p>
           <h3 align="justify">Parameter::</h3>
-          <div style="border: 1px solid #CCC; margin: 5px 5px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+          <div style="border: 1px solid #CCC; margin: 5px 5px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;">
             - image: source image<br>
             - alpha: alpha<br>
             - beta: beta<br>
             - zoom: zoom<br>
             - mode: mode anypoint view (by default it will be mode 1)<br>
-            - See <a href="https://github.com/MoilOrg/moildev/tree/main/examples/anypoint">example</a></i>
+            - See <a href="https://github.com/MoilOrg/moildev/tree/main/examples/anypoint">example</a>
           </div><br>
           <h3 align="justify">3. Code Overview</h3>  
           <p align="justify">First, import and create object of moildev library</p>
-          <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 130px; width: auto; text-align: left;">
-            # import library<br><br>
-            import cv2<br><br>
-            from Moildev import Moildev<br><br>
 
-            # create object of Moildev<br>
-            moildev = Moildev("../Raspi_Cam.json")  # select parameter file (.json)<br><br>
+          <div style="border: 0px #cf294d solid; margin: 5px 5px; padding: 5px; background-color: rgb(29, 29, 31); overflow: auto; height: 130px; width: auto; text-align: left;">
+            <font face="SemiBold 600" color= "white"> 
+              # import library<br>
+           </font>
+            <font face="SemiBold 600" color= #cf294d> 
+              import 
+            </font>
+            <font face="SemiBold 600" color= "white"> 
+               Moildev
+            </font>
+            <font face="SemiBold 600" color= #cf294d> 
+              from 
+            </font>
+            <font face="SemiBold 600" color= "white"> 
+              Moildev
+           </font><br>
+           <font face="SemiBold 600" color= #cf294d> 
+            import 
+          </font>
+          <font face="SemiBold 600" color= "white"> 
+            Moildev
+          </font><br><br>
+          <font face="SemiBold 600" color= "white"> 
+            moildev
+            </font>
+            <font face="SemiBold 600" color= "red"> 
+               =  
+              </font>
+              <font face="SemiBold 600" color= "white"> 
+                Moildev 
+                </font>
+            <font face="SemiBold 600" color= "yellow"> 
+              ("../Raspi_Cam.json")  
+            </font>
+            <font face="SemiBold 600" color= "white"> 
+              # select parameter file (.json)
+          </font>
+            
           </div></center><br>
           <p align="justify">Create specified variable value of alpha, beta, zoom and mode</p>
-          <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 130px; width: auto; text-align: left;">
             # create specified variable value of alpha beta zoom and mode<br><br>
-            alpha = 30<br><br>
-            beta = 30<br><br>
-            zoom = 4<br><br>
-            mode = 2<br><br>
+            <div style="border: 1px solid #CCC; margin: 5px 5px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;">
+              alpha = 30<br>
+              beta = 30<br>
+              zoom = 4<br>
+              mode = 2<br>
+            </div><br>
           </div></center><br>
           <p align="justify">Read image from directory</p>
-          <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 70px; width: auto; text-align: left;">
-            # read image from directory using opencv<br><br>
-            image = cv2.imread("../image.jpg")<br><br>
+          <div style=" margin: 10px 5px; padding: 5px; background-color: rgb(29, 29, 31); overflow: auto; height: 50px; width: auto; text-align: left;">
+            <font face="SemiBold 600" color= "white"> 
+              # read image from directory using opencv
+           </font><br>
+           <font face="SemiBold 600" color= "white"> 
+            image 
+         </font>
+         <font face="SemiBold 600" color= "red"> 
+          =  
+         </font>
+         <font face="SemiBold 600" color= "white"> 
+          image. 
+          </font>
+            <font face="SemiBold 600" color= "green"> 
+              cv2.imread
+          </font>
+          <font face="SemiBold 600" color= "yellow"> 
+            ("../image.jpg")
+        </font>
+         <br>
           </div></center><br>
           <p align="justify"><b>You only need choose one between this two function</b></p>
           <p align="justify">1. Create anypoint image using getAnypointMaps and remap function After get maps x and maps y, next add function cv2.remap from opencv
         </p>
-          <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 130px; width: auto; text-align: left;">
-            # create maps_x and map_y image<br><br>
-            map_x, map_y = moildev.getAnypointMaps(alpha, beta, zoom, mode)<br><br>
-            # create anypoint image using remap function from map x and map y<br><br>
-            anypoint_image_1 = cv2.remap(image, map_x, map_y, cv2.INTER_CUBIC)<br><br>
+        <div style=" margin: 10px 5px; padding: 5px; background-color: rgb(29, 29, 31); overflow: auto; height: 110px; width: auto; text-align: left;">
+              <font face="SemiBold 600" color= "white"> 
+                # create maps_x and map_y image
+              </font><br>
+              <font face="SemiBold 600" color= "white"> 
+                map_x, map_y 
+              </font>
+              <font face="SemiBold 600" color= "red"> 
+                =  
+               </font>
+               <font face="SemiBold 600" color= "white"> 
+                moildev.
+              </font>
+              <font face="SemiBold 600" color= "green"> 
+                getAnypointMaps
+              </font>
+              <font face="SemiBold 600" color= "yellow"> 
+                getAnypointMaps(alpha, beta, zoom, mode)
+              </font>
+               <br><br>
+              <font face="SemiBold 600" color= "white"> 
+              # create anypoint image using remap function from map x and map y
+              </font><br>
+              <font face="SemiBold 600" color= "white"> 
+                anypoint_image_1 
+              </font>
+              <font face="SemiBold 600" color= "red"> 
+                =  
+               </font>
+               <font face="SemiBold 600" color= "green"> 
+                cv2.remap
+              </font>
+              <font face="SemiBold 600" color= "yellow"> 
+                (image, map_x, map_y, cv2.INTER_CUBIC)
+              </font><br>
+
           </div></center><br>
           <p align="justify">2. Create anypoint using anypoint function image Directly create anypoint image in one line code<br>
             </p>
-            <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 70px; width: auto; text-align: left;">
-            # create anypoint image<br><br>
-            anypoint_image = moildev.anypoint(image, alpha, beta, zoom, mode)<br><br>
+            <div style="border: 0px #cf294d solid; margin: 5px 5px; padding: 5px; background-color: rgb(29, 29, 31); overflow: auto; height: 50px; width: auto; text-align: left;">
+              <font face="SemiBold 600" color= "white"> 
+                # create anypoint image<br>
+             </font>
+             <font face="SemiBold 600" color= "white"> 
+              anypoint_image 
+           </font>
+           <font face="SemiBold 600" color= "red"> 
+            =  
+           </font>
+           <font face="SemiBold 600" color= "white"> 
+            moildev.
+         </font>
+         <font face="SemiBold 600" color= "yellow"> 
+          anypoint(image, alpha, beta, zoom, mode)<br>
+       </font>
+            
             </div></center><br>
-            <p align="justify">Save image using opencv cv2.imwrite<br>
-            <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 70px; width: auto; text-align: left;">
-                # save anypoint image<br><br>
-                cv2.imwrite("anypoint_image_1.jpg", anypoint_image_1)<br><br>
-                cv2.imwrite("anypoint_image_2.jpg", anypoint_image_2)<br><br>
-            </div></center><br>
+            <p align="justify">3. Save image using opencv cv2.imwrite<br>
+              <div style="border: 0px #cf294d solid; margin: 5px 5px; padding: 5px; background-color: rgb(29, 29, 31); overflow: auto; height: 95px; width: auto; text-align: left;">
+                <font face="SemiBold 600" color= "white"> 
+                  # save anypoint image<br>
+               </font>
+               <font face="SemiBold 600" color= "white"> 
+                cv2.imwrite
+             </font>
+             <font face="SemiBold 600" color= "yellow"> 
+              ("anypoint_image_1.jpg", anypoint_image_1)<br>
+           </font>
+             <font face="SemiBold 600" color= "white"> 
+              cv2.imwrite
+           </font>
+           <font face="SemiBold 600" color= "yellow"> 
+           ("anypoint_image_2.jpg", anypoint_image_2)
+         </font>
               </p>
           </div><br>
         <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
@@ -290,7 +445,7 @@
               <div class="lang-selector">
                     <!-- <a href="#" data-language-name="cpp">C++</a>
                     <a href="#" data-language-name="csharp">C#</a> -->
-                    <a href="#" data-language-name="python">Python</a>
+                    <!-- <a href="#" data-language-name="python">Python</a> -->
               </div>
           </div>
     </div>

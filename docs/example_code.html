@@ -121,12 +121,12 @@
 </ul>
 
 <ul class="current">
-  <li class="toctree-l1 current"><a class="reference internal" href="example_code.html">List Code Example</a><ul class="current">
-  <!-- <li class="toctree-l2 current"><a class="current reference internal" href="introduction.html">What is Moildev?</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="moildev-library.html">Get starting with Moildev-Installation</a></li></ul> -->
+    <li class="toctree-l1 current"><a class="reference internal" href="example_code.html">List Code Example</a><ul class="current">
+    <!-- <li class="toctree-l2 current"><a class="current reference internal" href="introduction.html">What is Moildev?</a></li>
+    <li class="toctree-l2"><a class="reference internal" href="moildev-library.html">Get starting with Moildev-Installation</a></li></ul> -->
+    </ul>
+  </li>
   </ul>
-</li>
-</ul>
 
 <ul class="current">
   <li class="toctree-l1 current"><a class="reference internal" href="moilapp.html">Application Example</a><ul class="current">
@@ -175,9 +175,15 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
           <!-- <li><a href="modules.html">Documentation</a> &raquo;</li> -->
-      <li>About Moildev </li>
+      <li>List Code Example </li>
       <li class="wy-breadcrumbs-aside">
-      <a href="sources/moildev.rst.txt" rel="nofollow"> View page source</a> 
+      <!-- <a href="sources/moildev.rst.txt" rel="nofollow"> View page source</a>  -->
+        <input type="button" face="Tahoma" value="Print !!!" onclick="printPage()" />
+      <script>
+        function printPage() { 
+          window.print(); 
+          }
+      </script>
       </li>
   </ul>
   <hr/>
@@ -186,121 +192,12 @@
        <div itemprop="articleBody">
             
 <div class="section" id="module-moildev">
-<span id="moildev-module"></span><h1>About Moildev<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+<span id="moildev-module"></span><h1>List Example Code with Moildev<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
 <!-- <dl class="class">
 <dt id="moildev.Moildev">
 <em class="property">Fisheye Lens Technology</em><code class="descclassname"></code><code class="descname"></code><span class="sig-paren"></span><em></em><em></em><em></em><span class="sig-paren"></span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
 <!-- <p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p> -->
-<p align="justify">&emsp; &emsp;  
-  The fisheye lens also terms fisheye image sensor (FIS) is a unique super wide-angle
-  lens with a short focal length; The focal length of a lens is defined as the distance from the optical center of a lens (or,  
-  the secondary principal point for a complex lens like a camera lens) to the focal point (sensor) when the lens is focused on an object at infinity.
-  that produces strong visual distortion intended to create
-  a wide panoramic or hemispherical image. The most significant feature is the field of
-  view vast. A fisheye camera can capture a
-  clear image with a FOV of over 180 degrees, 
-  The field of view of a lens (the angle of coverage or angle of view) is defined as the angle (in object space). 
-  It depends on factors, the focal length of the lens (see above).
-  but a severer barrel distortion comes along. <br>
-  &emsp; &emsp;Based on <i>Prof Chuang-Jan Chang</i>, the method for presenting fisheye camera images
-  is integrating the multicollimator metrology and cartography in order to
-  systematically describe the projection mechanism of the fisheye camera. The fisheye
-  camera in our proposed method generates the hemisphere coordinate system. Hence,
-  the position of an imaged point referring to the principal point on the image plane
-  directly reflects its corresponding Zenithal distance a. and azimuthal distance β of the
-  sight ray in space so as to normalize the imaged point onto a small sphere.</p>
-  <center><img src="assets/c.png"></center><br>
-<p align="justify">&emsp; &emsp; According to the coordinate system, the angles respectively defined by
-  incident rays and the optical axis is the zenithal angle of 𝑎 (𝑎𝑙𝑝ℎ𝑎), and 𝛽 (beta)
-  is the azimuthal angle, which are the angles Surrounding the optical axis. It has
-  relation with the coordinate system X, Y, Z, where the optical axis is defined by
-  Z-axis. For the zenithal angle, it is the angle from the vertical optical axis to the X-
-  axis and Y axis, as shown in figure 3.a. Whereas the azimuthal angle is defined as
-  the angle of positive Y as the reference point with value 0 degrees and the Z-axis
-  is used as the rotation axis, as shown in figure 3.b. the rotation around the optical
-  axis is the angle of the Y axis starting from positive direction and clockwise around
-  the X axis.</p>
-  <center><img src="assets/d.png"></center><br>
-<b><p>A. What is Anypoint View?</p></b>
-<p align="justify">&emsp; &emsp; This method converts the image plane coordinate to hemispherical coordinates,
-  moves the optical axis to the specified zenithal (alpha) and azimuthal (beta) angle
-  based on the coordinate given. the Anypoint view is an image that has been
-  undistorted in a certain area according to the input coordinates.</p>
-<b><p >B. What is Panorama View?</p></b>
-<p align="justify">&emsp; &emsp; The panoramic view may present a horizontal view in a specific immersed
-  environment to meet the common human visual perception. A panoramic view is like
-  unfold the hemisphere image. Here, Figure 4(a) shown the fisheye image model and
-  Figure 4(b) shown the mapping plane of the panoramic view. The horizontal axis in
-  the target plane is the longitude and the vertical axis is the latitude of spherical
-  coordinate. The maximum radius of longitude angle also called beta (β) is 360 0 and
-  the latitude or alpha (α) is a half of Field of View (FoV) camera where in this study
-  camera lens have FoV 220 degree. We set the alpha and beta is 0 then we calculate
-  with our method formula then the fisheye image can be expanded to the desired
-  panorama image.</p>
-  <center><img src="assets/e.png">  </center><br>
-<b><p>C. What is the use of this app?</p></b>
-<p align="justify">&emsp; &emsp; Currently, the use of fisheye camera technology has been widely used in various
-  fields such as 3D measurement, medical, ADAS system and others.</p>
-<div class="section" id="module-moildev">
-<span id="moildev-module"></span><h1>What is Moildev?<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
-<!-- <dl class="class">
-<dt id="moildev.Moildev">
-<em class="property"></em><code class="descclassname"></code>Theory<code class="descname"></code><span class="sig-paren"></span><em></em><em></em><em></em><span class="sig-paren"></span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
-<!-- <p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p> -->
-<p align="justify">&emsp; &emsp; 
-  Moildev Library is a collection of functions to developments fisheye image applications. Initially, this library is written for C++ programing language. In the recent decade, python is a programming language that is very popular for developers. That is the reason why we are developing the Moildev library for python. This library build using share object library C++ to make it fast in 
-  computation and using ctypes to wrapper the function inside the library that can use in python. This library was available for Linux and Windows with installation python 64 bit.</p>  
 
-<div class="section" id="module-moildev">
-<span id="moildev-module"></span><h1>Requirement to Build This Library<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
-<!-- <dl class="class">
-<dt id="moildev.Moildev">
-<em class="property"></em><code class="descclassname"></code>Theory<code class="descname"></code><span class="sig-paren"></span><em></em><em></em><em></em><span class="sig-paren"></span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
-<!-- <code class="xref py py-class docutils literal notranslate"><span class="pre"><b>1. Ctypes</b></span></code> -->
-<b>1. Ctypes</b>
-<p align="justify">&emsp; &emsp; Ctypes is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python <a href="https://github.com/MoilOrg/moildev/tree/main/examples/anypoint">Download Here</a> 
-<br>
-<!-- <code class="xref py py-class docutils literal notranslate"><span class="pre">2. Integrated Development Environment (IDE)  </span></code> -->
-<b>2. Integrated Development Environment (IDE)</b>
-<div style="border: 1px solid #CCC; margin: 10px 30px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;">
-  <i>- for example, in windows using visual studio community <a href="https://visualstudio.microsoft.com/vs/">Download Here</a> <br></i>
-  <i>- in Linux, can use pycharm or sublime text<br></i>
-</div>
-
-<!-- <code class="xref py py-class docutils literal notranslate"><span class="pre">3. CMake   </span></code> -->
-<b>3. CMake</b>
-<p align="justify">&emsp; &emsp; CMake is a cross-platform free and open-source software tool for managing the build process of software using a compiler-independent method. It supports directory hierarchies and applications that depend on multiple libraries. It is used in conjunction with native build environments such as Make, Qt Creator, Ninja, Apple's Xcode, and Microsoft Visual Studio.  
-<br>
-<!-- <code class="xref py py-class docutils literal notranslate"><span class="pre">4. OpenCV    </span></code> -->
-<b>4. OpenCV</b>
-<p align="justify">&emsp; &emsp; OpenCV (Open Source Computer Vision Library) is a library of programming functions mainly aimed at real-time computer vision. Originally developed by Intel, it was later supported by Willow Garage then Itseez (which was later acquired by Intel). The library is cross-platform and free for use under the open-source BSD license [Wikipedia]. To install OpenCV you can reference some link bellow this: 
-<div style="border: 1px solid #CCC; margin: 10px 30px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;">
-  <i>- for Linux os <br></i>
-  <i>- for windows<br></i>
-</div>
-<br>
-<div class="section" id="module-moildev">
-<span id="moildev-module"></span><h1>Design and architecture <a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
-<!-- <dl class="class">
-<dt id="moildev.Moildev">
-<em class="property"></em><code class="descclassname"></code>Theory<code class="descname"></code><span class="sig-paren"></span><em></em><em></em><em></em><span class="sig-paren"></span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
-<p align="justify">The architecture of the library is like diagram bellow this.  
-<center><img src="assets/a.png">  </center>
-<br>
-<!-- <p align="justify">As shown in the diagram, this library has 5 function, which is some function not available in windows like shown in table below this. 
-<center><img src="b.png">  </center> -->
-
-<br><br>
-<div class="section" id="module-moildev">
-<span id="moildev-module"></span><h1>List Example Code with Moildev<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
-<!-- <dl class="class">
-<dt id="moildev.Moildev">
-<em class="property"></em><code class="descclassname"></code>Theory<code class="descname"></code><span class="sig-paren"></span><em></em><em></em><em></em><span class="sig-paren"></span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
-<!-- <p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>  -->
-<br>
-<!-- <h1>
-  Example of Moildev library
-</h1> -->
 <center><table border="2" width="auto"><thead>
   <tr style="background-color: #4988b3;">
   <th width="40"><font color="white">No</font></th>
@@ -384,8 +281,8 @@
     </div>
     <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="moildev-function.html" class="btn btn-neutral float-right" title="spamfilter module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="introduction.html" class="btn btn-neutral float-left" title="spamfilter-py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="moilapp.html" class="btn btn-neutral float-right" title="spamfilter module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="reverse_view.html" class="btn btn-neutral float-left" title="spamfilter-py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
   <hr/>
   <div role="contentinfo">

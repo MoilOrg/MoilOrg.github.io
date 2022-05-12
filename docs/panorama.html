@@ -101,9 +101,18 @@
 </ul>
 
 <ul class="current">
-  <li class="toctree-l1 current"><a class="reference internal" href="moildev-function.html">Moildev Library</a><ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="getting_started.html">Getting Started</a><ul class="current">
+  <!-- <li class="toctree-l2 current"><a class="current reference internal" href="introduction.html">What is Moildev?</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="moildev-library.html">Get starting with Moildev-Installation</a></li></ul> -->
+  </ul>
+</li>
+</ul>
+
+<ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="moildev-function.html">Moildev API References</a><ul class="current">
   <!-- <li class="toctree-l2"><a class="reference internal" href="source.html">Panorama</a></li></ul> -->
-  <li class="toctree-l2 current"><a class="current reference internal" href="anypoint.html">Anypoint</a></li>
+  <li class="toctree-l2 current"><a class="current reference internal" href="moildev-function.html">Methodology</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="anypoint.html"> Anypoint</a></li>
   <li class="toctree-l2"><a class="reference internal" href="panorama.html"> Panorama</a></li>
   <li class="toctree-l2"><a class="reference internal" href="reverse_view.html">Reverse View</a></li> 
   </ul>
@@ -111,7 +120,15 @@
 </ul>
 
 <ul class="current">
-  <li class="toctree-l1 current"><a class="reference internal" href="moildev-function.html">Application using Moildev</a><ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="example_code.html">List Code Example</a><ul class="current">
+  <!-- <li class="toctree-l2 current"><a class="current reference internal" href="introduction.html">What is Moildev?</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="moildev-library.html">Get starting with Moildev-Installation</a></li></ul> -->
+  </ul>
+</li>
+</ul>
+
+<ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="moilapp.html">Application Example</a><ul class="current">
       <li class="toctree-l2 current"><a class="current reference internal" href="moilapp.html">MoilApp</a></li>
       <li class="toctree-l2"><a class="reference internal" href="colonoscopy.html">Colonoscopy</a></li>
       <li class="toctree-l2"><a class="reference internal" href="mms.html">Moil Monitoring System</a></li> 
@@ -154,10 +171,16 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="modules.html">Documentation</a> &raquo;</li>
-      <li>Moildev module</li>
+          <!-- <li><a href="modules.html">Documentation</a> &raquo;</li> -->
+      <li>Panorama</li>
       <li class="wy-breadcrumbs-aside">
-      <a href="sources/moildev.rst.txt" rel="nofollow"> View page source</a> 
+      <!-- <a href="sources/moildev.rst.txt" rel="nofollow"> View page source</a>  -->
+        <input type="button" face="Tahoma" value="Print !!!" onclick="printPage()" />
+      <script>
+        function printPage() { 
+          window.print(); 
+          }
+      </script>
       </li>
   </ul>
   <hr/>
@@ -180,79 +203,233 @@
           <p>This function will give you return maps x and maps y for panorama image. after get maps x and maps y we can create panorama image using remap function from opencv.</p>
           <p>2. panorama()</p>
           <p>This function will give return a panorama image directly.</p>
-          <code class="xref py py-class docutils literal notranslate"><span class="pre">Variable</span></code><br><br>
-          <div style="border: 1px solid #CCC; margin: 5px 1px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+          <code class="xref py py-class docutils literal notranslate"><span class="pre">Variable</span></code><br>
+          <div style="border: 1px solid #CCC; margin: 5px 1px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;">
             - image = the original image<br>
             - alpha_min = the minimum alpha<br>
-            - alpha_max : max of alpha. The recommended value is half of camera FOV.<br></i>
+            - alpha_max : max of alpha. The recommended value is half of camera FOV.<br>
           </div><br>
           <h1 align="justify">Example Code</h1>  
-          <h3 align="justify">1. Create panorama maps</h3>  
-          <center><div style="border: 1px #1c1d1c solid; margin: 10px 30px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 30px; width: auto; text-align: left;">
-            >>> map_x, map_y = moildev.getPanoramaMaps(alpha_min, alpha_max)
-          </div></center>
+          <h3 align="justify">1. Create panorama maps</h3> 
+
+          <div style="border: 0px #1c1d1c solid; margin: 5px 5px; padding: 5px; background-color: rgb(29, 29, 31); overflow: auto; height: 30px; width: auto; text-align: left;">
+            <font face="comic sans ms" color="white"> 
+              $ map_x, map_y</font>
+            <font face="SemiBold 600" color= "red"> 
+              =  
+             </font>
+             <font face="SemiBold 600" color= "white"> 
+              moildev.  
+             </font>
+             <font face="SemiBold 600" color= "green"> 
+              getPanoramaMaps
+             </font>
+             <font face="SemiBold 600" color= "yellow"> 
+              (alpha_min, alpha_max)
+             </font></div>
+
           <h3 align="justify">Purpose:</h3>
           <p align="justify">To generate a pair of X-Y Maps for alpha within 0..alpha_max degree, the result X-Y Maps can be used later to generate a panorama image from the original fish-eye image.</p>
           <h3 align="justify">Parameter::</h3>
-          <div style="border: 1px solid #CCC; margin: 5px 5px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+          <div style="border: 1px solid #CCC; margin: 5px 5px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;">
             - alpha_min = the minimum alpha<br>
-            - alpha_max = the maximum of alpha. The recommended vaule is half of camera FOV. For 	example, use 90 for a 180 degree fisheye images and use 110 for a 220 degree fisheye images.<br>
-            - See <a href="https://github.com/MoilOrg/moildev/tree/main/examples/panorama">example</a></i>
+            - alpha_max = the maximum of alpha. The recommended vaule is half of camera FOV. <br>
+            - For 	example, use 90 for a 180 degree fisheye images and use 110 for a 220 degree fisheye images.<br>
+            - See <a href="https://github.com/MoilOrg/moildev/tree/main/examples/panorama">example</a>
           </div><br>
           
-          <h3 align="justify">2. Panorama</h3>  
-          <center><div style="border: 1px #1c1d1c solid; margin: 5px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 30px; width: auto; text-align: left;">
-            >>> panorama_image = moildev.panorama(image, alpha_min, alpha_max)
-          </div></center>
+          <h3 align="justify">2. Panorama</h3>
+          <div style="border: 0px #1c1d1c solid; margin: 5px 5px; padding: 5px; background-color: rgb(29, 29, 31); overflow: auto; height: 30px; width: auto; text-align: left;">
+            <font face="SemiBold 600" color="white"> 
+              $ panorama_image</font>
+            <font face="SemiBold 600" color= "red"> 
+              =  
+             </font>
+             <font face="SemiBold 600" color= "white"> 
+              moildev.  
+             </font>
+             <font face="SemiBold 600" color= "green"> 
+              panorama
+             </font>
+             <font face="SemiBold 600" color= "yellow"> 
+              (image, alpha_min, alpha_max)
+             </font></div>  
+         
           <h3 align="justify">Purpose:</h3>
           <p align="justify">The panorama image centered at the 3D direction with alpha = iC_alpha_degree and beta = iC_beta_degree.</p>
           <h3 align="justify">Parameter::</h3>
-          <div style="border: 1px solid #CCC; margin: 5px 5px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"><i>
+          <div style="border: 1px solid #CCC; margin: 5px 5px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;">
             - image = the original image<br>
             - alpha_min = the minimum alpha<br>
             - alpha_max : max of alpha. The recommended vaule is half of camera FOV. For example, use 90 for a 180 degree fisheye images and use 110 for a 220 degree fisheye images.<br>
-            - See <a href="https://github.com/MoilOrg/moildev/tree/main/examples/panorama">example</a><</i>
+            - See <a href="https://github.com/MoilOrg/moildev/tree/main/examples/panorama">example</a>
           </div>
 
           <h3 align="justify">3. Code Overview</h3>  
           <p align="justify">First, import and create object of moildev library</p>
-          <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 130px; width: auto; text-align: left;">
-            # import library<br><br>
-            import cv2<br><br>
-            from Moildev import Moildev<br><br>
 
-            # create object of Moildev<br>
-            moildev = Moildev("../Raspi_Cam.json")  # select parameter file (.json)<br><br>
-          </div></center><br>
+          <div style="border: 0px #cf294d solid; margin: 5px 5px; padding: 5px; background-color: rgb(29, 29, 31); overflow: auto; height: 130px; width: auto; text-align: left;">
+            <font face="SemiBold 600" color= "white"> 
+              # import library<br>
+           </font>
+            <font face="SemiBold 600" color= #cf294d> 
+              import  
+            </font>
+            <font face="SemiBold 600" color= "white"> 
+              cv2
+            </font>
+            <font face="SemiBold 600" color= #cf294d> 
+              from 
+            </font>
+            <font face="SemiBold 600" color= "white"> 
+              Moildev
+           </font><br>
+           <font face="SemiBold 600" color= #cf294d> 
+            import 
+          </font>
+          <font face="SemiBold 600" color= "white"> 
+            Moildev
+          </font><br><br>
+          <font face="SemiBold 600" color= "white"> 
+            moildev
+            </font>
+            <font face="SemiBold 600" color= "red"> 
+               =  
+              </font>
+              <font face="SemiBold 600" color= "white"> 
+                Moildev
+                </font>
+            <font face="SemiBold 600" color= "yellow"> 
+              ("../Raspi_Cam.json")  
+            </font>
+            <font face="SemiBold 600" color= "white"> 
+              # select parameter file (.json)
+          </font></div>
+
+
+         
           <p align="justify">Create specified variable value of alpha, beta, zoom and mode</p>
-          <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 70px; width: auto; text-align: left;">
-            # create specified variable value of alpha min dan alpha max<br><br>
-            alpha_min = 10<br><br>
-            alpha_max = 110<br><br>
-          </div></center><br>
+
+          <div style="border: 0px #cf294d solid; margin: 5px 5px; padding: 5px; background-color: rgb(29, 29, 31); overflow: auto; height: 90px; width: auto; text-align: left;">
+            <font face="SemiBold 600" color= "white"> 
+              #  create specified variable value of alpha min dan alpha max<br>  
+            </font>
+            <font face="SemiBold 600" color= "white"> 
+              alpha_max
+            </font>
+            <font face="SemiBold 600" color= "red"> 
+              =
+            </font>
+            <font face="SemiBold 600" color= "purple"> 
+              110<br>  
+            </font>
+          </font>
+          <font face="SemiBold 600" color= "white"> 
+            alpha_min
+          </font>
+          <font face="SemiBold 600" color= "red"> 
+            =
+          </font>
+          <font face="SemiBold 600" color= "purple"> 
+            110<br>  
+          </font>
+          </div><br>
+
+          
           <p align="justify">Read image from directory</p>
-          <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 70px; width: auto; text-align: left;">
-            # read image from directory using opencv<br><br>
-            image = cv2.imread("../image_2.png")<br><br>
-          </div></center><br>
+          <div style="border: 0px #cf294d solid; margin: 5px 5px; padding: 5px; background-color: rgb(29, 29, 31); overflow: auto; height: 60px; width: auto; text-align: left;">
+            <font face="comic sans ms" color= "white"> 
+              #  read image from directory using opencv<br>  
+            </font>
+            <font face="SemiBold 600" color= "white"> 
+              image
+            </font>
+            <font face="SemiBold 600" color= "red"> 
+              =
+            </font>
+            <font face=SemiBold 600" color= "green"> 
+              cv2.imread
+            </font>
+            <font face="SemiBold 600" color= "yellow"> 
+              ("../image_2.png")
+            </font>
+          </div><br>
+
           <p align="justify"><b>You only need choose one between this two function</b></p>
           <p align="justify">1. Create maps and panorama image using remap function After get maps x and maps y, next add function cv2.remap from opencv</p>
-          <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 120px; width: auto; text-align: left;">
-            # create maps_x and map_y image<br><br>
-            map_x, map_y = moildev.getPanoramaMaps(alpha_min, alpha_max)<br><br>
-            panorama_image_1 = cv2.remap(image, map_x, map_y, cv2.INTER_CUBIC)<br><br>
-          </div></center><br>
-          <p align="justify">2. Create panorama image directly image<br>
-            </p>
-            <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 70px; width: auto; text-align: left;">
-                # create panorama image<br><br>
-            panorama_image = moildev.panorama(image, alpha_min, alpha_max)<br><br>
-            </div></center><br>
-            <p align="justify">Save image using opencv imwrite<br>
-            <center><div style=" margin: 10px 5px; padding: 5px; background-color: rgb(247, 249, 252); overflow: auto; height: 120px; width: auto; text-align: left;">
-                # save panorama image<br><br>
-                cv2.imwrite("panorama_image_1.jpg", panorama_image_1)<br><br>
-                cv2.imwrite("panorama_image_2.jpg", panorama_image_2)<br><br>
+          <p align="justify">Read image from directory</p>
+          <div style="border: 0px #cf294d solid; margin: 5px 5px; padding: 5px; background-color: rgb(29, 29, 31); overflow: auto; height: 100px; width: auto; text-align: left;">
+            <font face="SemiBold 600" color= "white"> 
+              # create maps_x and map_y image<br>  
+            </font>
+            <font face="SemiBold 600" color= "white"> 
+              map_x, map_y
+            </font>
+            <font face="SemiBold 600" color= "red"> 
+              =
+            </font>
+            <font face="SemiBold 600" color= "white"> 
+              moildev.
+            </font>
+            <font face="SemiBold 600" color= "green"> 
+              getPanoramaMaps
+            </font>
+            <font face="SemiBold 600" color= "yellow"> 
+              (image, map_x, map_y, cv2.INTER_CUBIC)
+            </font><br><br>
+            <font face="SemiBold 600" color= "white"> 
+              panorama_image_1
+            </font>
+            <font face="SemiBold 600" color= "red"> 
+              =
+            </font>
+            <font face="SemiBold 600" color= "white"> 
+              cv2.remap
+            </font>
+          </div><br>
+
+          <p align="justify">2. Create panorama image directly image<br></p>
+
+          <div style="border: 0px #cf294d solid; margin: 5px 5px; padding: 5px; background-color: rgb(29, 29, 31); overflow: auto; height: 60px; width: auto; text-align: left;">
+            <font face="SemiBold 600" color= "white"> 
+              # create panorama image<br>  
+            </font>
+            <font face="SemiBold 600" color= "white"> 
+              panorama_image
+            </font>
+            <font face="SemiBold 600" color= "red"> 
+              =
+            </font>
+            <font face="SemiBold 600" color= "white"> 
+              moildev.
+            </font>
+            <font face="SemiBold 600" color= "green"> 
+              panorama
+            </font>
+            <font face="SemiBold 600" color= "yellow"> 
+              (image, alpha_min, alpha_max)
+            </font>
+            </div><br>
+
+
+            <p align="justify">3. Save image using opencv imwrite<br>
+            
+              <div style="border: 0px #cf294d solid; margin: 5px 5px; padding: 5px; background-color: rgb(29, 29, 31); overflow: auto; height: 80px; width: auto; text-align: left;">
+                <font face="SemiBold 600" color= "white"> 
+                  # save panorama image<br>
+               </font>
+               <font face="SemiBold 600" color= "white"> 
+                cv2.imwrite
+             </font>
+             <font face="SemiBold 600" color= "yellow"> 
+              ("panorama_image_1.jpg", panorama_image_1)<br>
+           </font>
+             <font face="SemiBold 600" color= "white"> 
+              cv2.imwrite
+           </font>
+           <font face="SemiBold 600" color= "yellow"> 
+            ("panorama_image_2.jpg", panorama_image_2)
+         </font>
             </div></center><br>
           </div><br>
 
@@ -280,7 +457,7 @@
               <div class="lang-selector">
                     <!-- <a href="#" data-language-name="cpp">C++</a>
                     <a href="#" data-language-name="csharp">C#</a> -->
-                    <a href="#" data-language-name="python">Python</a>
+                    <!-- <a href="#" data-language-name="python">Python</a> -->
               </div>
           </div>
     </div>

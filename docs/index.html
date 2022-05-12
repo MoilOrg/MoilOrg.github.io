@@ -1,42 +1,91 @@
 <!DOCTYPE html>
 <html class="writer-html4" lang="en" >
 <head>
+  
   <meta charset="utf-8" />
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Welcome to moil’s documentation! &mdash; MOILDEV-SDK version 1 documentation</title>
+  <title>Moildev&mdash;library</title>
   <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <style type="text/css">
+      body{
+        background: #eee;
+        padding-top: 20px;
+        /* font-family: monospace; */
+      }
+      .header{
+        border-radius: 20px 20px 0px 0px;
+        padding: 10px 0px;
+        background: #4988b3;
+        color: #fff;
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+      .faq-item{
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+      .faq-body{
+        display: none;
+        margin-top: 30px;
+      }
+      .faq-wrapper{
+        width: 70%;
+        margin: 0 auto;
+      }
+      .faq-inner{
+        padding: 30px;
+        background: aliceblue;
+      }
+      .faq-plus{
+        float: right;
+        font-size: 1.4em;
+        line-height: 1em;
+        cursor: pointer;
+      }
+      hr{
+        background-color: #9b9b9b;
+      }
+    </style>
+
+    
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
+
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
         <script type="text/javascript" src="static/jquery.js"></script>
         <script type="text/javascript" src="static/underscore.js"></script>
         <script type="text/javascript" src="static/doctools.js"></script>
         <script type="text/javascript" src="static/language_data.js"></script>
-    
-    <script type="text/javascript" src="static/js/theme.js"></script>
+      <script type="text/javascript" src="static/js/theme.js"></script>
+      <script>
+        function printPage() { 
+          window.print(); 
+          }
+      </script>
 
-    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="spamfilter-py" href="source.html" /> 
+    <link rel="next" title="spamfilter module" href="moildev-function.html" />
+    <link rel="prev" title="spamfilter-py" href="introduction.html" /> 
 </head>
 <body class="wy-body-for-nav">
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <!-- <a href="#" class="icon icon-home"> Moildev</a>
-            <h2>Version 3.1.0</h2> -->
+            <!-- <h1 href="index.html" class="icon icon-home"><b>Moildev</b></h1>
+            <p>Version 3.1.0</p> -->
             <body><font face="Tahoma" size="6"> Moildev</font><br/> 
               <font face="Tahoma" size="3"> Version 3.1.0</font><br/>
               </body>
             <br>
- 
+
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -45,13 +94,12 @@
   </form>
 </div>
 </div>
-
-        
-<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">        
+<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">  
+            
 <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation"> 
 <!-- <p class="caption"><span class="caption-text">Documentation:</span></p> -->
 <ul class="current">
-  <li class="toctree-l1 current"><a class="reference internal" href="introduction.html">Introduction</a><ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="introduction.html">About Moildev</a><ul class="current">
   <!-- <li class="toctree-l2 current"><a class="current reference internal" href="introduction.html">What is Moildev?</a></li>
   <li class="toctree-l2"><a class="reference internal" href="moildev-library.html">Get starting with Moildev-Installation</a></li></ul> -->
   </ul>
@@ -59,8 +107,17 @@
 </ul>
 
 <ul class="current">
-  <li class="toctree-l1 current"><a class="reference internal" href="moildev-function.html">Moildev Library</a><ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="getting_started.html">Getting Started</a><ul class="current">
+  <!-- <li class="toctree-l2 current"><a class="current reference internal" href="introduction.html">What is Moildev?</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="moildev-library.html">Get starting with Moildev-Installation</a></li></ul> -->
+  </ul>
+</li>
+</ul>
+
+<ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="moildev-function.html">Moildev API References</a><ul class="current">
   <!-- <li class="toctree-l2"><a class="reference internal" href="source.html">Panorama</a></li></ul> -->
+  <li class="toctree-l2 current"><a class="current reference internal" href="moildev-function.html">Methodology</a></li>
   <li class="toctree-l2 current"><a class="current reference internal" href="anypoint.html">Anypoint</a></li>
   <li class="toctree-l2"><a class="reference internal" href="panorama.html"> Panorama</a></li>
   <li class="toctree-l2"><a class="reference internal" href="reverse_view.html">Reverse View</a></li> 
@@ -70,10 +127,12 @@
 
 <ul class="current">
   <li class="toctree-l1 current"><a class="reference internal" href="moildev-function.html">Application using Moildev</a><ul class="current">
-    <li class="toctree-l2 current"><a class="current reference internal" href="moilapp.html">MoilApp</a></li>
-    <li class="toctree-l2"><a class="reference internal" href="measurement.html"> 3D Measurement</a></li>
-    <li class="toctree-l2"><a class="reference internal" href="mms.html">Moil Monitoring System</a></li> 
+      <li class="toctree-l2 current"><a class="current reference internal" href="moilapp.html">MoilApp</a></li>
+      <li class="toctree-l2"><a class="reference internal" href="colonoscopy.html">Colonoscopy</a></li>
+      <li class="toctree-l2"><a class="reference internal" href="mms.html">Moil Monitoring System</a></li> 
   </ul>
+</li>
+</ul>
 </li>
 </ul>
 
@@ -84,113 +143,179 @@
 </li>
 </ul>
 
-        </div>
-      </div>
-    </nav>
+<ul class="current">
+  <!-- <li class="toctree-l1 current"><a class="reference internal" href="source.html">Moildev Library</a><ul class="current"> -->
+  </ul>
+</li>
+</ul>
+
+<!-- <ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Application</a><ul class="current"> -->
+  <!-- <li class="toctree-l2 current"><a class="current reference internal" href="#">MoilApp</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="spamfilter.html">Visual Odometry</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="test_spamfilter.html">Surounding View's</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="token.html">Camera MOnitoring System</a></li> -->
+  <!-- </ul> -->
+</li>
+</ul>               
+</div>
+</div>
+</nav>
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" aria-label="top navigation">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">MOILDEV-SDK</a>
+          <a href="index.html">MOILDEV-SDK</a>
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content">
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
-      <li>Welcome to moil’s documentation!</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <!-- <li><a href="modules.html">Documentation</a> &raquo;</li> -->
+      <li>Moildev module</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="sources/index.rst.txt" rel="nofollow"> View page source</a>
+      <!-- <a href="sources/moildev.rst.txt" rel="nofollow"> View page source</a>  -->
+        <input type="button" face="Tahoma" value="Print !!!" onclick="printPage()" />
+ 
+      
       </li>
   </ul>
   <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+      <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+       <div itemprop="articleBody">
             
-  <div class="section" id="welcome-to-moil-s-documentation">
-<h1>Welcome to Moil Documentation!<a class="headerlink" href="#welcome-to-moil-s-documentation" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<!-- <p class="caption"><span class="caption-text">Documentation:</span></p> -->
-<ul>
-<!-- <li class="toctree-l1"><a class="reference internal" href="modules.html">spamfilter-py</a><ul> -->
-  <ul class="current">
-    <li class="toctree-l1 current"><a class="reference internal" href="introduction.html">Introduction</a><ul class="current">
-    <!-- <li class="toctree-l2 current"><a class="current reference internal" href="introduction.html">What is Moildev?</a></li>
-    <li class="toctree-l2"><a class="reference internal" href="moildev-library.html">Get starting with Moildev-Installation</a></li></ul> -->
-    </ul>
-  </li>
-  </ul>
-  
-  <ul class="current">
-    <li class="toctree-l1 current"><a class="reference internal" href="moildev-function.html">Moildev Library</a><ul class="current">
-    <!-- <li class="toctree-l2"><a class="reference internal" href="source.html">Panorama</a></li></ul> -->
-    <li class="toctree-l2 current"><a class="current reference internal" href="anypoint.html">Anypoint</a></li>
-    <li class="toctree-l2"><a class="reference internal" href="panorama.html"> Panorama</a></li>
-    <li class="toctree-l2"><a class="reference internal" href="reverse_view.html">Reverse View</a></li> 
-    </ul>
-  </li>
-  </ul>
-  
-  <ul class="current">
-    <li class="toctree-l1 current"><a class="reference internal" href="moildev-function.html">Application using Moildev</a><ul class="current">
-      <li class="toctree-l2 current"><a class="current reference internal" href="moilapp.html">MoilApp</a></li>
-      <li class="toctree-l2"><a class="reference internal" href="measurement.html"> 3D Measurement</a></li>
-      <li class="toctree-l2"><a class="reference internal" href="mms.html">Moil Monitoring System</a></li> 
-    </ul>
-  </li>
-  </ul>
-  
-  <ul class="current">
-    <li class="toctree-l1 current"><a class="reference internal" href="moilfaqs.html">Moil FAQs</a><ul class="current">
-    <!-- <li class="toctree-l2"><a class="reference internal" href="source.html">Panorama</a></li></ul> -->
-    </ul>
-  </li>
-  </ul>
-</li>
-</ul>
-</div>
-</div>
-<!-- <div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
-</ul>
-</div> -->
+<div class="section" id="module-moildev">
+<span id="moildev-module"></span><h1>About Moildev<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+<!-- <dl class="class">
+<dt id="moildev.Moildev">
+<em class="property">Fisheye Lens Technology</em><code class="descclassname"></code><code class="descname"></code><span class="sig-paren"></span><em></em><em></em><em></em><span class="sig-paren"></span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
+<!-- <p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p> -->
+<p align="justify">&emsp; &emsp;  
+  The fisheye lens also terms fisheye image sensor (FIS) is a unique super wide-angle
+  lens with a short focal length; The focal length of a lens is defined as the distance from the optical center of a lens (or,  
+  the secondary principal point for a complex lens like a camera lens) to the focal point (sensor) when the lens is focused on an object at infinity.
+  that produces strong visual distortion intended to create
+  a wide panoramic or hemispherical image. The most significant feature is the field of
+  view vast. A fisheye camera can capture a
+  clear image with a FOV of over 180 degrees, 
+  The field of view of a lens (the angle of coverage or angle of view) is defined as the angle (in object space). 
+  It depends on factors, the focal length of the lens (see above).
+  but a severer barrel distortion comes along. <br>
+  &emsp; &emsp;Based on <i>Prof Chuang-Jan Chang</i>, the method for presenting fisheye camera images
+  is integrating the multicollimator metrology and cartography in order to
+  systematically describe the projection mechanism of the fisheye camera. The fisheye
+  camera in our proposed method generates the hemisphere coordinate system. Hence,
+  the position of an imaged point referring to the principal point on the image plane
+  directly reflects its corresponding Zenithal distance a. and azimuthal distance β of the
+  sight ray in space so as to normalize the imaged point onto a small sphere.</p>
+  <center><img src="assets/c.png"></center><br>
+<p align="justify">&emsp; &emsp; According to the coordinate system, the angles respectively defined by
+  incident rays and the optical axis is the zenithal angle of 𝑎 (𝑎𝑙𝑝ℎ𝑎), and 𝛽 (beta)
+  is the azimuthal angle, which are the angles Surrounding the optical axis. It has
+  relation with the coordinate system X, Y, Z, where the optical axis is defined by
+  Z-axis. For the zenithal angle, it is the angle from the vertical optical axis to the X-
+  axis and Y axis, as shown in figure 3.a. Whereas the azimuthal angle is defined as
+  the angle of positive Y as the reference point with value 0 degrees and the Z-axis
+  is used as the rotation axis, as shown in figure 3.b. the rotation around the optical
+  axis is the angle of the Y axis starting from positive direction and clockwise around
+  the X axis.</p>
+  <center><img src="assets/d.png"></center><br>
+<b><p>A. What is Anypoint View?</p></b>
+<p align="justify">&emsp; &emsp; This method converts the image plane coordinate to hemispherical coordinates,
+  moves the optical axis to the specified zenithal (alpha) and azimuthal (beta) angle
+  based on the coordinate given. the Anypoint view is an image that has been
+  undistorted in a certain area according to the input coordinates.</p>
+<b><p >B. What is Panorama View?</p></b>
+<p align="justify">&emsp; &emsp; The panoramic view may present a horizontal view in a specific immersed
+  environment to meet the common human visual perception. A panoramic view is like
+  unfold the hemisphere image. Here, Figure 4(a) shown the fisheye image model and
+  Figure 4(b) shown the mapping plane of the panoramic view. The horizontal axis in
+  the target plane is the longitude and the vertical axis is the latitude of spherical
+  coordinate. The maximum radius of longitude angle also called beta (β) is 360 0 and
+  the latitude or alpha (α) is a half of Field of View (FoV) camera where in this study
+  camera lens have FoV 220 degree. We set the alpha and beta is 0 then we calculate
+  with our method formula then the fisheye image can be expanded to the desired
+  panorama image.</p>
+  <center><img src="assets/e.png">  </center><br>
+<b><p>C. What is the use of this app?</p></b>
+<p align="justify">&emsp; &emsp; Currently, the use of fisheye camera technology has been widely used in various
+  fields such as 3D measurement, medical, ADAS system and others.</p>
+<div class="section" id="module-moildev">
+<span id="moildev-module"></span><h1>What is Moildev?<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+<!-- <dl class="class">
+<dt id="moildev.Moildev">
+<em class="property"></em><code class="descclassname"></code>Theory<code class="descname"></code><span class="sig-paren"></span><em></em><em></em><em></em><span class="sig-paren"></span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
+<!-- <p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p> -->
+<p align="justify">&emsp; &emsp; 
+  Moildev Library is a collection of functions to developments fisheye image applications. Initially, this library is written for C++ programing language. In the recent decade, python is a programming language that is very popular for developers. That is the reason why we are developing the Moildev library for python. This library build using share object library C++ to make it fast in 
+  computation and using ctypes to wrapper the function inside the library that can use in python. This library was available for Linux and Windows with installation python 64 bit.</p>  
 
+<div class="section" id="module-moildev">
+<span id="moildev-module"></span><h1>Requirement to Build This Library<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+<!-- <dl class="class">
+<dt id="moildev.Moildev">
+<em class="property"></em><code class="descclassname"></code>Theory<code class="descname"></code><span class="sig-paren"></span><em></em><em></em><em></em><span class="sig-paren"></span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
+<!-- <code class="xref py py-class docutils literal notranslate"><span class="pre"><b>1. Ctypes</b></span></code> -->
+<b>1. Ctypes</b>
+<p align="justify">&emsp; &emsp; Ctypes is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python <a href="https://github.com/MoilOrg/moildev/tree/main/examples/anypoint">Download Here</a> 
+<br>
+<!-- <code class="xref py py-class docutils literal notranslate"><span class="pre">2. Integrated Development Environment (IDE)  </span></code> -->
+<b>2. Integrated Development Environment (IDE)</b>
+<div style="border: 1px solid #CCC; margin: 10px 30px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;">
+  <i>- for example, in windows using visual studio community <a href="https://visualstudio.microsoft.com/vs/">Download Here</a> <br></i>
+  <i>- in Linux, can use pycharm or sublime text<br></i>
+</div>
 
-           </div>
-           
-          </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="modules.html" class="btn btn-neutral float-right" title="spamfilter-py" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+<!-- <code class="xref py py-class docutils literal notranslate"><span class="pre">3. CMake   </span></code> -->
+<b>3. CMake</b>
+<p align="justify">&emsp; &emsp; CMake is a cross-platform free and open-source software tool for managing the build process of software using a compiler-independent method. It supports directory hierarchies and applications that depend on multiple libraries. It is used in conjunction with native build environments such as Make, Qt Creator, Ninja, Apple's Xcode, and Microsoft Visual Studio.  
+<br>
+<!-- <code class="xref py py-class docutils literal notranslate"><span class="pre">4. OpenCV    </span></code> -->
+<b>4. OpenCV</b>
+<p align="justify">&emsp; &emsp; OpenCV (Open Source Computer Vision Library) is a library of programming functions mainly aimed at real-time computer vision. Originally developed by Intel, it was later supported by Willow Garage then Itseez (which was later acquired by Intel). The library is cross-platform and free for use under the open-source BSD license [Wikipedia]. To install OpenCV you can reference some link bellow this: 
+<div style="border: 1px solid #CCC; margin: 10px 30px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;">
+  <i>- for Linux os <br></i>
+  <i>- for windows<br></i>
+</div>
+<br>
+<div class="section" id="module-moildev">
+<span id="moildev-module"></span><h1>Design and architecture <a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+<!-- <dl class="class">
+<dt id="moildev.Moildev">
+<em class="property"></em><code class="descclassname"></code>Theory<code class="descname"></code><span class="sig-paren"></span><em></em><em></em><em></em><span class="sig-paren"></span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
+<p align="justify">The architecture of the library is like diagram bellow this.  
+<center><img src="assets/a.png">  </center>
+<br>
+<!-- <p align="justify">As shown in the diagram, this library has 5 function, which is some function not available in windows like shown in table below this. 
+<center><img src="b.png">  </center> -->
+
+<br><br>
+  </head>
+<dl class="docutils">
+</div>
+  </div>
     </div>
-
+    <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="spamfilter module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="introduction.html" class="btn btn-neutral float-left" title="spamfilter-py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
   <hr/>
-
   <div role="contentinfo">
     <p>
         &#169; Copyright 2022, Moil.
-
     </p>
   </div>
     
-    
-    
     Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
   
 
