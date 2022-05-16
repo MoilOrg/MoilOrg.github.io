@@ -82,7 +82,7 @@
 
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" autocomplete="off"/>
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -114,7 +114,8 @@
   <li class="toctree-l2 current"><a class="current reference internal" href="moildev-function.html">Methodology</a></li> -->
   <li class="toctree-l2 current"><a class="current reference internal" href="anypoint.html">Anypoint</a></li>
   <li class="toctree-l2"><a class="reference internal" href="panorama.html"> Panorama</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="reverse_view.html">Reverse View</a></li> 
+  <li class="toctree-l2"><a class="reference internal" href="reverse_view.html">Reverse View</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="add_function.html">Additional function</a></li>   
   </ul>
 </li>
 </ul>
@@ -215,9 +216,9 @@
           <p><b>2. panorama()</b><br>
             &emsp;&emsp;This function will give return a panorama image direcstly.<br>
             <code class="xref py py-class docutils literal notranslate"><span class="pre">Variable</span></code><br>
-            &emsp; &omicron; image = the original image<br>
-            &emsp; &omicron; alpha_min = the minimum alpha<br>
-            &emsp; &omicron; alpha_max : max of alpha. The recommended value is half of camera FOV.<br>
+            &emsp; - image = the original image<br>
+            &emsp; - alpha_min = the minimum alpha<br>
+            &emsp; - alpha_max : max of alpha. The recommended value is half of camera FOV.<br>
           </p>
           <!-- <div style="border: 0px solid #CCC; margin: 5px 1px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"> -->
             
@@ -244,10 +245,10 @@
           <p align="justify">To generate a pair of X-Y Maps for alpha within 0..alpha_max degree, the result X-Y Maps can be used later to generate a panorama image from the original fish-eye image.</p>
           <h3 align="justify">Parameter::</h3>
           <!-- <div style="border: 0px solid #CCC; margin: 5px 5px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"> -->
-            &emsp; &omicron; alpha_min = the minimum alpha<br>
-            &emsp; &omicron; alpha_max = the maximum of alpha. The recommended vaule is half of camera FOV. <br>
-            &emsp; &omicron; For 	example, use 90 for a 180 degree fisheye images and use 110 for a 220 degree fisheye images.<br>
-            &emsp; &omicron; See <a href="https://github.com/MoilOrg/moildev/tree/main/examples/panorama">example</a>
+            &emsp; - alpha_min = the minimum alpha<br>
+            &emsp; - alpha_max = the maximum of alpha. The recommended vaule is half of camera FOV. <br>
+            &emsp; - For 	example, use 90 for a 180 degree fisheye images and use 110 for a 220 degree fisheye images.<br>
+            &emsp; - See <a href="https://github.com/MoilOrg/moildev/tree/main/examples/panorama">example</a>
           <br><br>
 
           <h3 align="justify">2. Panorama</h3>
@@ -271,11 +272,11 @@
           <p align="justify">The panorama image centered at the 3D direction with alpha = iC_alpha_degree and beta = iC_beta_degree.</p>
           <h3 align="justify">Parameter::</h3>
           <!-- <div style="border: 0px solid #CCC; margin: 5px 5px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"> -->
-            &emsp; &omicron; image = the original image<br>
-            &emsp; &omicron; alpha_min = the minimum alpha<br>
-            &emsp; &omicron; alpha_max : max of alpha. The recommended vaule is half of camera FOV. <br>
-            &emsp; &omicron; For example, use 90 for a 180 degree fisheye images and use 110 for a 220 degree fisheye images.<br>
-            &emsp; &omicron; See <a href="https://github.com/MoilOrg/moildev/tree/main/examples/panorama">example</a>
+            &emsp; - image = the original image<br>
+            &emsp; - alpha_min = the minimum alpha<br>
+            &emsp; - alpha_max : max of alpha. The recommended vaule is half of camera FOV. <br>
+            &emsp; - For example, use 90 for a 180 degree fisheye images and use 110 for a 220 degree fisheye images.<br>
+            &emsp; - See <a href="https://github.com/MoilOrg/moildev/tree/main/examples/panorama">example</a>
           <br><br>
 
           <h3 align="justify">3. Code Overview</h3>  
@@ -459,9 +460,11 @@
               </p>
             </div>
               
-              Built with <a href="#">Sphinx</a> using a         
-              <a href="#">theme</a>         
-              provided by <a href="#">Read the Docs</a>. 
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+            <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+            
+            provided by <a href="https://readthedocs.org">Read the Docs</a>.  
           
           </footer>
                   </div>

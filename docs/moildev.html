@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html4" lang="en" >
 <head>
+  
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Moildev&mdash;library</title>
@@ -33,7 +34,7 @@
         margin-top: 30px;
       }
       .faq-wrapper{
-        width: 100%;
+        width: 70%;
         margin: 0 auto;
       }
       .faq-inner{
@@ -50,6 +51,8 @@
         background-color: #9b9b9b;
       }
     </style>
+
+    
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -60,10 +63,15 @@
         <script type="text/javascript" src="static/doctools.js"></script>
         <script type="text/javascript" src="static/language_data.js"></script>
       <script type="text/javascript" src="static/js/theme.js"></script>
+      <script>
+        function printPage() { 
+          window.print(); 
+          }
+      </script>
 
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="spamfilter module" href="application.html" />
+    <link rel="next" title="spamfilter module" href="getting_started.html" />
     <link rel="prev" title="spamfilter-py" href="introduction.html" /> 
 </head>
 <body class="wy-body-for-nav">
@@ -71,29 +79,25 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <!-- <a href="#" class="icon icon-home"> Moildev</a>
-            <h2>Version 3.1.0</h2>
-          </a> -->
-          <body><font face="Tahoma" size="6"> Moildev</font><br/> 
-            <font face="Tahoma" size="3"> Version 3.1.0</font><br/>
-            </body>
-          <br>
-
+            <!-- <h1 href="index.html" class="icon icon-home"><b>Moildev</b></h1>
+            <p>Version 3.1.0</p> -->
+            <body><font face="Tahoma" size="6"> Moildev</font><br/> 
+              <font face="Tahoma" size="3"> Version 3.1.0</font><br/>
+              </body>
+            <br>
 
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" autocomplete="off"/>
     <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
+    <input type="hidden" name="intr.html" value="default" />
   </form>
 </div>
 </div>
 <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">  
-            
-<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation"> 
 <!-- <p class="caption"><span class="caption-text">Documentation:</span></p> -->
 <ul class="current">
-  <li class="toctree-l1 current"><a class="reference internal" href="introduction.html">About Moildev</a><ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="introduction.html">introduction Moildev</a><ul class="current">
   <!-- <li class="toctree-l2 current"><a class="current reference internal" href="introduction.html">What is Moildev?</a></li>
   <li class="toctree-l2"><a class="reference internal" href="moildev-library.html">Get starting with Moildev-Installation</a></li></ul> -->
   </ul>
@@ -109,12 +113,13 @@
 </ul>
 
 <ul class="current">
-  <li class="toctree-l1 current"><a class="reference internal" href="moildev-function.html">Moildev API References</a><ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="moildev-api.html">Moildev API References</a><ul class="current">
   <!-- <li class="toctree-l2"><a class="reference internal" href="source.html">Panorama</a></li></ul>
   <li class="toctree-l2 current"><a class="current reference internal" href="moildev-function.html">Methodology</a></li> -->
-  <li class="toctree-l2"><a class="reference internal" href="anypoint.html"> Anypoint</a></li>
+  <li class="toctree-l2 current"><a class="current reference internal" href="anypoint.html">Anypoint</a></li>
   <li class="toctree-l2"><a class="reference internal" href="panorama.html"> Panorama</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="reverse_view.html">Reverse View</a></li> 
+  <li class="toctree-l2"><a class="reference internal" href="reverse_view.html">Reverse View</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="add_function.html">Additional function</a></li>  
   </ul>
 </li>
 </ul>
@@ -128,14 +133,15 @@
 </ul>
 
 <ul class="current">
-  <li class="toctree-l1 current"><a class="reference internal" href="moilapp.html">Application Example</a><ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="application_ex.html">Application Examples</a><ul class="current">
       <li class="toctree-l2 current"><a class="current reference internal" href="moilapp.html">MoilApp</a></li>
       <li class="toctree-l2"><a class="reference internal" href="colonoscopy.html">Colonoscopy</a></li>
       <li class="toctree-l2"><a class="reference internal" href="mms.html">Moil Monitoring System</a></li> 
   </ul>
 </li>
 </ul>
-
+</li>
+</ul>
 
 <ul class="current">
   <li class="toctree-l1 current"><a class="reference internal" href="moilfaqs.html">Moil FAQs</a><ul class="current">
@@ -157,8 +163,8 @@
 </li>
 </ul>
 
-<!-- <ul class="current"> -->
-  <!-- <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Application</a><ul class="current"> -->
+<!-- <ul class="current">
+  <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Application</a><ul class="current"> -->
   <!-- <li class="toctree-l2 current"><a class="current reference internal" href="#">MoilApp</a></li>
   <li class="toctree-l2"><a class="reference internal" href="spamfilter.html">Visual Odometry</a></li>
   <li class="toctree-l2"><a class="reference internal" href="test_spamfilter.html">Surounding View's</a></li>
@@ -179,16 +185,11 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="#">Moildev API Refeences-</a> &raquo;</li>
-      <li>Methodology</li>
+          <!-- <li><a href="modules.html">Documentation</a> &raquo;</li> -->
+      <li>Moildev module</li>
       <li class="wy-breadcrumbs-aside">
       <!-- <a href="sources/moildev.rst.txt" rel="nofollow"> View page source</a>  -->
         <input type="button" face="Tahoma" value="Print" onclick="printPage()" />
-      <script>
-        function printPage() { 
-          window.print(); 
-          }
-      </script>
       </li>
   </ul>
   <hr/>
@@ -196,331 +197,165 @@
       <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
        <div itemprop="articleBody">
             
-        <div class="page-wrapper">
-          <div class="dark-box"></div>
-          <div class="content">
-          <h1 id='introduction'>Methodology</h1><pre class="highlight cpp tab-cpp"><code><span class="c1">
+<div class="section" id="module-moildev">
+<span id="moildev-module"></span><h1>Introduction Moildev<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+<!-- <dl class="class">
+<dt id="moildev.Moildev">
+<em class="property">Fisheye Lens Technology</em><code class="descclassname"></code><code class="descname"></code><span class="sig-paren"></span><em></em><em></em><em></em><span class="sig-paren"></span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
+<!-- <p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p> -->
+<p align="justify">&emsp; &emsp;  
+  The fisheye lens also terms fisheye image sensor (FIS) is a unique super wide-angle
+  lens with a short focal length; The focal length of a lens is defined as the distance from the optical center of a lens (or,  
+  the secondary principal point for a complex lens like a camera lens) to the focal point (sensor) when the lens is focused on an object at infinity.
+  that produces strong visual distortion intended to create
+  a wide panoramic or hemispherical image. The most significant feature is the field of
+  view vast. A fisheye camera can capture a
+  clear image with a FOV of over 180 degrees, 
+  The field of view of a lens (the angle of coverage or angle of view) is defined as the angle (in object space). 
+  It depends on factors, the focal length of the lens (see above).
+  but a severer barrel distortion comes along. <br>
+  <center><img src="assets/ii.png"></center><br>
+<p align="justify">&emsp; &emsp;Based on <i>Prof Chuang-Jan Chang</i>, the method for presenting fisheye camera images
+  is integrating the multicollimator metrology and cartography in order to
+  systematically describe the projection mechanism of the fisheye camera. The fisheye
+  camera in our proposed method generates the hemisphere coordinate system. Hence,
+  the position of an imaged point referring to the principal point on the image plane
+  directly reflects its corresponding Zenithal distance a. and azimuthal distance β of the
+  sight ray in space so as to normalize the imaged point onto a small sphere.</p>
+  <center><img src="assets/c.png"></center><br>
+<p align="justify">&emsp; &emsp; According to the coordinate system, the angles respectively defined by
+  incident rays and the optical axis is the zenithal angle of 𝑎 (𝑎𝑙𝑝ℎ𝑎), and 𝛽 (beta)
+  is the azimuthal angle, which are the angles Surrounding the optical axis. It has
+  relation with the coordinate system X, Y, Z, where the optical axis is defined by
+  Z-axis. For the zenithal angle, it is the angle from the vertical optical axis to the X-
+  axis and Y axis, as shown in figure 3.a. Whereas the azimuthal angle is defined as
+  the angle of positive Y as the reference point with value 0 degrees and the Z-axis
+  is used as the rotation axis, as shown in figure 3.b. the rotation around the optical
+  axis is the angle of the Y axis starting from positive direction and clockwise around
+  the X axis.</p>
+  <center><img src="assets/d.png"></center><br>
+<b><p>A. What is Anypoint View?</p></b>
+<p align="justify">&emsp; &emsp; This method converts the image plane coordinate to hemispherical coordinates,
+  moves the optical axis to the specified zenithal (alpha) and azimuthal (beta) angle
+  based on the coordinate given. <br>
+  <center><img src="assets/jj.png"></center><br>
+<p align="justify">&emsp; &emsp; The Anypoint view is an image that has been undistorted in a certain area according to the input coordinates
+  From the original fisheye image, the normal image of the specified angle is calculated and restored. There are the following two ways of specifying the angle.</p>
+  <center><img src="assets/kk.png"></center>
+  <center><p><i>Mode 1 : (Pitch, Roll)</i></p></center>
+  <center><img src="assets/ll.png"></center>
+  <center><p><i>Mode 2 : ( Pitch, Yaw)</i></p></center>
+  <b><p >B. What is Panorama View?</p></b>
+<p align="justify">&emsp; &emsp; The panoramic view may present a horizontal view in a specific immersed
+  environment to meet the common human visual perception. A panoramic view is like
+  unfold the hemisphere image. Here, Figure 4(a) shown the fisheye image model and
+  Figure 4(b) shown the mapping plane of the panoramic view. </p><br>
+  <center><img src="assets/e.png">  </center><br>
   
-    
-      <span class="k">print</span><span class="n">success</span><span class="o">.</span><span class="n">MOILDEV-SDK</span>
-      </code></pre>
-      <dl class="class">
-      <dt id="moildev.Moildev">
-      <em class="property">class </em><code class="descclassname">moildev.</code><code class="descname">Moildev</code><span class="sig-paren">(</span><em>file_camera_parameter=None</em>, <em>camera_type=None</em>, <em>**kwarg</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt>
-      <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-      <dl class="method">
-      <dt id="moildev.Moildev.PanoramaM_Rt">
-      <code class="descname">PanoramaM_Rt</code><span class="sig-paren">(</span><em>alpha_max</em>, <em>alpha</em>, <em>beta</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.PanoramaM_Rt" title="Permalink to this definition">¶</a></dt>
-      <dd><p>To generate a pair of X-Y Maps for alpha within 0..alpha_max degree, the result X-Y Maps can be used later
-      to generate a panorama</p> 
-      <p>from the original fisheye image. The panorama image centered at the 3D
-        direction with alpha = iC_alpha_degree and beta = iC_beta_degree.</p> 
-      <dl class="docutils">
-      <dt>Args:</dt>
-      <!-- <dd><dl class="first docutils">
-      <dt>. alpha_max <span class="classifier-delimiter">:</span> <span class="classifier">max of alpha. The recommended value is half of camera FOV. For example, use</span></dt>
-      <dd>90 for a 180 degree fisheye images and use 110 for a 220 degree fisheye images.</dd>
-      </dl> -->
-      <p class="last">. alpha : alpha angle of panorama center.
-      . beta : beta angle of panorama center.</p>
-      </dd>
-      <dt>Returns:</dt>
-      <dd>New mapX and mapY.</dd>
-      <dt>Examples:</dt>
-      <dd>please reference: <a class="reference external" href="https://github.com/MoilOrg/moildev">https://github.com/MoilOrg/moildev</a></dd>
-      </dl>
-      </dd></dl>  
-      <dl class="method">
-      <dt id="moildev.Moildev.anypoint">
-      <code class="descname">anypoint</code><span class="sig-paren">(</span><em>image</em>, <em>alpha</em>, <em>beta</em>, <em>zoom</em>, <em>mode=1</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.anypoint" title="Permalink to this definition">¶</a></dt>
-      <dd><p>Generate anypoint view image. for mode 1, the result rotation is betaOffset degree rotation around the
-      Z-axis(roll) after alphaOffset degree </p>
-      <p>around the X-axis(pitch). for mode 2, The result rotation is thetaY degree rotation around the Y-axis(yaw) after thetaX degree rotation around the X-axis(pitch).</p> 
-      <dl class="docutils">
-      <dt>Args:</dt>
-      <dd>image (): source image given
-      alpha (): the alpha offset that corespondent to the pitch rotation
-      <p>(): the beta offset that corespondent to the yaw rotation</p> 
-      <p>(): decimal zoom factor, normally 1..12</p> 
-      mode (): the mode view selected</dd>
-      <dt>Returns:</dt>
-      <dd>anypoint image</dd>
-      <dt>Examples:</dt>
-      <dd>please reference: <a class="reference external" href="https://github.com/MoilOrg/moildev">https://github.com/MoilOrg/moildev</a></dd>
-      </dl>
-      </dd></dl>
-        
-      <dl class="method">
-      <dt id="moildev.Moildev.create_map_result_image">
-      <code class="descname">create_map_result_image</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.create_map_result_image" title="Permalink to this definition">¶</a></dt>
-      <dd><p>Create Maps image from zeroes matrix for result image.</p>
-      <dl class="docutils">
-      <dt>Returns:</dt>
-      <dd>Zeroes matrix same size with original image to stored data from result image.</dd>
-      </dl>
-      </dd></dl>
-        
-      <dl class="method">
-      <dt id="moildev.Moildev.getAlphaBeta">
-      <code class="descname">getAlphaBeta</code><span class="sig-paren">(</span><em>coordinateX</em>, <em>coordinateY</em>, <em>mode=1</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getAlphaBeta" title="Permalink to this definition">¶</a></dt>
-      <dd><p>Get the alpha beta from specific coordinate image.</p>
-      <dl class="docutils">
-      <dt>Args:</dt>
-      <dd>coordinateX:
-      coordinateY:
-      mode:</dd>
-      <dt>Returns:</dt>
-      <dd>alpha, beta</dd>
-      <dt>Examples:</dt>
-      <dd>please reference: <a class="reference external" href="https://github.com/MoilOrg/moildev">https://github.com/MoilOrg/moildev</a></dd>
-      </dl>
-      </dd></dl>
-        
-      <!-- <dl class="method">
-      <dt id="moildev.Moildev.getAlphaFromRho">
-      <code class="descname">getAlphaFromRho</code><span class="sig-paren">(</span><em>rho</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getAlphaFromRho" title="Permalink to this definition">¶</a></dt>
-      <dd><p>Get the alpha from rho image.
-      Args:</p>
-      <blockquote>
-      <div>rho: the value of rho given</div></blockquote>
-      <dl class="docutils">
-      <dt>Returns:</dt>
-      <dd>alpha</dd>
-      </dl>
-      </dd></dl> -->
-        
-      <dl class="method">
-      <dt id="moildev.Moildev.getAnypointMaps">
-      <code class="descname">getAnypointMaps</code><span class="sig-paren">(</span><em>alpha</em>, <em>beta</em>, <em>zoom</em>, <em>mode=1</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getAnypointMaps" title="Permalink to this definition">¶</a></dt>
-      <dd><p>The purpose is to generate a pair of X-Y Maps for the specified alpha, beta and zoom parameters,
-      the result X-Y Maps can be used later to remap the original fisheye image to the target angle image.</p>
-      <dl class="docutils">
-      <dt>Args:</dt>
-      <dd>alpha (): value of zenithal distance(float).
-      beta (): value of azimuthal distance based on cartography system(float)
-      zoom (): value of zoom(float)
-      mode (): selection anypoint mode(1 or 2)</dd>
-      <dt>Returns:</dt>
-      <dd>mapX: the mapping matrices X
-      mapY: the mapping matrices Y</dd>
-      <dt>Examples:</dt>
-      <dd>please reference: <a class="reference external" href="https://github.com/MoilOrg/moildev">https://github.com/MoilOrg/moildev</a></dd>
-      </dl>
-      </dd></dl>
-        
-      <dl class="method">
-      <dt id="moildev.Moildev.getCameraFov">
-      <code class="descname">getCameraFov</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getCameraFov" title="Permalink to this definition">¶</a></dt>
-      <dd><p>Get Field of View Camera.</p>
-      <dl class="docutils">
-      <dt>Returns:</dt>
-      <dd>FoV camera (int)</dd>
-      </dl>
-      </dd></dl>
-        
-      <dl class="method">
-      <dt id="moildev.Moildev.getCameraName">
-      <code class="descname">getCameraName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getCameraName" title="Permalink to this definition">¶</a></dt>
-      <dd><p>Get camera name.</p>
-      <dl class="docutils">
-      <dt>Returns:</dt>
-      <dd>Camera name (string)</dd>
-      </dl>
-      </dd></dl>
-        
-      <dl class="method">
-      <dt id="moildev.Moildev.getIcx">
-      <code class="descname">getIcx</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getIcx" title="Permalink to this definition">¶</a></dt>
-      <dd><p>Get center image from width image.</p>
-      <dl class="docutils">
-      <dt>Returns:</dt>
-      <dd>Image center X (int)</dd>
-      </dl>
-      </dd></dl>
-        
-      <dl class="method">
-      <dt id="moildev.Moildev.getIcy">
-      <code class="descname">getIcy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getIcy" title="Permalink to this definition">¶</a></dt>
-      <dd><p>Get center image from height image.</p>
-      <dl class="docutils">
-      <dt>Returns:</dt>
-      <dd>Image center Y(int)</dd>
-      </dl>
-      </dd></dl>
-        
-      <dl class="method">
-      <dt id="moildev.Moildev.getImageHeight">
-      <code class="descname">getImageHeight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getImageHeight" title="Permalink to this definition">¶</a></dt>
-      <dd><p>Get the size height of the image.</p>
-      <dl class="docutils">
-      <dt>Returns:</dt>
-      <dd>image height(int)</dd>
-      </dl>
-      </dd></dl>
-        
-      <dl class="method">
-      <dt id="moildev.Moildev.getImageWidth">
-      <code class="descname">getImageWidth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getImageWidth" title="Permalink to this definition">¶</a></dt>
-      <dd><p>Get the size width of the image.</p>
-      <dl class="docutils">
-      <dt>Returns:</dt>
-      <dd>image width(int)</dd>
-      </dl>
-      </dd></dl>
-        
-      <dl class="method">
-      <dt id="moildev.Moildev.getPanoramaMaps">
-      <code class="descname">getPanoramaMaps</code><span class="sig-paren">(</span><em>alpha_min</em>, <em>alpha_max</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getPanoramaMaps" title="Permalink to this definition">¶</a></dt>
-      <dd><p>To generate a pair of X-Y Maps for alpha within 0 … alpha_max degree, the result X-Y Maps can be used later
-      to generate a panorama image from the original fisheye image.</p>
-      <dl class="docutils">
-      <dt>Args:</dt>
-      <!-- <dd><p class="first">alpha_min (): the minimum alpha degree given
-      alpha_max (): the maximum alpha degree given. The recommended value is half of camera FOV. For example, use</p>
-      <blockquote class="last">
-      <div>90 for a 180 degree fisheye images and use 110 for a 220 degree fisheye images.</div></blockquote>
-      </dd> -->
-      <dt>Returns:</dt>
-      <dd>mapX: the mapping matrices X
-      mapY: the mapping matrices Y</dd>
-      <dt>Examples:</dt>
-      <dd>please reference: <a class="reference external" href="https://github.com/MoilOrg/moildev">https://github.com/MoilOrg/moildev</a></dd>
-      </dl>
-      </dd></dl>
-        
-      <dl class="method">
-      <dt id="moildev.Moildev.getRhoFromAlpha">
-      <code class="descname">getRhoFromAlpha</code><span class="sig-paren">(</span><em>alpha</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.getRhoFromAlpha" title="Permalink to this definition">¶</a></dt>
-      <dd><p>Get rho image from alpha given.</p>
-      <dl class="docutils">
-      <dt>Args:</dt>
-      <dd>alpha: the value of alpha given</dd>
-      <dt>Returns:</dt>
-      <dd>rho image</dd>
-      </dl>
-      </dd></dl>
-        
-      <dl class="method">
-      <dt id="moildev.Moildev.importMoildev">
-      <code class="descname">importMoildev</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.importMoildev" title="Permalink to this definition">¶</a></dt>
-      <dd><p>Create moildev instance from Moildev SDK share object library.</p>
-      <dl class="docutils">
-      <dt>Returns:</dt>
-      <dd>Moildev object (private attribute for this class)</dd>
-      </dl>
-      </dd></dl>
-        
-      <dl class="method">
-      <dt id="moildev.Moildev.initAlphaRho_Table">
-      <code class="descname">initAlphaRho_Table</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.initAlphaRho_Table" title="Permalink to this definition">¶</a></dt>
-      <dd><p>Create list for initial alpha to rho(height image).</p>
-      <dl class="docutils">
-      <dt>Returns:</dt>
-      <dd>Initial alpha and rho table.</dd>
-      </dl>
-      </dd></dl>
-        
-      <dl class="method">
-      <dt id="moildev.Moildev.panorama">
-      <code class="descname">panorama</code><span class="sig-paren">(</span><em>image</em>, <em>alpha_min</em>, <em>alpha_max</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.panorama" title="Permalink to this definition">¶</a></dt>
-      <dd><p>The panorama image centered at the 3D direction with alpha = iC_alpha_degree and beta = iC_beta_degree.</p>
-      <dl class="docutils">
-      <dt>Args:</dt>
-      <dd>image: image source given
-      alpha_min:
-      alpha_max:</dd>
-      <dt>Returns:</dt>
-      <dd>Panorama view image</dd>
-      <dt>Examples:</dt>
-      <dd>please reference: <a class="reference external" href="https://github.com/MoilOrg/moildev">https://github.com/MoilOrg/moildev</a></dd>
-      </dl>
-      </dd></dl>
-        
-      <dl class="method">
-      <dt id="moildev.Moildev.reverseImage">
-      <code class="descname">reverseImage</code><span class="sig-paren">(</span><em>image</em>, <em>alpha_max</em>, <em>alpha</em>, <em>beta</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.reverseImage" title="Permalink to this definition">¶</a></dt>
-      <dd><p>To generate the image reverse image from panorama that can change the focus direction from the original
-      images. The panorama reverse image centered at the 3D direction with alpha_max = max of alpha and beta =
-      iC_beta_degree.</p>
-      <dl class="docutils">
-      <dt>Args:</dt>
-      <!-- <dd><p class="first">image: source image given
-      alpha_max: the value of alpha_max. is half of camera FOV. For example, use</p>
-      <blockquote>
-      <div>90 for a 180 degree fisheye images and use 110 for a 220 degree fisheye images.</div></blockquote>
-      <p class="last">alpha: the value of alpha degree
-      beta: the value of alpha degree</p>
-      </dd> -->
-      <dt>Returns:</dt>
-      <dd>the reverse image</dd>
-      <dt>Examples:</dt>
-      <dd>please reference: <a class="reference external" href="https://github.com/MoilOrg/moildev">https://github.com/MoilOrg/moildev</a></dd>
-      </dl>
-      </dd></dl>
-        
-      <dl class="method">
-      <dt id="moildev.Moildev.setCameraParameter">
-      <code class="descname">setCameraParameter</code><span class="sig-paren">(</span><em>parameter</em>, <em>cameraType</em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.setCameraParameter" title="Permalink to this definition">¶</a></dt>
-      <dd><p>Set up the configuration of the camera parameter
-      Args:</p>
-      <!-- <blockquote>
-      <div>parameter (): the <a href="#id1"><span class="problematic" id="id2">*</span></a>.json file
-      cameraType (): type of the camera</div></blockquote> -->
-      <dl class="docutils">
-      <dt>Returns:</dt>
-      <dd>None</dd>
-      </dl>
-      </dd></dl>
-        
-      <dl class="classmethod">
-      <dt id="moildev.Moildev.version">
-      <em class="property">classmethod </em><code class="descname">version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev.version" title="Permalink to this definition">¶</a></dt>
-      <dd><p>Showing the version of the library and the new feature updated.</p>
-      <dl class="docutils">
-      <dt>Returns:</dt>
-      <dd>Moildev version</dd>
-      </dl>
-      </dd></dl>  
-      </dd></dl>
-        
-      </div>
+  <p align="justify">&emsp; &emsp; The horizontal axis in the target plane is the longitude and the vertical axis is the latitude of spherical
+    coordinate  rotation <a href="https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula">(refer to Rodrigues' rotation formula)</a> converts the fisheye image into an image facing another angle. <br>
+    <center><img src="assets/mm.png"></center></p><br>
+  
+  <p align="justify">&emsp; &emsp; In the application of the tube image, the objects in the image at different positions relative to the vanishing point of the tube can be used as the image. 
+    A normalization helps to understand the size of the object.The maximum radius of longitude angle also called beta (β) is 360 0 and
+    the latitude or alpha (α) is a half of Field of View (FoV) camera where in this study
+    camera lens have FoV 220 degree. We set the alpha and beta is 0 then we calculate
+    with our method formula then the fisheye image can be expanded to the desired
+    panorama image. Following for the detail.</p>
+  
+<b><p>C. What is the use of this app?</p></b>
+<p align="justify">&emsp; &emsp; Currently, the use of fisheye camera technology has been widely used in various
+  fields such as 3D measurement, medical, ADAS system and others.</p>
+<div class="section" id="module-moildev">
+<span id="moildev-module"></span><h1>What is Moildev?<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+<!-- <dl class="class">
+<dt id="moildev.Moildev">
+<em class="property"></em><code class="descclassname"></code>Theory<code class="descname"></code><span class="sig-paren"></span><em></em><em></em><em></em><span class="sig-paren"></span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
+<!-- <p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p> -->
+<p align="justify">&emsp; &emsp; 
+  Moildev Library is a collection of functions to developments fisheye image applications. Initially, this library is written for C++ programing language. In the recent decade, python is a programming language that is very popular for developers. That is the reason why we are developing the Moildev library for python. This library build using share object library C++ to make it fast in 
+  computation and using ctypes to wrapper the function inside the library that can use in python. This library was available for Linux and Windows with installation python 64 bit.</p>  
 
-      </div>
-        <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-            <a href="anypoint.html" class="btn btn-neutral float-right" title="spamfilter module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-            <a href="getting_started.html" class="btn btn-neutral float-left" title="spamfilter-py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        </div>
-          
-          <dl class="docutils">
-          </div>
-            <div role="contentinfo">
-              <p>
-                  &#169; Copyright 2022, Moil.
-              </p>
-            </div>
-              
-              Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a         
-              <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>         
-              provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-          
-          </footer>
-                  </div>
-                </div>
-          <div class="dark-box">
-              <div class="lang-selector">
-                    <!-- <a href="#" data-language-name="cpp">C++</a>
-                    <a href="#" data-language-name="csharp">C#</a> -->
-                    <!-- <a href="#" data-language-name="python">Python</a> -->
-              </div>
-          </div>
+<div class="section" id="module-moildev">
+<span id="moildev-module"></span><h1>Requirement to Build This Library<a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+<!-- <dl class="class">
+<dt id="moildev.Moildev">
+<em class="property"></em><code class="descclassname"></code>Theory<code class="descname"></code><span class="sig-paren"></span><em></em><em></em><em></em><span class="sig-paren"></span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
+<!-- <code class="xref py py-class docutils literal notranslate"><span class="pre"><b>1. Ctypes</b></span></code> -->
+<b>1. Ctypes</b>
+<p align="justify">&emsp; &emsp; Ctypes is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python <a href="https://github.com/MoilOrg/moildev/tree/main/examples/anypoint">Download Here</a> 
+<br>
+<!-- <code class="xref py py-class docutils literal notranslate"><span class="pre">2. Integrated Development Environment (IDE)  </span></code> -->
+<b>2. Integrated Development Environment (IDE)</b><br>
+<!-- <div style="border: 0px solid #CCC; margin: 1px 1px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"> -->
+  &emsp; - For example, in windows using visual studio community <a href="https://visualstudio.microsoft.com/vs/">Download Here</a> <br>
+  &emsp; - In Linux, can use pycharm or sublime text
+</div>
+<!-- <code class="xref py py-class docutils literal notranslate"><span class="pre">3. CMake   </span></code> -->
+<b>3. CMake</b>
+<p align="justify">&emsp; &emsp; CMake is a cross-platform free and open-source software tool for managing the build process of software using a compiler-independent method. It supports directory hierarchies and applications that depend on multiple libraries. It is used in conjunction with native build environments such as Make, Qt Creator, Ninja, Apple's Xcode, and Microsoft Visual Studio.  
+<br>
+<!-- <code class="xref py py-class docutils literal notranslate"><span class="pre">4. OpenCV    </span></code> -->
+<b>4. OpenCV</b>
+<p align="justify">&emsp; &emsp; OpenCV (Open Source Computer Vision Library) is a library of programming functions mainly aimed at real-time computer vision. Originally developed by Intel, it was later supported by Willow Garage then Itseez (which was later acquired by Intel). The library is cross-platform and free for use under the open-source BSD license [Wikipedia]. To install OpenCV you can reference some link bellow this: <br>
+<!-- <div style="border: 0px solid #CCC; margin: 1px 1px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"> -->
+  &emsp; - For Linux os <br>
+  &emsp; - For windows<br>
+</div>
+<div class="section" id="module-moildev">
+<span id="moildev-module"></span><h1>Design and architecture <a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+<!-- <dl class="class">
+<dt id="moildev.Moildev">
+<em class="property"></em><code class="descclassname"></code>Theory<code class="descname"></code><span class="sig-paren"></span><em></em><em></em><em></em><span class="sig-paren"></span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
+<p align="justify">The architecture of the library is like diagram bellow this.  
+<center><img src="assets/a.png">  </center>
+<br>
+<!-- <p align="justify">As shown in the diagram, this library has 5 function, which is some function not available in windows like shown in table below this. 
+<center><img src="b.png">  </center> -->
+
+<br><br>
+  </head>
+<dl class="docutils">
+</div>
+  </div>
+
+
     </div>
+    <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="spamfilter module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="introduction.html" class="btn btn-neutral float-left" title="spamfilter-py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+  <hr/>
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Moil.
+    </p>
+  </div>
+    
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+  <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+  
+  provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
     </section>
   </div>
+  
+
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

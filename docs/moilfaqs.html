@@ -82,7 +82,7 @@
 
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" autocomplete="off"/>
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -114,7 +114,8 @@
     <li class="toctree-l2 current"><a class="current reference internal" href="moildev-function.html">Methodology</a></li> -->
     <li class="toctree-l2"><a class="reference internal" href="anypoint.html"> Anypoint</a></li>
     <li class="toctree-l2"><a class="reference internal" href="panorama.html"> Panorama</a></li>
-    <li class="toctree-l2"><a class="reference internal" href="reverse_view.html">Reverse View</a></li> 
+    <li class="toctree-l2"><a class="reference internal" href="reverse_view.html">Reverse View</a></li>
+    <li class="toctree-l2"><a class="reference internal" href="add_function.html">Additional function</a></li> 
     </ul>
   </li>
   </ul>
@@ -200,7 +201,7 @@
           <div class="faq-inner">
             <div class="faq-item">
               <h5>
-                What are the advantages of MoilApp ?
+                What are the advantages of Moildev ?
                 <span class="faq-plus">&plus;</span>
               </h5>
               <div class="faq-body">
@@ -232,6 +233,12 @@
       </div>
     </div>
  <br><br>
+ <script type="text/javascript">
+  $(".faq-plus").on('click',function(){
+    $(this).parent().parent().find('.faq-body').slideToggle();
+  });
+</script>
+</body>
   
 <dl class="docutils">
 </div>
@@ -250,11 +257,11 @@
     </p>
   </div>
     
-    Built with <a href="#">Sphinx</a> using a
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="#">theme</a>
-    
-    provided by <a href="#">Read the Docs</a>. 
+  <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+  
+  provided by <a href="https://readthedocs.org">Read the Docs</a>.  
 
 </footer>
         </div>

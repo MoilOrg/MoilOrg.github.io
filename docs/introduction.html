@@ -70,8 +70,8 @@
       </script>
 
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="introduction.html" />
-    <link rel="next" title="spamfilter module" href="moildev-function.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="spamfilter module" href="getting_started.html" />
     <link rel="prev" title="spamfilter-py" href="introduction.html" /> 
 </head>
 <body class="wy-body-for-nav">
@@ -88,15 +88,17 @@
 
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" autocomplete="off" autocapitalize="off"/>
     <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
+    <input type="hidden" name="introduction.html" value="default" />
   </form>
+  <form action="" method="get">
+    
+  </form>
+  
 </div>
 </div>
 <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">  
-            
-<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation"> 
 <!-- <p class="caption"><span class="caption-text">Documentation:</span></p> -->
 <ul class="current">
   <li class="toctree-l1 current"><a class="reference internal" href="introduction.html">introduction Moildev</a><ul class="current">
@@ -120,7 +122,8 @@
   <li class="toctree-l2 current"><a class="current reference internal" href="moildev-function.html">Methodology</a></li> -->
   <li class="toctree-l2 current"><a class="current reference internal" href="anypoint.html">Anypoint</a></li>
   <li class="toctree-l2"><a class="reference internal" href="panorama.html"> Panorama</a></li>
-  <li class="toctree-l2"><a class="reference internal" href="reverse_view.html">Reverse View</a></li> 
+  <li class="toctree-l2"><a class="reference internal" href="reverse_view.html">Reverse View</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="add_function.html">Additional function</a></li>  
   </ul>
 </li>
 </ul>
@@ -215,7 +218,8 @@
   The field of view of a lens (the angle of coverage or angle of view) is defined as the angle (in object space). 
   It depends on factors, the focal length of the lens (see above).
   but a severer barrel distortion comes along. <br>
-  &emsp; &emsp;Based on <i>Prof Chuang-Jan Chang</i>, the method for presenting fisheye camera images
+  <center><img src="assets/ii.png"></center><br>
+<p align="justify">&emsp; &emsp;Based on <i>Prof Chuang-Jan Chang</i>, the method for presenting fisheye camera images
   is integrating the multicollimator metrology and cartography in order to
   systematically describe the projection mechanism of the fisheye camera. The fisheye
   camera in our proposed method generates the hemisphere coordinate system. Hence,
@@ -237,20 +241,32 @@
 <b><p>A. What is Anypoint View?</p></b>
 <p align="justify">&emsp; &emsp; This method converts the image plane coordinate to hemispherical coordinates,
   moves the optical axis to the specified zenithal (alpha) and azimuthal (beta) angle
-  based on the coordinate given. the Anypoint view is an image that has been
-  undistorted in a certain area according to the input coordinates.</p>
-<b><p >B. What is Panorama View?</p></b>
+  based on the coordinate given. <br>
+  <center><img src="assets/jj.png"></center><br>
+<p align="justify">&emsp; &emsp; The Anypoint view is an image that has been undistorted in a certain area according to the input coordinates
+  From the original fisheye image, the normal image of the specified angle is calculated and restored. There are the following two ways of specifying the angle.</p>
+  <center><img src="assets/kk.png"></center>
+  <center><p><i>Mode 1 : (Pitch, Roll)</i></p></center>
+  <center><img src="assets/ll.png"></center>
+  <center><p><i>Mode 2 : ( Pitch, Yaw)</i></p></center>
+  <b><p >B. What is Panorama View?</p></b>
 <p align="justify">&emsp; &emsp; The panoramic view may present a horizontal view in a specific immersed
   environment to meet the common human visual perception. A panoramic view is like
   unfold the hemisphere image. Here, Figure 4(a) shown the fisheye image model and
-  Figure 4(b) shown the mapping plane of the panoramic view. The horizontal axis in
-  the target plane is the longitude and the vertical axis is the latitude of spherical
-  coordinate. The maximum radius of longitude angle also called beta (β) is 360 0 and
-  the latitude or alpha (α) is a half of Field of View (FoV) camera where in this study
-  camera lens have FoV 220 degree. We set the alpha and beta is 0 then we calculate
-  with our method formula then the fisheye image can be expanded to the desired
-  panorama image.</p>
+  Figure 4(b) shown the mapping plane of the panoramic view. </p><br>
   <center><img src="assets/e.png">  </center><br>
+  
+  <p align="justify">&emsp; &emsp; The horizontal axis in the target plane is the longitude and the vertical axis is the latitude of spherical
+    coordinate  rotation <a href="https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula">(refer to Rodrigues' rotation formula)</a> converts the fisheye image into an image facing another angle. <br>
+    <center><img src="assets/mm.png"></center></p><br>
+  
+  <p align="justify">&emsp; &emsp; In the application of the tube image, the objects in the image at different positions relative to the vanishing point of the tube can be used as the image. 
+    A normalization helps to understand the size of the object.The maximum radius of longitude angle also called beta (β) is 360 0 and
+    the latitude or alpha (α) is a half of Field of View (FoV) camera where in this study
+    camera lens have FoV 220 degree. We set the alpha and beta is 0 then we calculate
+    with our method formula then the fisheye image can be expanded to the desired
+    panorama image. Following for the detail.</p>
+  
 <b><p>C. What is the use of this app?</p></b>
 <p align="justify">&emsp; &emsp; Currently, the use of fisheye camera technology has been widely used in various
   fields such as 3D measurement, medical, ADAS system and others.</p>
@@ -276,8 +292,8 @@
 <!-- <code class="xref py py-class docutils literal notranslate"><span class="pre">2. Integrated Development Environment (IDE)  </span></code> -->
 <b>2. Integrated Development Environment (IDE)</b><br>
 <!-- <div style="border: 0px solid #CCC; margin: 1px 1px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"> -->
-  &emsp; &omicron; For example, in windows using visual studio community <a href="https://visualstudio.microsoft.com/vs/">Download Here</a> <br>
-  &emsp; &omicron; In Linux, can use pycharm or sublime text
+  &emsp; - For example, in windows using visual studio community <a href="https://visualstudio.microsoft.com/vs/">Download Here</a> <br>
+  &emsp; - In Linux, can use pycharm or sublime text
 </div>
 <!-- <code class="xref py py-class docutils literal notranslate"><span class="pre">3. CMake   </span></code> -->
 <b>3. CMake</b>
@@ -287,8 +303,8 @@
 <b>4. OpenCV</b>
 <p align="justify">&emsp; &emsp; OpenCV (Open Source Computer Vision Library) is a library of programming functions mainly aimed at real-time computer vision. Originally developed by Intel, it was later supported by Willow Garage then Itseez (which was later acquired by Intel). The library is cross-platform and free for use under the open-source BSD license [Wikipedia]. To install OpenCV you can reference some link bellow this: <br>
 <!-- <div style="border: 0px solid #CCC; margin: 1px 1px; padding: 10px; width: auto; height: auto; background-color: #FBFBEE; text-align: left;"> -->
-  &emsp; &omicron; For Linux os <br>
-  &emsp; &omicron; For windows<br>
+  &emsp; - For Linux os <br>
+  &emsp; - For windows<br>
 </div>
 <div class="section" id="module-moildev">
 <span id="moildev-module"></span><h1>Design and architecture <a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
@@ -319,9 +335,11 @@
     </p>
   </div>
     
-    Built with <a href="#">Sphinx</a> using a
-    <a href="#">theme</a>
-    provided by <a href="#">Read the Docs</a>. 
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+  <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+  
+  provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
