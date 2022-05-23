@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moildev&mdash;library</title>
+  <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <style type="text/css">
+      body{
+        background: #eee;
+        padding-top: 20px;
+        /* font-family: monospace; */
+      }
+      .header{
+        border-radius: 20px 20px 0px 0px;
+        padding: 10px 0px;
+        background: #4988b3;
+        color: #fff;
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+      .faq-item{
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+      .faq-body{
+        display: none;
+        margin-top: 30px;
+      }
+      .faq-wrapper{
+        width: auto;
+        margin: 0 auto;
+      }
+      .faq-inner{
+        padding: 30px;
+        background: aliceblue;
+      }
+      .faq-plus{
+        float: right;
+        font-size: 1.4em;
+        line-height: 1em;
+        cursor: pointer;
+      }
+      hr{
+        background-color: #9b9b9b;
+      }
+    </style>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
+        <script type="text/javascript" src="static/jquery.js"></script>
+        <script type="text/javascript" src="static/underscore.js"></script>
+        <script type="text/javascript" src="static/doctools.js"></script>
+        <script type="text/javascript" src="static/language_data.js"></script>
+      <script type="text/javascript" src="static/js/theme.js"></script>
+
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="spamfilter module" href="source.html" />
+    <link rel="prev" title="spamfilter-py" href="moildev-function.html" /> 
+</head>
+<body class="wy-body-for-nav">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <!-- <a href="#" class="icon icon-home"> Moildev</a>
+            <h2>Version 3.1.0</h2>
+          </a> -->
+          <body><font face="Tahoma" size="6"> Moildev</font><br/> 
+            <font face="Tahoma" size="3"> Version 3.1.0</font><br/>
+            <br>
+            </body>
+
+<!-- GTranslate: http://gtranslate.net/ -->
+
+<!-- <a href="#" onclick="doGTranslate('id|ar');return false;" title="Arabic" class="gflag nturl" style="background-position:-100px -0px;"><img src="http://joomla-gtranslate.googlecode.com/svn/trunk/mod_gtranslate/tmpl/lang/blank.png" height="10" width="10" alt="Arabic" /></a> -->
+
+<!-- <a href="#" onclick="doGTranslate('id|zh-CN');return false;" ><img src="images/Flag-China.jpg" height="10" width="10" alt="Chinese" /></a>
+
+<a href="#" onclick="doGTranslate('id|en');return false;"><img src="images/english.jpeg" height="10" width="10" alt="English" /></a>
+
+<a href="#" onclick="doGTranslate('id|id');return false;"><img src="images/indonesia.png" height="10" width="10" alt="Indonesian" /></a> -->
+
+<!-- <a href="#" onclick="doGTranslate('id|ja');return false;" title="Japanese" class="gflag nturl" style="background-position:-700px -100px;"><img src="http://joomla-gtranslate.googlecode.com/svn/trunk/mod_gtranslate/tmpl/lang/blank.png" height="32" width="32" alt="Japanese" /></a> -->
+
+<!-- <style type="text/css">
+
+a.gflag {vertical-align:middle;font-size:32px;padding:1px 0;background-repeat:no-repeat;background-image:url('http://joomla-gtranslate.googlecode.com/svn/trunk/mod_gtranslate/tmpl/lang/32.png');}
+a.gflag img {border:0;}
+a.gflag:hover {background-image:url('http://joomla-gtranslate.googlecode.com/svn/trunk/mod_gtranslate/tmpl/lang/32a.png');}
+#goog-gt-tt {display:none !important;}
+.goog-te-banner-frame {display:none !important;}
+.goog-te-menu-value:hover {text-decoration:none !important;}
+body {top:0 !important;}
+#google_translate_element2 {display:none!important;}
+
+</style>
+
+<div id="google_translate_element2"></div>
+<script type="text/javascript">
+function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'id',autoDisplay: false}, 'google_translate_element2');}
+</script><script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+
+<script type="text/javascript">
+/* <![CDATA[ */
+eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://joomla-gtranslate.googlecode.com/svn/trunk/gt_update_notes0.js"></script> -->
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" autocomplete="off"/>
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</div>
+<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">  
+            
+<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation"> 
+<!-- <p class="caption"><span class="caption-text">Documentation:</span></p> -->
+<ul class="current">
+    <li class="toctree-l1 current"><a class="reference internal" href="introduction_2.html">Pengantar Moildev</a><ul class="current">
+    <!-- <li class="toctree-l2 current"><a class="current reference internal" href="introduction.html">What is Moildev?</a></li>
+    <li class="toctree-l2"><a class="reference internal" href="moildev-library.html">Get starting with Moildev-Installation</a></li></ul> -->
+    </ul>
+  </li>
+  </ul>
+  
+  <ul class="current">
+    <li class="toctree-l1 current"><a class="reference internal" href="getting_started2.html">Mulai</a><ul class="current">
+    <!-- <li class="toctree-l2 current"><a class="current reference internal" href="introduction.html">What is Moildev?</a></li>
+    <li class="toctree-l2"><a class="reference internal" href="moildev-library.html">Get starting with Moildev-Installation</a></li></ul> -->
+    </ul>
+  </li>
+  </ul>
+  
+  <ul class="current">
+    <li class="toctree-l1 current"><a class="reference internal" href="moildev-api2.html">Referensi API Moildev</a><ul class="current">
+    <!-- <li class="toctree-l2"><a class="reference internal" href="source.html">Panorama</a></li></ul>
+    <li class="toctree-l2 current"><a class="current reference internal" href="moildev-function.html">Methodology</a></li> -->
+    <li class="toctree-l2 current"><a class="current reference internal" href="anypoint2.html">Anypoint</a></li>
+    <li class="toctree-l2"><a class="reference internal" href="panorama2.html"> Panorama</a></li>
+    <li class="toctree-l2"><a class="reference internal" href="reverse_view2.html">Reverse_view</a></li>
+    <li class="toctree-l2"><a class="reference internal" href="add_function2.html">Additional functions</a></li>   
+    </ul>
+  </li>
+  </ul>
+  
+  <ul class="current">
+    <li class="toctree-l1 current"><a class="reference internal" href="example_code2.html">Daftar Contoh Kode </a><ul class="current">
+    <!-- <li class="toctree-l2 current"><a class="current reference internal" href="introduction.html">What is Moildev?</a></li>
+    <li class="toctree-l2"><a class="reference internal" href="moildev-library.html">Get starting with Moildev-Installation</a></li></ul> -->
+    </ul>
+  </li>
+  </ul>
+  
+  <ul class="current">
+    <li class="toctree-l1 current"><a class="reference internal" href="application_ex2.html">Contoh aplikasi</a><ul class="current">
+        <li class="toctree-l2 current"><a class="current reference internal" href="moilapp2.html">MoilApp</a></li>
+        <li class="toctree-l2"><a class="reference internal" href="colonoscopy2.html">Colonoscopy</a></li>
+        <li class="toctree-l2"><a class="reference internal" href="mms2.html">Moil Monitoring System</a></li> 
+    </ul>
+  </li>
+  </ul>
+  </li>
+  </ul>
+  
+  <ul class="current">
+    <li class="toctree-l1 current"><a class="reference internal" href="moilfaqs2.html">Moil FAQs</a><ul class="current">
+    <!-- <li class="toctree-l2"><a class="reference internal" href="source.html">Panorama</a></li></ul> -->
+    </ul>
+  </li>
+  </ul>
+  
+  <ul class="current">
+    <li class="toctree-l1 current"><a class="reference internal" href="about_us2.html">Tentang kami</a><ul class="current">
+    <!-- <li class="toctree-l2"><a class="reference internal" href="source.html">Panorama</a></li></ul> -->
+    </ul>
+  </li>
+  </ul>
+
+<!-- 
+<br>
+&emsp; <input type="button" face="Tahoma" value="Chinese" onclick="doGTranslate('id|zh-CN');return false;" />
+<input type="button" face="Tahoma" value="English" onclick="doGTranslate('id|en');return false;" />
+<input type="button" face="Tahoma" value="Indonesian" onclick="doGTranslate('id|id');return false;" />
+<br>  -->
+
+<ul class="current">
+  <!-- <li class="toctree-l1 current"><a class="reference internal" href="source.html">Moildev Library</a><ul class="current"> -->
+  </ul>
+</li>
+</ul>
+
+<br> <font size="2px" face="Arial" color= "#00BFFF">&#10017; Bahasa<br></font>
+</ul>
+  <ul class="current">
+  <font size="2px" face="Arial"> <a class="reference internal" href="introduction_2.html">&#10023; Indonesia</a><ul class="current"></ul> </font>
+  <font size="2px" face="Arial"> <a class="reference internal" href="introduction.html">&#10023; Inggris</a><ul class="current"></ul> </font>
+  <font size="2px" face="Arial"> <a class="reference internal" href="introduction3.html">&#10023; China</a><ul class="current"></ul> </font>
+</ul>
+
+<!-- <ul class="current"> 
+  <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Application</a><ul class="current"> 
+  <li class="toctree-l2 current"><a class="current reference internal" href="#">MoilApp</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="spamfilter.html">Visual Odometry</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="test_spamfilter.html">Surounding View's</a></li>
+  <li class="toctree-l2"><a class="reference internal" href="token.html">Camera MOnitoring System</a></li> 
+   </ul> -->
+</li>
+</ul>               
+</div>
+</div>
+</nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" aria-label="top navigation">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MOILDEV-SDK</a>
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content">
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="#">Contoh Aplikasi</a> &raquo;</li>
+      <li>Moil Monitoring System</li>
+      <li class="wy-breadcrumbs-aside">
+      <!-- <a href="sources/moildev.rst.txt" rel="nofollow"> View page source</a>  -->
+      <!-- <a href="introduction.html"><button>Indonesian</button></a> -->
+        <input type="button" face="Tahoma" value="Print" onclick="printPage()" />
+      <script>
+        function printPage() { 
+          window.print(); 
+          }
+      </script>
+      </li>
+  </ul>
+  <hr/>
+</div>
+      <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+       <div itemprop="articleBody">
+            
+
+<div class="section" id="module-moildev">
+<span id="moildev-module"></span><h1>Moil Monitoring System <a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+<!-- <dl class="class">
+<dt id="moildev.Moildev">
+<em class="property">Code Examples to start prototyping quickly:</em><code class="descclassname">These simple examples demonstrate how to easily use the Library to include code snippets that process fisheye images.</code>Code wrote in python<code class="descname"></code><span class="sig-paren">(</span><em></em>, <em></em>, <em></em><span class="sig-paren">)</span><a class="headerlink" href="#moildev.Moildev" title="Permalink to this definition">¶</a></dt> -->
+<!-- <p>* What is MoilApp?</p> -->
+<p align="justify">&emsp; &emsp;Kamera adalah perangkat yang dapat menangkap gambar atau video. Salah satu kegunaan kamera adalah dapat digunakan sebagai pemantau suatu lingkungan yang disebut dengan kamera pengintai. Kini banyak kamera yang dipasang di kantor pemerintahan, kantor bisnis bahkan sekolah untuk membantu meningkatkan tingkat keselamatan masyarakat.<br> 
+    &emsp; &emsp; Kamera pengintai biasanya diletakkan di sudut ruangan untuk melihat satu sisi karena kamera memiliki sudut pandang yang kecil. Karena kekurangan tersebut, kamera berkembang menjadi kamera pan till zoom (PTZ), yang dapat bergerak ke kiri dan kanan, bawah, dan atas serta zooming yang memungkinkan pengguna untuk melihat area lain dengan mudah. Dan kini kamera fisheye sudah mulai banyak digunakan untuk menggantikan kedua jenis kamera tersebut. Kamera fisheye adalah kamera yang memiliki jangkauan sudut pandang lebar yang berbeda dengan kamera biasa yang memiliki tampilan kecil.
+    &emsp; &emsp; Meski memiliki pandangan yang luas, kamera fisheye memiliki distorsi gambar yang tinggi, seperti objek yang terlihat melengkung atau objek yang tidak jelas sehingga gambarnya tidak terlalu bagus. jika masalah ini dapat diselesaikan maka akan menghasilkan gambar yang sama dengan kamera lainnya dan juga dapat menjangkau area yang lebih luas daripada kamera PTZ.
+</p>
+<br><center><img src="assets/z.png"></center>
+
+<span id="moildev-module"></span><h1>Metode usulan <a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+<p>Sesi ini akan menjelaskan secara detail tentang library yang digunakan.</p>
+
+<b><p style=" margin: 10px 30px; padding: 5px;">a. Moil Monitoring Application</p></b>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp;Kami (Laboratorium Moil) mencoba mengembangkan kamera fisheye untuk mengatasi masalah distorsi kamera pada gambar fisheye dan membuatnya lebih sederhana dan dapat menggantikan kamera PTZ. kami membuat aplikasi yang dapat mengolah kamera fisheye dan menjadikannya sebagai kamera pemantau. Aplikasi ini dapat memaksimalkan FoV dari kamera fisheye sehingga dapat menggantikan kamera PTZ.<br>
+    &emsp; &emsp; Aplikasi ini dapat memproses kamera USB dan kamera streaming secara bersamaan. Sebelum menjalankan aplikasi ini, kamera akan dikalibrasi terlebih dahulu oleh lab moil kemudian akan didapatkan parameter yang dapat digunakan oleh masing-masing kamera dengan tipe model yang sama. Untuk memaksimalkan penggunaan kamera fisheye, ada dua mode yang dapat digunakan tergantung pada posisi kamera diletakkan, apakah dipasang di dinding atau dipasang di langit-langit.  
+</p>
+<b><p style=" margin: 10px 30px; padding: 5px;">b. Antarmuka pengguna</p></b>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; Kami merancang antarmuka pengguna yang berguna dalam membantu pengguna melakukan pemantauan. Gambar dibawah ini adalah gambar tampilan awal dari software yang kita buat. Pada tahap awal pengguna dapat menambahkan perangkat terlebih dahulu. jika kamera yang digunakan adalah kamera USB, maka pastikan kamera tersebut terhubung dengan komputer atau laptop. jika kamera yang digunakan adalah kamera web, pastikan kamera terhubung ke jaringan yang sama agar kamera dapat diakses dengan alamat Ip.  
+    <br><center><img src="assets/aa.png"></center>
+</p>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp;  Setelah membuka aplikasi, langkah selanjutnya adalah memilih "tambah perangkat baru" lalu pilih kamera dan pilih parameter yang digunakan untuk kamera. jangan takut jika anda menggunakan beberapa kamera karena aplikasi ini dapat menjalankan lebih dari dua kamera sekaligus.  
+    <br><center><img src="assets/bb.png"></center>
+</p>
+</p>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp;  Setelah memilih kamera dan parameter, UI akan berubah menjadi seperti gambar di bawah ini. di tampilan awal akan menggunakan mode kamera di dinding.   
+    <br><center><img src="assets/cc.png"></center>
+</p>
+
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; Dari gambar di atas secara default menampilkan pemandangan untuk kamera di langit-langit. Pada tampilan 1 akan menampilkan konfigurasi tombol dan juga akan menampilkan informasi detail tergantung dari aplikasi yang digunakan. pada gambar diatas aplikasi digunakan untuk mendeteksi objek sehingga menampilkan waktu pendeteksian nama dan tingkat identitas AI dalam mendeteksi objek. pada gambar diatas terdapat empat pilihan tampilan yang berbeda sehingga dapat digunakan untuk memaksimalkan FOV dari kamera fisheye.  
+</p>
+<b><p style=" margin: 10px 30px; padding: 5px;">c. Pemasangan kamera di langit-langit</p></b>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp;  Seperti yang telah dijelaskan sebelumnya, kamera dapat dipasang dalam dua posisi, yaitu dipasang di langit-langit dan dinding. Pengguna dapat memasang kamera di langit-langit seperti yang ditunjukkan pada gambar di bawah ini.   
+    <br><center><img src="assets/dd.png"></center>
+</p>
+</p>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; Gambar di bawah ini adalah gambar yang diambil menggunakan kamera yang dipasang di langit-langit sebuah ruangan. Pengguna dapat mengubah arah tampilan yang ingin dilihat dengan mengklik gambar dalam konfigurasi. Pengguna juga dapat mengubah perangkat kamera dengan memilih daftar perangkat yang tersedia, jika tidak terbaca, sumber kamera dapat ditambahkan kembali. Saat membuka perangkat, mode yang pertama kali dipilih adalah mode 1 (mode kamera dipasang di langit-langit). Garis merah, biru, dan hijau adalah garis dari wilayah yang ingin dilihat pengguna, dan merah adalah sisi atas.
+    <br><center><img src="assets/ee.png"></center>
+</p>
+<b><p style=" margin: 10px 30px; padding: 5px;">d. Kamera dipasang di dinding</p></b>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp;  Contoh penggunaan aplikasi jika Anda menggunakan kamera yang dipasang di dinding adalah seperti yang ditunjukkan pada Gambar di bawah ini.   
+    <br><center><img src="assets/ff.png"></center>
+</p>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; Dalam mengkonfigurasi, yang pertama adalah mengubah mode ke mode 2 maka gambar akan mengubah tampilan. untuk fungsi lainnya sama dengan posisi kamera yang dipasang di plafon.   
+    <br><center><img src="assets/gg.png"></center>
+</p>
+<b><p style=" margin: 10px 30px; padding: 5px;">e. Multiview dan beberapa perangkat</p></b>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; Aplikasi Moil dapat menggunakan lebih dari satu perangkat kamera secara bersamaan. Aplikasi ini juga menyediakan empat tampilan yang berbeda dan dapat diubah sesuai dengan kebutuhan pengguna. saat memilih "tampilkan perangkat" Anda akan melihat perangkat aktif dan area yang sedang ditampilkan dalam tampilan. 
+    <br><center><img src="assets/hh.png"></center>
+</p>
+
+
+<span id="moildev-module"></span><h1>Aplikasi <a class="headerlink" href="#module-moildev" title="Permalink to this headline">¶</a></h1>
+<p align="justify" style=" margin: 10px 1px; padding: 1px;">Aplikasi pemantauan mol ini dapat digunakan dengan berbagai aplikasi sesuai dengan kebutuhan Anda. Beberapa opsi termasuk: 
+</p>
+<b><p style=" margin: 10px 30px; padding: 5px;">a. Kegiatan pemantauan</p></b>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; Pengguna dapat memantau aktivitas dengan menggunakan aplikasi ini. Kegiatan monitoring dilakukan untuk mencegah hal-hal buruk terjadi, seperti meletakkan kamera di rumah untuk memantau anggota keluarga atau dipasang di kantor untuk melihat bagaimana karyawan bekerja dan banyak hal lainnya. Kamera juga dapat ditempatkan di area terbuka seperti tempat umum, jalan raya untuk meminimalisir tindak kriminal dan meningkatkan rasa aman bagi masyarakat. Aplikasi tersebut dapat dipadukan dengan AI sehingga dapat mendeteksi suatu fenomena yang terjadi seperti, kegiatan apa yang sedang dilakukan, siapa yang ada di dalam ruangan dan lain-lain. 
+</p>
+<b><p style=" margin: 10px 30px; padding: 5px;">b. Pengenalan Wajah</p></b>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp;  Wajah merupakan salah satu bagian tubuh yang unik dan berbeda dari yang lain. Dengan menggunakan pengenalan wajah, kita dapat mengenali wajah seseorang dan menggunakannya untuk berbagai skenario. Yang pertama adalah face recognition untuk absensi, dengan face recognition, absensi yang perlu menggunakan sidik jari tidak diperlukan lagi karena kontak fisik yang bisa berbahaya. yang kedua adalah untuk mendeteksi seseorang yang berada di tempat umum yang dapat melakukan hal-hal buruk sehingga dapat meningkatkan keamanan bagi masyarakat. Ketiga, sebagai keamanan rumah, ketika pemilik rumah pergi, ada kemungkinan orang asing masuk ke dalam rumah sehingga kita dapat mencegah kemungkinan pencurian.  
+</p>
+<b><p style=" margin: 10px 30px; padding: 5px;">c. Pemantauan Lalu Lintas</p></b>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; Jalan raya merupakan salah satu tempat umum yang harus mendapat perhatian karena banyak terjadi kecelakaan dan pengendara yang tidak menaati peraturan. Dengan pemantauan lalu lintas, kami dapat meminimalkan ini dan mengambil tindakan segera.  
+</p>
+<b><p style=" margin: 10px 30px; padding: 5px;">d. Pengenalan Plat</p></b>
+<p align="justify" style=" margin: 10px 30px; padding: 5px;">&emsp; &emsp; ESetiap kendaraan pasti memiliki plat nomor yang berbeda. Dengan plat ini, kita bisa mengidentifikasi pemilik kendaraan. Dengan mengenali pelat, kita dapat menggunakan aplikasi dengan skenario yang berbeda. Pertama, mendeteksi kendaraan jalan yang melakukan kesalahan atau ugal-ugalan di jalanan. Dengan pengenalan plat akan mudah untuk mengenali pengguna kendaraan. Kedua, pembayaran tol tidak perlu dibayarkan langsung di tempat. Dengan pengenalan plat, sistem tol hanya perlu mendeteksi kendaraan dengan plat nomor tertentu sudah masuk jalan tol sehingga tagihan pembayaran otomatis masuk ke rekening bank. Ketiga, kendaraan parkir tidak perlu lagi membawa uang, cukup datang ke tempat parkir, kemudian saat kamera mendeteksi kendaraan maka akan mendeteksi plat nomor dan nomor posisi tempat parkir. Setelah selesai, pemilik kendaraan dapat membayar tagihan ketika dia meninggalkan tempat parkir. Aplikasi lain yang mungkin terjadi adalah untuk data kendaraan di satu tempat dan aplikasi lainnya.  
+</p> 
+
+
+
+<dl class="docutils">
+</div>
+           </div>
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="moilfaqs2.html" class="btn btn-neutral float-right" title="spamfilter module" accesskey="n" rel="next">Selanjutnya <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="colonoscopy2.html" class="btn btn-neutral float-left" title="spamfilter-py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span>Sebelumnnya</a>
+    </div>
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Moil.
+    </p>
+  </div>
+    
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+  <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+  
+  provided by <a href="https://readthedocs.org">Read the Docs</a>.  
+
+</footer>
+        </div>
+      </div>
+    </section>
+</div> 
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+</body>
+</html>
